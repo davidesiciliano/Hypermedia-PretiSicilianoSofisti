@@ -58,6 +58,7 @@ li{
 }
 
 /*Footer*/
+
 .footer{
     width: 100%;
     height: 400px;
@@ -114,6 +115,20 @@ font-family: Helvetica;
     transition: all .3s;
 }
 
+
+.bnt{
+    padding: .5rem 1rem;
+    background: grey;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+
+.bnt-big{
+    padding: .7rem 1.3rem;
+    line-height: 1.3rem;
+}
+
 .footer .footer-content .footer-section {
     flex: 1;
     padding: 25px;
@@ -133,4 +148,33 @@ font-family: Helvetica;
     font-size: 1.2em;
     color: grey;
     transition: all .3s
+}
+
+
+.footer .footer-content .contact-form{
+    padding-right: 70px;
+}
+
+.footer .footer-content .contact-form .contact-input{
+    background:  rgb(18, 88, 129);
+    color: white;
+    width: 100%;
+    margin-bottom: 10px;
+    line-height: 1.5rem;
+    padding: .9rem 1.4rem;
+    border: none;
+    border-radius: 5px;
+}
+.footer .footer-content .contact-form .contact-input:focus{
+    background: rgb(12, 56, 82);
+}
+
+.footer .footer-content .contact-form .contact-btn{
+    float: right;
+    background: grey;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    padding: .7rem 1.3rem;
+    line-height: 1.3rem;
 }
