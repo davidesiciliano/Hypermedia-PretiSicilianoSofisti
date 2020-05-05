@@ -7,6 +7,40 @@ html, body {
 .container {
   min-height: 100%;
 }
+.nextEvents{
+  background: #F1F1F1;
+  width: 100%;
+  position: absolute;
+  height: 414px;
+  left: 0px;
+  top: 708px;
+}
+
+.nextEvents .h2{
+  align-content: center;
+}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width:20%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.partners{
+  background: #F1F1F1;
+  width: 100%;
+}
+.upper-section{
+  width: 100%;
+}
 
 /*Header*/
 
@@ -36,7 +70,7 @@ html, body {
 }
 
 .nav {
-  align: right;
+  align-content: right;
   padding-top: 25px;
   margin-right: 25px;
 }
