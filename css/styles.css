@@ -94,7 +94,6 @@ ul {
 
 .footer .footer-content {
   height: 369px;
-  border: 1px solid red;
   display: flex;
   font-family: Helvetica;
 }
@@ -106,7 +105,7 @@ ul {
 .footer .footer-content .about .contact span {
   display: block;
   font-size: 1.1em;
-  margin-bottom: 8px;
+  margin-bottom: 20px;
 }
 
 .footer .footer-content .about .socials a {
@@ -145,23 +144,15 @@ ul {
 .footer .footer-content .footer-section {
   flex: 1;
   padding: 25px;
-  border: 1px solid yellow;
 }
 
-.footer .footer-content .footer-section .links ul a {
+.footer .footer-content .footer-section .links .br .ul b{
   display: block;
-  margin-bottom: 10px;
-  font-size: 1.2em;
+  margin-bottom: 50px;
+  font-size: 3em;
   transition: all .3s
 }
 
-.footer .footer-content .footer-section .links ul a:hover {
-  display: block;
-  margin-bottom: 10px;
-  font-size: 1.2em;
-  color: grey;
-  transition: all .3s
-}
 
 
 .footer .footer-content .contact-form {
