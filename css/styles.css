@@ -219,7 +219,7 @@ ul {
 
 /*Carusel*/
 .carousel-container{
-  width: 60%;
+  width: 100%;
   margin: auto;
   overflow: hidden;
   position: relative;
@@ -237,7 +237,7 @@ ul {
   left: 5%;
   font-size: 30px;
   color: white;
-  opacity: 0.5;
+  opacity: 20;
   cursor: pointer;
 }
 
@@ -247,7 +247,7 @@ ul {
   right: 5%;
   font-size: 30px;
   color: white;
-  opacity: 0.5;
+  opacity: 20;
   cursor: pointer;
 }
 
