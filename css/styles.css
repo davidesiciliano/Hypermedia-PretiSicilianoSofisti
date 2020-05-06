@@ -219,7 +219,7 @@ ul {
 
 /*Carusel*/
 .carousel-container{
-  width: 100%;
+  width: 60%;
   margin: auto;
   overflow: hidden;
   position: relative;
