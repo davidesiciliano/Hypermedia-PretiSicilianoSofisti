@@ -58,11 +58,15 @@ p{
 }
 
 /* Three image containers (use 25% for four, and 50% for two, etc) */
-.column {
+.gallery .column {
   float: left;
-  width:20%;
+  width:25%;
 }
 
+.partners .column{
+  float: left;
+  width: 20%;
+}
 /* Clear floats after image containers */
 .row::after {
   content: "";
@@ -322,11 +326,21 @@ p{
 }
 
 .map{
-  width:50%;
+  width:100%;
   height:350px;
   border-radius: 10px;
 }
 
 .bottom-section{
   padding: 20px;
+  display: flex;
+}
+
+.bottom-section .column{
+  flex: 50%;
+  padding-right: 50px;
+}
+
+.bottom-section .column p{
+  text-align: left;
 }
