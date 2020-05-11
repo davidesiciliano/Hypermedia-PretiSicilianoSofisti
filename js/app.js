@@ -39,3 +39,7 @@ carouselSlide.addEventListener('transitionend',() => {
     carouselSlide.style.transform = 'translateX('+(-size*counter)+'px)';
   }
 })
+
+function popUp() {
+  alert("Due to the currrent COVID-19 situation all the association activities are suspended!");
+}
