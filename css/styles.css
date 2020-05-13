@@ -46,7 +46,8 @@ p{
   padding-bottom: .5em;
 }
 
-.container {
+.contents {
+  width: 100%;
   min-height: 100%;
 }
 
@@ -386,3 +387,12 @@ h4{
   padding-top: 50px;
 }
 
+/*People*/
+.pic{
+  display: flex;
+  justify-content: center;
+}
+
+.people img{
+  border-radius: 10px;
+}
