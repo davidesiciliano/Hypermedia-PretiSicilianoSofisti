@@ -283,10 +283,12 @@ p{
   height: 200px;
 }
 
-.partners .row .column img{
-  width: 100px;
-	padding-bottom: 33.33%;
-	position: relative;
+.partners .row{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .joinUsBtnContainer{
