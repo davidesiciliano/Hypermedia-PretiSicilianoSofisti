@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang=en>
+  <head>
+    <title>Volontariato di Montagna</title>
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    <link rel="stylesheet" href="img/fontawesome-free-5.13.0-web/css/all.css">
+    <meta charset="utf-8">   
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="img/Favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/Favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/Favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/Favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">  
+  </head>
+
+  <body>
+  <!--header-->
+    <div class="header">
+      <div class="container">
+        <div class="logo">
+          <img src="img/Logo.png" alt="logo"/>
+          <h1><a href="home_page.html">Volontariato di Montagna</a></h1>
+          <div class="nav">
+            <a href="association_page.html">Association</a>    <!--al posto dei # vanno i link alle pagine da caricare-->
+            <a href="#">Farms</a>
+            <a href="#">Activities</a>
+            <a href="#">Events</a>
+            <a href="people_page.html">People</a>
+            <a href="#">Help Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--contents-->
+    <div class="contents">
+      <div class="pad"></div> 
+      
+      <div class="eventDescription">
+        <div class="column1">
+          <img src="img\Founders\1.jfif" alt="">
+        </div>
+        <div class="column2">
+         
+          <p>Camilla is one of the tree founders of the association. She created Volontariato di montagna in 2018 with other two friends after the end of his study carrier and a digree in economics with a thesis in Sustainable development of italian small Farms where she studied more in depth those realities and got the idea of the asssociation. She is dynamic and corious.</p>
+          <h3>Assigned activities</h3>
+        </div>
+      </div>
+    
+
+    <!--footer-->
+    <div class="footer">
+
+      <div class="footer-content">
+
+        <div class="footer-section about">
+          <h2>Contacts</h2>
+          <p>Contact us for more informations:</p>
+          <div class="contact">
+            <span><i class="fas fa-phone">&nbsp;02 50204018</i></span>
+            <span><i class="fas fa-envelope">&nbsp;info@volontariatodimontagna.it</i></span>
+          </div>
+          <div class="socials">
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+            <a href="https://youtube.com/"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-section links">
+          <h2>Quick Links</h2>
+            <br>
+              <ul>
+                <li><b href="#">Terms</b></li>
+                <li><b href="#">FAQ</b></li>
+              </ul>
+        </div>
+
+        <div class="footer-section contact-form">
+          <h2>Contact Us</h2>
+          <br>
+          <form action="" method="post">
+            <input type="email" name="email" class="text-input contact-input" placeholder="Your email address..."></input>
+            <textarea name="message" class="text-input contact-input" placeholder="Your message..."></textarea>
+            <button type="submit" class="btn btn-big contact-btn">
+              <i class="fas fa-envelope">&nbsp; Send</i>
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        &copy; volontariatodimontagna.com | Designed by Preti Siciliano Sofisti
+      </div>
+    </div>
+  </body>
+  <script src = "js/app.js"></script>
+  <script src = "js/app.js">popUp();</script>
+  <script>
+    function myMap() {
+      var mapProp= {
+        center:new google.maps.LatLng(51,0),
+        zoom:5,
+      };
+      var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+    }
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4wPa65PgdXb-DiKdVZf-Um7AOv8Yp_dY&callback=myMap"></script>
+</html>
