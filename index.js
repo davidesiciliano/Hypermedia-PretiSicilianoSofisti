@@ -2,11 +2,12 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var PORT = process.env.PORT || 5000;
 var app = express();
+var path = require("path");
 
 app.use(bodyParser.json());
 
-app.get("/dreamforce", function(req, res) {
-    res.status(200).json({message: "Hello Dreamforce"})
+app.get("/", function(req, res) {
+    rres.sendFile(path.join(__dirname + '/home_page.html'));
 });
 
 app.listen(PORT, function() {
