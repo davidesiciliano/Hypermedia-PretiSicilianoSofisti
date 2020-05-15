@@ -16,7 +16,7 @@ h2 {
   padding-top: .5em;
 }
 
-h3{
+h3 {
   font-family: Helvetica;
   color: black;
   padding-top: .5em;
@@ -39,7 +39,7 @@ ul {
   margin-bottom: 1em;
 }
 
-p{
+p {
   text-align: center;
   font-family: Helvetica;
   padding-bottom: .5em;
@@ -50,7 +50,7 @@ p{
   min-height: 100%;
 }
 
-.nextEvents{
+.nextEvents {
   background: #F1F1F1;
   width: 100%;
   height: 414px;
@@ -64,7 +64,7 @@ p{
   flex: auto;
 }
 
-.partners .column{
+.partners .column {
   float: center;
   width: 20%;
 }
@@ -75,13 +75,13 @@ p{
   display: table;
 }
 
-.partners{
+.partners {
   width: 100%;
 }
-.partners img{
+.partners img {
   height: 100px;
 }
-.upper-section{
+.upper-section {
   width: 100%;
 }
 
@@ -158,7 +158,7 @@ p{
 .footer .footer-content h2 {
   color: white;
 }
-.footer-content p{
+.footer-content p {
   text-align: left;
 }
 
@@ -168,7 +168,7 @@ p{
   margin-bottom: 20px;
 }
 
-.footer .footer-content .about .socials a{
+.footer .footer-content .about .socials a {
   border: 1px solid white;
   width: 45px;
   height: 35px;
@@ -206,14 +206,12 @@ p{
   padding: 25px;
 }
 
-.footer .footer-content .footer-section .links .br .ul b{
+.footer .footer-content .footer-section .links .br .ul b {
   display: block;
   margin-bottom: 50px;
   font-size: 3em;
   transition: all .3s
 }
-
-
 
 .footer .footer-content .contact-form {
   padding-right: 70px;
@@ -245,21 +243,21 @@ p{
   line-height: 1.3rem;
 }
 
-/*Carusel*/
-.carousel-container{
+/*Carousel*/
+.carousel-container {
   width: 100%;
   margin: auto;
   overflow: hidden;
   position: relative;
 }
 
-.carousel-slide{
+.carousel-slide {
   display: flex;
   width: 100%;
   height: 100%;
 }
 
-#prevBtn{
+#prevBtn {
   position: absolute;
   top: 50%;
   left: 5%;
@@ -269,7 +267,7 @@ p{
   cursor: pointer;
 }
 
-#nextBtn{
+#nextBtn {
   position: absolute;
   top: 50%;
   right: 5%;
@@ -279,16 +277,16 @@ p{
   cursor: pointer;
 }
 
-.pad{
+.pad {
   height: 65px;
 }
 
 /*partners*/
-.partners{
+.partners {
   height: 200px;
 }
 
-.partners .row{
+.partners .row {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -296,11 +294,9 @@ p{
   justify-content: space-evenly;
 }
 
-.joinUsBtnContainer{
+.joinUsBtnContainer {}
 
-}
-
-.joinUsBtn{
+.joinUsBtn {
   height: 25px;
   width: auto;
   text-align: center;
@@ -308,23 +304,23 @@ p{
   background-color: #0F4D71;
 }
 
-.buttomImage{
+.buttomImage {
   width: 100%;
 }
 
-.middle-section{
+.middle-section {
   background-color: #F1F1F1;
   width: 100%;
   height: 150px;
 }
 
-.gallery{
+.gallery {
   height: 400px;
   text-align: center;
 }
 
 
-.gallery img{
+.gallery img {
   overflow: hidden;
   width: 200px;
   height: 100px;
@@ -333,13 +329,13 @@ p{
   box-shadow: 0 0 4px #666;
 }
 
-.map{
+.map {
   width:100%;
   height:350px;
   border-radius: 10px;
 }
 
-.bottom-section{
+.bottom-section {
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
@@ -347,16 +343,16 @@ p{
   background-color: #F1F1F1;
 }
 
-.bottom-section .column{
+.bottom-section .column {
   flex: 50%;
   padding-right: 50px;
 }
 
-.bottom-section .column p{
+.bottom-section .column p {
   text-align: left;
 }
 
-.eventDescription{
+.eventDescription {
   padding-top: 100px;
   padding-left: 20px;
   padding-right: 20px;
@@ -364,51 +360,51 @@ p{
   display: flex;
 }
 
-.eventDescription .column1{
+.eventDescription .column1 {
   flex:  100%;
   padding-right: 50px;
 }
-.eventDescription .column1 img{
+.eventDescription .column1 img {
   border-radius: 10px;
   width: 100%;
 }
 
-h4{
+h4 {
   font-family: Helvetica;
   font-size: 20px;
   color: #0F4D71;
 }
-.eventDescription .column2 .contacts{
+.eventDescription .column2 .contacts {
   display: flex;
 }
 
-.eventDescription .column2 p{
+.eventDescription .column2 p {
   text-align: justify;
 }
-.eventDescription .column2 .contacts .columnA{
+.eventDescription .column2 .contacts .columnA {
   flex: 50%;
 }
 
-.eventDescription .column2 .contacts .columnB{
+.eventDescription .column2 .contacts .columnB {
   flex: 50%;
   padding-top: 50px;
 }
 
 /*People*/
-.pic{
+.pic {
   display: flex;
   justify-content: center;
 }
-.elem{
+.elem {
   padding: 10px;
 }
-.people img{
+.people img {
   border-radius: 10px;
   box-shadow: 0 0 4px #666;
   z-index: 0;
 }
 
-.name-box{
+.name-box {
   background-color: white;
   color: black;
   border-bottom-left-radius: 10px;
