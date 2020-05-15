@@ -27,7 +27,6 @@ a {
   font-family: Helvetica;
   margin-right: 20px;
   color: white;
-  text-shadow: 0 0 4px #666;
 }
 
 a:focus {
@@ -58,14 +57,15 @@ p{
   left: 0px;
 }
 
-/* Three image containers (use 25% for four, and 50% for two, etc) */
-.gallery .column {
-  float: left;
-  width:25%;
+.gallery .row {
+  display: flex;
+}
+.gallery .row .column{
+  flex: auto;
 }
 
 .partners .column{
-  float: left;
+  float: center;
   width: 20%;
 }
 /* Clear floats after image containers */
@@ -95,17 +95,18 @@ p{
   left: 0px;
   z-index: 99999;
   box-shadow: 0 0 4px #666;
+  height: 60px;
 }
 
 .header img {
   float: left;
-  width: 128px;
-  height: 83px;
+  width: auto;
+  height: 80px;
 }
 
 .logo {
   font-family: Helvetica;
-  margin-top: 15px;
+  margin-top: 0;
 }
 
 .logo h1 {
@@ -114,8 +115,8 @@ p{
 
 .nav {
   align-content: right;
-  padding-top: 25px;
-  margin-right: 25px;
+  padding-top: 20px;
+  margin-right: 18px;
 }
 
 
@@ -157,6 +158,9 @@ p{
 .footer .footer-content h2 {
   color: white;
 }
+.footer-content p{
+  text-align: left;
+}
 
 .footer .footer-content .about .contact span {
   display: block;
@@ -164,7 +168,7 @@ p{
   margin-bottom: 20px;
 }
 
-.footer .footer-content .about .socials a {
+.footer .footer-content .about .socials a{
   border: 1px solid white;
   width: 45px;
   height: 35px;
@@ -231,12 +235,13 @@ p{
 }
 
 .footer .footer-content .contact-form .contact-btn {
-  float: right;
-  background: grey;
+  float: center;
+  background: rgb(18, 88, 129);
   color: white;
   border: 1px solid transparent;
   border-radius: .25rem;
   padding: .7rem 1.3rem;
+  padding-right: .5rem;
   line-height: 1.3rem;
 }
 
