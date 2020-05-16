@@ -14,7 +14,7 @@ carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
 //button Listener
 nextBtn.addEventListener('click', () => {
   if (counter >= carouselImages.length - 1)
-    counter = 0;
+    counter = 1;
   carouselSlide.style.transform = "transform 0.4s ease-in-out";
   counter++;
   carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
@@ -22,7 +22,7 @@ nextBtn.addEventListener('click', () => {
 
 prevBtn.addEventListener('click', () => {
   if (counter <= 0)
-    counter = carouselImages.length - 1;
+    counter = carouselImages.length - 2;
   carouselSlide.style.transform = "transform 0.4s ease-in-out";
   counter--;
   carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
@@ -60,7 +60,6 @@ const navSlide = () => {
         link.style.animation = '';
       } else {
         link.style.animation = 'navLinkFade 0.5s ease forwards 0.2s';
-        console.log(index);
       }
     });
     //Burger Animation

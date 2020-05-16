@@ -332,20 +332,21 @@ footer .footer-content .footer-section .links a{
   padding: .7rem 1.3rem;
   padding-right: .5rem;
   line-height: 1.3rem;
+  cursor: pointer;
 }
 
 /*Carousel*/
 .carousel-container {
-  width: 100%;
-  margin: auto;
   overflow: hidden;
   position: relative;
 }
 
-.carousel-slide {
+.carousel-slide{
   display: flex;
-  width:1189px;
-  height: 100%;
+}
+.carousel-slide img{
+  width: 100%;
+  border: 1px solid red;  /*justr for debug*/
 }
 
 #prevBtn {
@@ -369,19 +370,28 @@ footer .footer-content .footer-section .links a{
 }
 
 
-
-
-.joinUsBtnContainer {}
-
-.joinUsBtn {
-  height: 25px;
-  width: auto;
-  text-align: center;
-  text-decoration-color: white;
-  background-color: #0F4D71;
+.joinUsBtnContainer{
+  width: 100%;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.buttomImage {
+.joinUsBtn {
+  cursor: pointer;
+  float: center;
+  background: rgb(18, 88, 129);
+  color: white;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  padding: .7rem 1.3rem;
+  padding-right: .5rem;
+  line-height: 1.3rem;
+}
+
+.bottomImage {
   width: 100%;
 }
 
