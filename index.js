@@ -7,7 +7,7 @@ var path = require("path");
 app.use(bodyParser.json());
 
 app.get("/", function(req, res) {
-    rres.sendFile(path.join(__dirname + '/home_page.html'));
+    res.sendFile(path.join(__dirname + '/public/pages/home_page.html'));
 });
 
 app.listen(PORT, function() {
