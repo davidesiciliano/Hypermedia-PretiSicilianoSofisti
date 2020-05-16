@@ -248,13 +248,14 @@ p {
 .carousel-container {
   width: 100%;
   margin: auto;
+  padding-top: 60px;
   overflow: hidden;
   position: relative;
 }
 
 .carousel-slide {
   display: flex;
-  width: 100%;
+  width:1189px;
   height: 100%;
 }
 
@@ -274,13 +275,10 @@ p {
   right: 5%;
   font-size: 30px;
   color: white;
-  opacity: 20;
+  opacity: 10;
   cursor: pointer;
 }
 
-.pad {
-  height: 65px;
-}
 
 /*partners*/
 .partners {
