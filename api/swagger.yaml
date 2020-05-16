@@ -1,0 +1,109 @@
+swagger: "2.0"
+info:
+  description: "This is a simple bookstore server with a book inventory, users and\
+    \ a shopping cart."
+  version: "1.0.0"
+  title: "Volontariato di Montagna"
+  contact:
+    email: "davidegiuseppe.siciliano@mail.polimi.it"
+  license:
+    name: "Apache-2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "localhost:8080"
+basePath: "/v2"
+tags:
+  - name: "person"
+    description: "person of the volontariato"
+schemes:
+  - "http"
+paths:
+  /people:
+    get:
+      tags:
+        - "person"
+      summary: "People who work for the association"
+      description: "List of people in the association"
+      operationId: "peopleGET"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "offset"
+          in: "query"
+          description: "Pagination offset. Default is 0."
+          required: false
+          type: "integer"
+        - name: "limit"
+          in: "query"
+          description: "Maximum number of items per page. Default is 20 and cannot exceed\
+          \ 500."
+          required: false
+          type: "integer"
+      responses:
+        200:
+          description: "A collection of People"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Person"
+        404:
+          description: "Unexpected error"
+      x-swagger-router-controller: "Person"
+  /people/{personId}:
+    get:
+      tags:
+        - "person"
+      summary: "Find person by ID"
+      description: "Returns a person"
+      operationId: "getPersonById"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "personId"
+          in: "path"
+          description: "ID of person to return"
+          required: true
+          type: "integer"
+          format: "int64"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/Person"
+        400:
+          description: "Invalid ID supplied"
+        404:
+          description: "Person not found"
+      x-swagger-router-controller: "Person"
+
+definitions:
+  Person:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+        format: "int64"
+      name:
+        type: "string"
+      surname:
+        type: "string"
+      role:
+        type: "string"
+        description: "role of the person in the association"
+        enum:
+          - "Founder"
+          - "Expert"
+          - "Volunteer"
+      personImg:
+        type: "string"
+    title: "Person"
+    description: "A person"
+    example:
+      - id: 0
+        name: "Davide"
+        surname: "Siciliano"
+        role: "Founder"
+        personImg: "boh"
+
+externalDocs:
+  description: "Find out more about Swagger"
+  url: "http://swagger.io"
