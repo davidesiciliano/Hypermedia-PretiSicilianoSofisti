@@ -12,11 +12,162 @@ info:
 host: "localhost:8080"
 basePath: "/v2"
 tags:
+  - name: "activity"
+    description: "Activities offered by the association"
+  - name: "contact"
+    description: "contact description"
+  - name: "FAQ"
+    description: "FAQ asked by users"
   - name: "person"
     description: "person of the volontariato"
 schemes:
   - "http"
 paths:
+  /activities:
+    get:
+      tags:
+        - "activity"
+      summary: "Activities of the association"
+      description: "List of activities offered by association"
+      operationId: "activityGET"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "offset"
+          in: "query"
+          description: "Pagination offset. Default is 0."
+          required: false
+          type: "integer"
+        - name: "limit"
+          in: "query"
+          description: "Maximum number of items per page. Default is 20 and cannot exceed\
+          \ 500."
+          required: false
+          type: "integer"
+      responses:
+        200:
+          description: "A collection of Activities"
+          schema:
+            type: "array"
+            items:
+              $ref: '#/definitions/Activity'
+        404:
+          description: "Unexpected error"
+      x-swagger-router-controller: "Contact"
+  /activities/{activityId}:
+    get:
+      tags:
+        - "activity"
+      summary: "Find activity by ID"
+      description: "Returns an activity"
+      operationId: "getActivityById"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "activityId"
+          in: "path"
+          description: "ID of activity to return"
+          required: true
+          type: "integer"
+          format: "int64"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            $ref: '#/definitions/Activity'
+        400:
+          description: "Invalid ID supplied"
+        404:
+          description: "Activity not found"
+      x-swagger-router-controller: "Activity"
+  /contacts:
+    get:
+      tags:
+        - "contact"
+      summary: "Contact of Person or Farm"
+      description: "List of contacts"
+      operationId: "contactGET"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "offset"
+          in: "query"
+          description: "Pagination offset. Default is 0."
+          required: false
+          type: "integer"
+        - name: "limit"
+          in: "query"
+          description: "Maximum number of items per page. Default is 20 and cannot exceed\
+          \ 500."
+          required: false
+          type: "integer"
+      responses:
+        200:
+          description: "A collection of Contacts"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Contact"
+        404:
+          description: "Unexpected error"
+      x-swagger-router-controller: "Contact"
+  /contacts/{contactId}:
+    get:
+      tags:
+        - "contact"
+      summary: "Find contact by ID"
+      description: "Returns a contact"
+      operationId: "getContactById"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "contactId"
+          in: "path"
+          description: "ID of contact to return"
+          required: true
+          type: "integer"
+          format: "int64"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/Contact"
+        400:
+          description: "Invalid ID supplied"
+        404:
+          description: "Contact not found"
+      x-swagger-router-controller: "Contact"
+  /faq:
+    get:
+      tags:
+        - "FAQ"
+      summary: "FAQs of the Association"
+      description: "List of Frequent Asked Questions"
+      operationId: "faqGET"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "offset"
+          in: "query"
+          description: "Pagination offset. Default is 0."
+          required: false
+          type: "integer"
+        - name: "limit"
+          in: "query"
+          description: "Maximum number of items per page. Default is 20 and cannot exceed\
+          \ 500."
+          required: false
+          type: "integer"
+      responses:
+        200:
+          description: "A collection of FAQ"
+          schema:
+            type: "array"
+            items:
+              $ref: '#/definitions/FAQ'
+        404:
+          description: "Unexpected error"
+      x-swagger-router-controller: "Person"
   /people:
     get:
       tags:
@@ -74,10 +225,67 @@ paths:
         404:
           description: "Person not found"
       x-swagger-router-controller: "Person"
-  /contact:
-  /contact/{contactId}:
 
 definitions:
+  Activity:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+        format: "int64"
+      name:
+        type: "string"
+      description:
+        type: "string"
+      startDate:
+        type: "string"
+        format: "date"
+      endDate:
+        type: "string"
+        format: "date"
+      activityImg:
+        type: "string"
+    title: "Activity"
+    description: "Contact associated to Person and Farm"
+    example:
+      id: 0
+      name: "Harvest"
+      description: "Harvest description"
+      startDate: "2020-07-01"
+      endDate: "2020-09-30"
+      activityImg: "img1"
+  Contact:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+        format: "int64"
+      email:
+        type: "string"
+        format: "email"
+      phoneNumber:
+        type: "string"
+        #format: "phoneNumber"
+    title: "Contact"
+    description: "Contact associated to Person and Farm"
+    example:
+      id: 0
+      email: "davide@siciliano.it"
+      phoneNumber: "12345"
+  FAQ:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+        format: "int64"
+      question:
+        type: "string"
+      answer:
+        type: "string"
+    example:
+      id: 0
+      question: "How to contact us"
+      answer: "Use the contact form"
   Person:
     type: "object"
     properties:
@@ -102,31 +310,16 @@ definitions:
     title: "Person"
     description: "A person"
     example:
-      - id: 0
-        name: "Davide"
-        surname: "Siciliano"
-        role: "Founder"
-        personImg: "boh"
-        contact:
-          id: 0
-          email: "davide@siciliano.it"
-          phoneNumber: "12345"
-  Contact:
-    type: "object"
-    properties:
-      id:
-        type: "integer"
-        format: "int64"
-      email:
-        type: "string"
-      phoneNumber:
-        type: "string"
-    title: "Contact"
-    description: "Contact associated to Person and Farm"
-    example:
       id: 0
-      email: "davide@siciliano.it"
-      phoneNumber: "12345"
+      name: "Davide"
+      surname: "Siciliano"
+      role: "Founder"
+      personImg: "boh"
+      contact:
+        id: 0
+        email: "davide@siciliano.it"
+        phoneNumber: "12345"
+
 
 externalDocs:
   description: "Find out more about Swagger"
