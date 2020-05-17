@@ -13,13 +13,17 @@ host: "localhost:8080"
 basePath: "/v2"
 tags:
   - name: "activity"
-    description: "Activities offered by the association"
+    description: "Activity offered by the association"
   - name: "contact"
-    description: "contact description"
+    description: "Contact of Person or Farm"
+  - name: "event"
+    description: "Event organized by the association"
   - name: "FAQ"
     description: "FAQ asked by users"
+  - name: "farm"
+    description: "Farm involved in the association"
   - name: "person"
-    description: "person of the volontariato"
+    description: "Person of the volontariato"
 schemes:
   - "http"
 paths:
@@ -137,6 +141,63 @@ paths:
         404:
           description: "Contact not found"
       x-swagger-router-controller: "Contact"
+  /events:
+    get:
+      tags:
+        - "event"
+      summary: "Events organized by the association"
+      description: "List of events of the association"
+      operationId: "eventsGET"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "offset"
+          in: "query"
+          description: "Pagination offset. Default is 0."
+          required: false
+          type: "integer"
+        - name: "limit"
+          in: "query"
+          description: "Maximum number of items per page. Default is 20 and cannot exceed\
+          \ 500."
+          required: false
+          type: "integer"
+      responses:
+        200:
+          description: "A collection of Events"
+          schema:
+            type: "array"
+            items:
+              $ref: '#/definitions/Event'
+        404:
+          description: "Unexpected error"
+      x-swagger-router-controller: "Event"
+  /events/{eventId}:
+    get:
+      tags:
+        - "event"
+      summary: "Find event by ID"
+      description: "Returns an event"
+      operationId: "getEventById"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "eventId"
+          in: "path"
+          description: "ID of event to return"
+          required: true
+          type: "integer"
+          format: "int64"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            $ref: '#/definitions/Event'
+        400:
+          description: "Invalid ID supplied"
+        404:
+          description: "Event not found"
+      x-swagger-router-controller: "Event"
   /faq:
     get:
       tags:
@@ -168,6 +229,63 @@ paths:
         404:
           description: "Unexpected error"
       x-swagger-router-controller: "Person"
+  /farms:
+    get:
+      tags:
+        - "farm"
+      summary: "Farm enrolled in the association"
+      description: "List of farms in the association"
+      operationId: "farmsGET"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "offset"
+          in: "query"
+          description: "Pagination offset. Default is 0."
+          required: false
+          type: "integer"
+        - name: "limit"
+          in: "query"
+          description: "Maximum number of items per page. Default is 20 and cannot exceed\
+          \ 500."
+          required: false
+          type: "integer"
+      responses:
+        200:
+          description: "A collection of Farms"
+          schema:
+            type: "array"
+            items:
+              $ref: '#/definitions/Farm'
+        404:
+          description: "Unexpected error"
+      x-swagger-router-controller: "Farm"
+  /farms/{farmId}:
+    get:
+      tags:
+        - "farm"
+      summary: "Find farm by ID"
+      description: "Returns a farm"
+      operationId: "getFarmById"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "farmId"
+          in: "path"
+          description: "ID of farm to return"
+          required: true
+          type: "integer"
+          format: "int64"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            $ref: '#/definitions/Farm'
+        400:
+          description: "Invalid ID supplied"
+        404:
+          description: "Farm not found"
+      x-swagger-router-controller: "Farm"
   /people:
     get:
       tags:
@@ -272,6 +390,43 @@ definitions:
       id: 0
       email: "davide@siciliano.it"
       phoneNumber: "12345"
+  Event:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+        format: "int64"
+      name:
+        type: "string"
+      date:
+        type: "string"
+        format: "date"
+      hours:
+        type: "string"
+        format: "time"
+      location:
+        type: "string"
+      smallDescription:
+        type: "string"
+      completeDescription:
+        type: "string"
+      eventImg:
+        type: "string"
+      personId:
+        type: "integer"
+        format: "int64"
+    title: "Event"
+    description: "An event of the association"
+    example:
+      id: 0
+      name: "ViggionFestival"
+      date: "2020-07-28"
+      hours: "21:00"
+      location: "Viggiona"
+      smallDescritpion: "small description"
+      completeDescription: "complete description"
+      eventImg: "Img0"
+      personId: 1
   FAQ:
     type: "object"
     properties:
@@ -286,6 +441,32 @@ definitions:
       id: 0
       question: "How to contact us"
       answer: "Use the contact form"
+  Farm:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+        format: "int64"
+      name:
+        type: "string"
+      description:
+        type: "string"
+      openingTimes:
+        type: "string"
+      farmImg:
+        type: "string"
+      contactId:
+        type: "integer"
+        format: "int64"
+    title: "Farm"
+    description: "A farm involved in the association"
+    example:
+      id: 0
+      name: "Rossi's Farm"
+      description: "Farm managed by Rossi's Family"
+      openingTimes: "7.00 - 14.00, 17.00 - 19.30"
+      FarmImg: "Img0"
+      contactId: 0
   Person:
     type: "object"
     properties:
@@ -305,21 +486,18 @@ definitions:
           - "Volunteer"
       personImg:
         type: "string"
-      contact:
-        $ref: "#/definitions/Contact"
+      contactId:
+        type: "integer"
+        format: "int64"
     title: "Person"
-    description: "A person"
+    description: "A person involved in the association"
     example:
       id: 0
       name: "Davide"
       surname: "Siciliano"
       role: "Founder"
-      personImg: "boh"
-      contact:
-        id: 0
-        email: "davide@siciliano.it"
-        phoneNumber: "12345"
-
+      personImg: "Img0"
+      contactId: 0
 
 externalDocs:
   description: "Find out more about Swagger"
