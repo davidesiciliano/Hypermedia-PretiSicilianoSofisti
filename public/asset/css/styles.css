@@ -534,3 +534,15 @@ h1{
   font-family: 'Poppins', sans-serif;
   font-size: 30px;
 }
+
+.Terms li{
+  font-family: 'Poppins', sans-serif;
+}
+
+.Terms p{
+  text-align: justify;
+}
+
+.Terms h3{
+  text-align: center;
+}
