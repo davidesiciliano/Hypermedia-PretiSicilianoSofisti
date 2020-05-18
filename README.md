@@ -11,7 +11,7 @@
 - [ ] FAQ_page.html
 - [ ] singleFarm_page.html
 - [ ] singleEvent_page.html
-- [ ] singleVolunteer_page.html
-- [ ] singleExpert_page.html
-- [ ] singleFounder_page.html
+- [x] singleVolunteer_page.html
+- [x] singleExpert_page.html
+- [x] singleFounder_page.html
 - [x] terms_page.html
