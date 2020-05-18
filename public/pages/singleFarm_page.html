@@ -47,6 +47,8 @@
 
       <div class="topImage">
         <img src="../asset/img/image_carusel/3.jpg" alt="text text" style="width:100%">
+        <div class="name"><a href="../pages/people_page.html"><i class="fas fa-chevron-left"></i> Farm Name</a></div>
+        <div class="navInfo"><a href="../pages/farms_page.html">Farms</a></div>
       </div>
 
       <div class="upper-section">
@@ -150,7 +152,8 @@
     function myMap() {
       var mapProp= {
         center:new google.maps.LatLng(51,0),
-        zoom:5,
+        zoom:15,
+        mapTypeId: google.maps.MapTypeId.HYBRID
       };
       var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
     }

@@ -463,8 +463,11 @@ nav{
 }
 
 .bottom-section .column p {
+  padding-left: 0;
+  padding-bottom: 10px;
   text-align: left;
 }
+
 
 .eventDescription {
   padding-bottom: 20px;
@@ -472,20 +475,34 @@ nav{
 }
 
 .eventDescription .column1 {
-  flex: 100%;
-  padding-left: 20px;
+  flex: auto;
+  padding-left: 40px;
+  border: 1px solid red;  /*justr for debug*/
+  min-height: 300px;
 }
+
 .eventDescription .column1 img {
   border-radius: 10px;
-  width: 100%;
-  max-width: 250px;
+  width: auto;
+  max-width: 300px;
+}
+
+.eventDescription h3{
+  padding-left: 30px;
 }
 
 h4 {
   font-family: 'Poppins', sans-serif;
   font-size: 20px;
+  padding-left: 30px;
   color: #0F4D71;
 }
+
+.eventDescription .column2{
+  border: 1px solid red;  /*justr for debug*/
+  width: 100%;
+}
+
 .eventDescription .column2 .contacts {
   display: flex;
 }
@@ -525,9 +542,28 @@ h4 {
 }
 
 .topSection{
-  display: flex;
+  height: 60px;
   padding: 20px;
+  padding-bottom: 40px;
+  position: relative;
+  text-align: center;
   padding-bottom: 0;
+}
+.topSection a{
+  color: black;
+}
+.navInfo{
+  font-family: 'Poppins', sans-serif;
+  position: absolute;
+  top: 25px;
+  right: 40px;
+}
+.name{
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  position: absolute;
+  top: 8px;
+  left: 16px;
 }
 
 h1{
@@ -625,9 +661,40 @@ h1{
   color: black;
   position: absolute;
   width: 100%;
+
+.Terms li{
+  font-family: 'Poppins', sans-serif;
+}
+
+.Terms p{
+  text-align: justify;
+}
+
+.Terms h3{
+  text-align: center;
+}
+.contents .topImage {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.contents .topImage .title{
+  position: absolute;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 60px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.small{
+  bottom: 0px;
+}
+
+.farm-section{
+  height: 500px;
 }
 
 /* Image hoover animation */
@@ -801,3 +868,6 @@ input {
 .btn-blue:hover {
   background: #0f3b71;
 }
+
+
+
