@@ -472,13 +472,20 @@ nav{
 }
 
 .eventDescription .column1 {
-  flex: 100%;
-  padding-left: 20px;
+  flex: auto;
+  padding-left: 40px;
+  border: 1px solid red;  /*justr for debug*/
+  min-height: 300px;
 }
+
 .eventDescription .column1 img {
   border-radius: 10px;
-  width: 100%;
-  max-width: 250px;
+  width: auto;
+  max-width: 300px;
+}
+
+.eventDescription h3{
+  padding-left: 30px;
 }
 
 h4 {
@@ -486,6 +493,12 @@ h4 {
   font-size: 20px;
   color: #0F4D71;
 }
+
+.eventDescription .column2{
+  border: 1px solid red;  /*justr for debug*/
+  width: 100%;
+}
+
 .eventDescription .column2 .contacts {
   display: flex;
 }
@@ -525,9 +538,26 @@ h4 {
 }
 
 .topSection{
-  display: flex;
+  height: 60px;
   padding: 20px;
+  padding-bottom: 40px;
+  position: relative;
+  text-align: center;
   padding-bottom: 0;
+}
+
+.navInfo{
+  font-family: 'Poppins', sans-serif;
+  position: absolute;
+  top: 25px;
+  right: 40px;
+}
+.topSection .name{
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  position: absolute;
+  top: 8px;
+  left: 16px;
 }
 
 h1{
@@ -562,3 +592,6 @@ h1{
   transform: translate(-50%, -50%);
 }
 
+.small{
+  bottom: 0px;
+}
