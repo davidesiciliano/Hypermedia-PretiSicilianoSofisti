@@ -546,3 +546,19 @@ h1{
 .Terms h3{
   text-align: center;
 }
+.contents .topImage {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.contents .topImage .title{
+  position: absolute;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 60px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
