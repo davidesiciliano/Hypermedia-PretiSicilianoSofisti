@@ -8,7 +8,7 @@
 - [ ] farms_page.html
 - [ ] events_page.html
 - [ ] people_page.html
-- [ ] FAQ_page.html             Almost done only one probelm with margin right to be fixed
+- [x] FAQ_page.html            
 - [x] singleActivity_page.html  Related events missing + farms
 - [x] singleFarm_page.html      Related events missing
 - [x] singleEvent_page.html     Related activities missing
