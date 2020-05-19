@@ -1,7 +1,7 @@
 ## Hypermedia Project
 
 # TODO:
-- [ ] index.html                Next events missing and Image carousel to be fixed
+- [x] index.html                Next events missing
 - [x] association_page.html
 - [ ] activities_page.html
 - [ ] helpUs_page.html

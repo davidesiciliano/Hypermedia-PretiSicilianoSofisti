@@ -34,6 +34,54 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+    <style type="text/css">
+      #slider{
+        overflow: hidden;
+      }
+
+      #slider figure{
+        position: relative;
+        width: 500%;
+        margin: 0;
+        left: 0;
+        animation: 20s slider infinite;
+      }
+
+      #slider figure img{
+        float: left;
+        width: 20%;
+      }
+
+      @keyframes slider{
+        0%{
+          left: 0;
+        }
+        20%{
+          left: 0;
+        }
+        25%{
+          left: -100%;
+        }
+        45%{
+          left: -100%;
+        }
+        50%{
+          left: -200%;
+        }
+        70%{
+          left: -200%;
+        }
+        75%{
+          left: -300%;
+        }
+        90%{
+          left: -300%;
+        }
+        100%{
+          left: -400%;
+        }
+      }
+    </style>
   </head>
 
   <body>
@@ -64,7 +112,7 @@
 
     <!--contents-->
     <div class="contents">
-      <!--Image Carusel-->
+      <!--Image Carusel
         <div class="carousel-container">
           <div class="carousel-slide">
             <img src="asset/img/image_carusel/3.jpg" id="lastClone" alt="">
@@ -76,9 +124,17 @@
           <i class="fas fa-arrow-left" id="prevBtn"></i>
           <i class="fas fa-arrow-right" id="nextBtn"></i>
         </div>
-
-
-
+      -->
+        <div class="slider" id="slider">
+          <div class="title">Volontariato di montagna</div>
+          <figure>
+            <img src="asset/img/image_carusel/1.jpg">
+            <img src="asset/img/image_carusel/2.jpg">
+            <img src="asset/img/image_carusel/3.jpg">
+            <img src="asset/img/image_carusel/2.jpg">
+            <img src="asset/img/image_carusel/1.jpg">
+          </figure>
+        </div>
 
 
 
