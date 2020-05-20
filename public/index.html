@@ -84,27 +84,6 @@
     </style>
   </head>
 
-  <body>
-    <h1>SERVER IS RUNNING</h1>
-    <p>LIST OF PEOPLE</p>
-    <ul></ul>
-
-    <div class="user"></div>
-    <script>
-      var myList = document.querySelector("ul");
-      fetch("v2/people").then(function (response) {
-        return response.json();
-      }).then(function (json) {
-        for (var i=0; i<json.length; i++) {
-          var listElement = document.createElement("li");
-          let { id, name, surname, role, personImg, contactId } = json[i];
-          listElement.innerHTML = `${id} - ${name} - ${surname}`;
-          myList.appendChild(listElement);
-        }
-      })
-    </script>
-
-
   <!--header-->
     <nav>
       <div class="logo">
