@@ -1,7 +1,7 @@
+---
 swagger: "2.0"
 info:
-  description: "This is a simple bookstore server with a book inventory, users and\
-    \ a shopping cart."
+  description: "Volontariato di Montagna Association's website"
   version: "1.0.0"
   title: "Volontariato di Montagna"
   contact:
@@ -12,338 +12,337 @@ info:
 host: "localhost:8080"
 basePath: "/v2"
 tags:
-  - name: "activity"
-    description: "Activity offered by the association"
-  - name: "contact"
-    description: "Contact of Person or Farm"
-  - name: "event"
-    description: "Event organized by the association"
-  - name: "FAQ"
-    description: "FAQ asked by users"
-  - name: "farm"
-    description: "Farm involved in the association"
-  - name: "person"
-    description: "Person of the volontariato"
+- name: "activity"
+  description: "Activity offered by the association"
+- name: "contact"
+  description: "Contact of Person or Farm"
+- name: "event"
+  description: "Event organized by the association"
+- name: "FAQ"
+  description: "FAQ asked by users"
+- name: "farm"
+  description: "Farm involved in the association"
+- name: "person"
+  description: "Person of the volontariato"
 schemes:
-  - "http"
+- "http"
 paths:
   /activities:
     get:
       tags:
-        - "activity"
+      - "activity"
       summary: "Activities of the association"
       description: "List of activities offered by association"
       operationId: "activityGET"
       produces:
-        - "application/json"
+      - "application/json"
       parameters:
-        - name: "offset"
-          in: "query"
-          description: "Pagination offset. Default is 0."
-          required: false
-          type: "integer"
-        - name: "limit"
-          in: "query"
-          description: "Maximum number of items per page. Default is 20 and cannot exceed\
+      - name: "offset"
+        in: "query"
+        description: "Pagination offset. Default is 0."
+        required: false
+        type: "integer"
+      - name: "limit"
+        in: "query"
+        description: "Maximum number of items per page. Default is 20 and cannot exceed\
           \ 500."
-          required: false
-          type: "integer"
+        required: false
+        type: "integer"
       responses:
-        200:
+        "200":
           description: "A collection of Activities"
           schema:
             type: "array"
             items:
-              $ref: '#/definitions/Activity'
-        404:
+              $ref: "#/definitions/Activity"
+        "404":
           description: "Unexpected error"
       x-swagger-router-controller: "Contact"
   /activities/{activityId}:
     get:
       tags:
-        - "activity"
+      - "activity"
       summary: "Find activity by ID"
       description: "Returns an activity"
       operationId: "getActivityById"
       produces:
-        - "application/json"
+      - "application/json"
       parameters:
-        - name: "activityId"
-          in: "path"
-          description: "ID of activity to return"
-          required: true
-          type: "integer"
-          format: "int64"
+      - name: "activityId"
+        in: "path"
+        description: "ID of activity to return"
+        required: true
+        type: "integer"
+        format: "int64"
       responses:
-        200:
+        "200":
           description: "successful operation"
           schema:
-            $ref: '#/definitions/Activity'
-        400:
+            $ref: "#/definitions/Activity"
+        "400":
           description: "Invalid ID supplied"
-        404:
+        "404":
           description: "Activity not found"
       x-swagger-router-controller: "Activity"
   /contacts:
     get:
       tags:
-        - "contact"
+      - "contact"
       summary: "Contact of Person or Farm"
       description: "List of contacts"
       operationId: "contactGET"
       produces:
-        - "application/json"
+      - "application/json"
       parameters:
-        - name: "offset"
-          in: "query"
-          description: "Pagination offset. Default is 0."
-          required: false
-          type: "integer"
-        - name: "limit"
-          in: "query"
-          description: "Maximum number of items per page. Default is 20 and cannot exceed\
+      - name: "offset"
+        in: "query"
+        description: "Pagination offset. Default is 0."
+        required: false
+        type: "integer"
+      - name: "limit"
+        in: "query"
+        description: "Maximum number of items per page. Default is 20 and cannot exceed\
           \ 500."
-          required: false
-          type: "integer"
+        required: false
+        type: "integer"
       responses:
-        200:
+        "200":
           description: "A collection of Contacts"
           schema:
             type: "array"
             items:
               $ref: "#/definitions/Contact"
-        404:
+        "404":
           description: "Unexpected error"
       x-swagger-router-controller: "Contact"
   /contacts/{contactId}:
     get:
       tags:
-        - "contact"
+      - "contact"
       summary: "Find contact by ID"
       description: "Returns a contact"
       operationId: "getContactById"
       produces:
-        - "application/json"
+      - "application/json"
       parameters:
-        - name: "contactId"
-          in: "path"
-          description: "ID of contact to return"
-          required: true
-          type: "integer"
-          format: "int64"
+      - name: "contactId"
+        in: "path"
+        description: "ID of contact to return"
+        required: true
+        type: "integer"
+        format: "int64"
       responses:
-        200:
+        "200":
           description: "successful operation"
           schema:
             $ref: "#/definitions/Contact"
-        400:
+        "400":
           description: "Invalid ID supplied"
-        404:
+        "404":
           description: "Contact not found"
       x-swagger-router-controller: "Contact"
   /events:
     get:
       tags:
-        - "event"
+      - "event"
       summary: "Events organized by the association"
       description: "List of events of the association"
       operationId: "eventsGET"
       produces:
-        - "application/json"
+      - "application/json"
       parameters:
-        - name: "offset"
-          in: "query"
-          description: "Pagination offset. Default is 0."
-          required: false
-          type: "integer"
-        - name: "limit"
-          in: "query"
-          description: "Maximum number of items per page. Default is 20 and cannot exceed\
+      - name: "offset"
+        in: "query"
+        description: "Pagination offset. Default is 0."
+        required: false
+        type: "integer"
+      - name: "limit"
+        in: "query"
+        description: "Maximum number of items per page. Default is 20 and cannot exceed\
           \ 500."
-          required: false
-          type: "integer"
+        required: false
+        type: "integer"
       responses:
-        200:
+        "200":
           description: "A collection of Events"
           schema:
             type: "array"
             items:
-              $ref: '#/definitions/Event'
-        404:
+              $ref: "#/definitions/Event"
+        "404":
           description: "Unexpected error"
       x-swagger-router-controller: "Event"
   /events/{eventId}:
     get:
       tags:
-        - "event"
+      - "event"
       summary: "Find event by ID"
       description: "Returns an event"
       operationId: "getEventById"
       produces:
-        - "application/json"
+      - "application/json"
       parameters:
-        - name: "eventId"
-          in: "path"
-          description: "ID of event to return"
-          required: true
-          type: "integer"
-          format: "int64"
+      - name: "eventId"
+        in: "path"
+        description: "ID of event to return"
+        required: true
+        type: "integer"
+        format: "int64"
       responses:
-        200:
+        "200":
           description: "successful operation"
           schema:
-            $ref: '#/definitions/Event'
-        400:
+            $ref: "#/definitions/Event"
+        "400":
           description: "Invalid ID supplied"
-        404:
+        "404":
           description: "Event not found"
       x-swagger-router-controller: "Event"
   /faq:
     get:
       tags:
-        - "FAQ"
+      - "FAQ"
       summary: "FAQs of the Association"
       description: "List of Frequent Asked Questions"
       operationId: "faqGET"
       produces:
-        - "application/json"
+      - "application/json"
       parameters:
-        - name: "offset"
-          in: "query"
-          description: "Pagination offset. Default is 0."
-          required: false
-          type: "integer"
-        - name: "limit"
-          in: "query"
-          description: "Maximum number of items per page. Default is 20 and cannot exceed\
+      - name: "offset"
+        in: "query"
+        description: "Pagination offset. Default is 0."
+        required: false
+        type: "integer"
+      - name: "limit"
+        in: "query"
+        description: "Maximum number of items per page. Default is 20 and cannot exceed\
           \ 500."
-          required: false
-          type: "integer"
+        required: false
+        type: "integer"
       responses:
-        200:
+        "200":
           description: "A collection of FAQ"
           schema:
             type: "array"
             items:
-              $ref: '#/definitions/FAQ'
-        404:
+              $ref: "#/definitions/FAQ"
+        "404":
           description: "Unexpected error"
-      x-swagger-router-controller: "Person"
+      x-swagger-router-controller: "FAQ"
   /farms:
     get:
       tags:
-        - "farm"
+      - "farm"
       summary: "Farm enrolled in the association"
       description: "List of farms in the association"
       operationId: "farmsGET"
       produces:
-        - "application/json"
+      - "application/json"
       parameters:
-        - name: "offset"
-          in: "query"
-          description: "Pagination offset. Default is 0."
-          required: false
-          type: "integer"
-        - name: "limit"
-          in: "query"
-          description: "Maximum number of items per page. Default is 20 and cannot exceed\
+      - name: "offset"
+        in: "query"
+        description: "Pagination offset. Default is 0."
+        required: false
+        type: "integer"
+      - name: "limit"
+        in: "query"
+        description: "Maximum number of items per page. Default is 20 and cannot exceed\
           \ 500."
-          required: false
-          type: "integer"
+        required: false
+        type: "integer"
       responses:
-        200:
+        "200":
           description: "A collection of Farms"
           schema:
             type: "array"
             items:
-              $ref: '#/definitions/Farm'
-        404:
+              $ref: "#/definitions/Farm"
+        "404":
           description: "Unexpected error"
       x-swagger-router-controller: "Farm"
   /farms/{farmId}:
     get:
       tags:
-        - "farm"
+      - "farm"
       summary: "Find farm by ID"
       description: "Returns a farm"
       operationId: "getFarmById"
       produces:
-        - "application/json"
+      - "application/json"
       parameters:
-        - name: "farmId"
-          in: "path"
-          description: "ID of farm to return"
-          required: true
-          type: "integer"
-          format: "int64"
+      - name: "farmId"
+        in: "path"
+        description: "ID of farm to return"
+        required: true
+        type: "integer"
+        format: "int64"
       responses:
-        200:
+        "200":
           description: "successful operation"
           schema:
-            $ref: '#/definitions/Farm'
-        400:
+            $ref: "#/definitions/Farm"
+        "400":
           description: "Invalid ID supplied"
-        404:
+        "404":
           description: "Farm not found"
       x-swagger-router-controller: "Farm"
   /people:
     get:
       tags:
-        - "person"
+      - "person"
       summary: "People who work for the association"
       description: "List of people in the association"
       operationId: "peopleGET"
       produces:
-        - "application/json"
+      - "application/json"
       parameters:
-        - name: "offset"
-          in: "query"
-          description: "Pagination offset. Default is 0."
-          required: false
-          type: "integer"
-        - name: "limit"
-          in: "query"
-          description: "Maximum number of items per page. Default is 20 and cannot exceed\
+      - name: "offset"
+        in: "query"
+        description: "Pagination offset. Default is 0."
+        required: false
+        type: "integer"
+      - name: "limit"
+        in: "query"
+        description: "Maximum number of items per page. Default is 20 and cannot exceed\
           \ 500."
-          required: false
-          type: "integer"
+        required: false
+        type: "integer"
       responses:
-        200:
+        "200":
           description: "A collection of People"
           schema:
             type: "array"
             items:
               $ref: "#/definitions/Person"
-        404:
+        "404":
           description: "Unexpected error"
       x-swagger-router-controller: "Person"
   /people/{personId}:
     get:
       tags:
-        - "person"
+      - "person"
       summary: "Find person by ID"
       description: "Returns a person"
       operationId: "getPersonById"
       produces:
-        - "application/json"
+      - "application/json"
       parameters:
-        - name: "personId"
-          in: "path"
-          description: "ID of person to return"
-          required: true
-          type: "integer"
-          format: "int64"
+      - name: "personId"
+        in: "path"
+        description: "ID of person to return"
+        required: true
+        type: "integer"
+        format: "int64"
       responses:
-        200:
+        "200":
           description: "successful operation"
           schema:
             $ref: "#/definitions/Person"
-        400:
+        "400":
           description: "Invalid ID supplied"
-        404:
+        "404":
           description: "Person not found"
       x-swagger-router-controller: "Person"
-
 definitions:
   Activity:
     type: "object"
@@ -383,7 +382,6 @@ definitions:
         format: "email"
       phoneNumber:
         type: "string"
-        #format: "phoneNumber"
     title: "Contact"
     description: "Contact associated to Person and Farm"
     example:
@@ -481,9 +479,9 @@ definitions:
         type: "string"
         description: "role of the person in the association"
         enum:
-          - "Founder"
-          - "Expert"
-          - "Volunteer"
+        - "Founder"
+        - "Expert"
+        - "Volunteer"
       personImg:
         type: "string"
       contactId:
@@ -498,7 +496,6 @@ definitions:
       role: "Founder"
       personImg: "Img0"
       contactId: 0
-
 externalDocs:
   description: "Find out more about Swagger"
   url: "http://swagger.io"
