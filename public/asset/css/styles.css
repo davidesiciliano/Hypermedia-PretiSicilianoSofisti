@@ -855,6 +855,7 @@ input {
   position: relative;
   margin-bottom: 30px;
   border-bottom: 2px solid #ccc;
+  font-family: 'Poppins', sans-serif;
 }
 
 .input--style-1 {
