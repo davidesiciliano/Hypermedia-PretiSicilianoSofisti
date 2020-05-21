@@ -62,3 +62,30 @@ exports.getFarmById = function(farmId) {
   });
 }
 
+
+/**
+ * Find farms by name
+ * Return farms with the specified name
+ *
+ * farmName String Name of farms to return
+ * returns Farm
+ **/
+exports.getFarmByName = function(farmName) {
+  return new Promise(function(resolve, reject) {
+    var examples = {};
+    examples['application/json'] = {
+  "id" : 0,
+  "name" : "Rossi's Farm",
+  "description" : "Farm managed by Rossi's Family",
+  "openingTimes" : "7.00 - 14.00, 17.00 - 19.30",
+  "FarmImg" : "Img0",
+  "contactId" : 0
+};
+    if (Object.keys(examples).length > 0) {
+      resolve(examples[Object.keys(examples)[0]]);
+    } else {
+      resolve();
+    }
+  });
+}
+

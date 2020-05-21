@@ -15,7 +15,7 @@ exports.eventsGET = function(offset,limit) {
     examples['application/json'] = [ {
   "id" : 0,
   "name" : "ViggionFestival",
-  "date" : "2020-07-28",
+  "date" : "2020-07-25",
   "hours" : "21:00",
   "location" : "Viggiona",
   "smallDescritpion" : "small description",
@@ -25,7 +25,7 @@ exports.eventsGET = function(offset,limit) {
 }, {
   "id" : 0,
   "name" : "ViggionFestival",
-  "date" : "2020-07-28",
+  "date" : "2020-07-25",
   "hours" : "21:00",
   "location" : "Viggiona",
   "smallDescritpion" : "small description",
@@ -55,7 +55,37 @@ exports.getEventById = function(eventId) {
     examples['application/json'] = {
   "id" : 0,
   "name" : "ViggionFestival",
-  "date" : "2020-07-28",
+  "date" : "2020-07-25",
+  "hours" : "21:00",
+  "location" : "Viggiona",
+  "smallDescritpion" : "small description",
+  "completeDescription" : "complete description",
+  "eventImg" : "Img0",
+  "personId" : 1
+};
+    if (Object.keys(examples).length > 0) {
+      resolve(examples[Object.keys(examples)[0]]);
+    } else {
+      resolve();
+    }
+  });
+}
+
+
+/**
+ * Find evens by name
+ * Returns events with a specific name
+ *
+ * eventName String Name of events to return
+ * returns Event
+ **/
+exports.getEventByName = function(eventName) {
+  return new Promise(function(resolve, reject) {
+    var examples = {};
+    examples['application/json'] = {
+  "id" : 0,
+  "name" : "ViggionFestival",
+  "date" : "2020-07-25",
   "hours" : "21:00",
   "location" : "Viggiona",
   "smallDescritpion" : "small description",

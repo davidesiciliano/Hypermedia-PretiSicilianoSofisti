@@ -25,3 +25,14 @@ module.exports.getFarmById = function getFarmById (req, res, next) {
       utils.writeJson(res, response);
     });
 };
+
+module.exports.getFarmByName = function getFarmByName (req, res, next) {
+  var farmName = req.swagger.params['farmName'].value;
+  Farm.getFarmByName(farmName)
+    .then(function (response) {
+      utils.writeJson(res, response);
+    })
+    .catch(function (response) {
+      utils.writeJson(res, response);
+    });
+};

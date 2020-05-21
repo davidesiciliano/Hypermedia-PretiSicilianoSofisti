@@ -25,3 +25,14 @@ module.exports.getActivityById = function getActivityById (req, res, next) {
       utils.writeJson(res, response);
     });
 };
+
+module.exports.getActivityByName = function getActivityByName (req, res, next) {
+  var activityName = req.swagger.params['activityName'].value;
+  Activity.getActivityByName(activityName)
+    .then(function (response) {
+      utils.writeJson(res, response);
+    })
+    .catch(function (response) {
+      utils.writeJson(res, response);
+    });
+};

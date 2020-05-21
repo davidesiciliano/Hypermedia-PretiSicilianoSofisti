@@ -62,3 +62,30 @@ exports.getActivityById = function(activityId) {
   });
 }
 
+
+/**
+ * Find activity by Name
+ * Returns the activities with a specific name
+ *
+ * activityName String Name of the activities to return
+ * returns Activity
+ **/
+exports.getActivityByName = function(activityName) {
+  return new Promise(function(resolve, reject) {
+    var examples = {};
+    examples['application/json'] = {
+  "id" : 0,
+  "name" : "Harvest",
+  "description" : "Harvest description",
+  "startDate" : "2020-07-01",
+  "endDate" : "2020-09-30",
+  "activityImg" : "img1"
+};
+    if (Object.keys(examples).length > 0) {
+      resolve(examples[Object.keys(examples)[0]]);
+    } else {
+      resolve();
+    }
+  });
+}
+

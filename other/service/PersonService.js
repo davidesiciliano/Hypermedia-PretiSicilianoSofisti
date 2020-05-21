@@ -15,6 +15,7 @@ exports.personDbSetup = function (connection) {
           tableBuilder.text("name");
           tableBuilder.text("surname");
           tableBuilder.enum("role", ["Founder", "Expert", "Volunteer"]);
+          tableBuilder.text("description")
           tableBuilder.text("personImg");
           tableBuilder.integer("contactId");
         });

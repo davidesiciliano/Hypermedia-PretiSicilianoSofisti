@@ -58,7 +58,7 @@ paths:
         "404":
           description: "Unexpected error"
       x-swagger-router-controller: "Contact"
-  /activities/{activityId}:
+  /activities/findById/{activityId}:
     get:
       tags:
       - "activity"
@@ -84,7 +84,32 @@ paths:
         "404":
           description: "Activity not found"
       x-swagger-router-controller: "Activity"
-  /contacts/{contactId}:
+  /activities/findByName/{activityName}:
+    get:
+      tags:
+      - "activity"
+      summary: "Find activity by Name"
+      description: "Returns the activities with a specific name"
+      operationId: "getActivityByName"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "activityName"
+        in: "path"
+        description: "Name of the activities to return"
+        required: true
+        type: "string"
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/Activity"
+        "400":
+          description: "Invalid name supplied"
+        "404":
+          description: "Activity not found"
+      x-swagger-router-controller: "Activity"
+  /contacts/findById/{contactId}:
     get:
       tags:
       - "contact"
@@ -141,7 +166,7 @@ paths:
         "404":
           description: "Unexpected error"
       x-swagger-router-controller: "Event"
-  /events/{eventId}:
+  /events/findById/{eventId}:
     get:
       tags:
       - "event"
@@ -164,6 +189,31 @@ paths:
             $ref: "#/definitions/Event"
         "400":
           description: "Invalid ID supplied"
+        "404":
+          description: "Event not found"
+      x-swagger-router-controller: "Event"
+  /events/findByName/{eventName}:
+    get:
+      tags:
+      - "event"
+      summary: "Find evens by name"
+      description: "Returns events with a specific name"
+      operationId: "getEventByName"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "eventName"
+        in: "path"
+        description: "Name of events to return"
+        required: true
+        type: "string"
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/Event"
+        "400":
+          description: "Invalid Name supplied"
         "404":
           description: "Event not found"
       x-swagger-router-controller: "Event"
@@ -229,7 +279,7 @@ paths:
         "404":
           description: "Unexpected error"
       x-swagger-router-controller: "Farm"
-  /farms/{farmId}:
+  /farms/findById/{farmId}:
     get:
       tags:
       - "farm"
@@ -252,6 +302,31 @@ paths:
             $ref: "#/definitions/Farm"
         "400":
           description: "Invalid ID supplied"
+        "404":
+          description: "Farm not found"
+      x-swagger-router-controller: "Farm"
+  /farms/findByName/{farmName}:
+    get:
+      tags:
+      - "farm"
+      summary: "Find farms by name"
+      description: "Return farms with the specified name"
+      operationId: "getFarmByName"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "farmName"
+        in: "path"
+        description: "Name of farms to return"
+        required: true
+        type: "string"
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/Farm"
+        "400":
+          description: "Invalid name supplied"
         "404":
           description: "Farm not found"
       x-swagger-router-controller: "Farm"
@@ -385,7 +460,7 @@ definitions:
     example:
       id: 0
       name: "ViggionFestival"
-      date: "2020-07-28"
+      date: "2020-07-25"
       hours: "21:00"
       location: "Viggiona"
       smallDescritpion: "small description"
@@ -449,6 +524,8 @@ definitions:
         - "Founder"
         - "Expert"
         - "Volunteer"
+      description:
+        type: "string"
       personImg:
         type: "string"
       contactId:
