@@ -1,5 +1,28 @@
 'use strict';
 
+let sqlDb;
+
+exports.farmDbSetup = function (connection) {
+  sqlDb = connection;
+  console.log("Checking if the event table exists");
+  return sqlDb.schema.hasTable("event")
+    .then((exists) => {
+      if (!exists) {
+        console.log("It does not exist so create it");
+        return sqlDb.schema.createTable("event", tableBuilder => {
+          tableBuilder.increments();
+          tableBuilder.integer("id");
+          tableBuilder.text("name");
+          tableBuilder.text("description");
+          tableBuilder.text("openingTimes");
+          tableBuilder.text("farmImg")
+          tableBuilder.integer("contactId");
+        });
+      } else {
+        console.log("Table already exists");
+      }
+    }).catch(error => console.log(error));
+};
 
 /**
  * Farm enrolled in the association
@@ -10,29 +33,11 @@
  * returns List
  **/
 exports.farmsGET = function(offset,limit) {
-  return new Promise(function(resolve, reject) {
-    var examples = {};
-    examples['application/json'] = [ {
-  "id" : 0,
-  "name" : "Rossi's Farm",
-  "description" : "Farm managed by Rossi's Family",
-  "openingTimes" : "7.00 - 14.00, 17.00 - 19.30",
-  "FarmImg" : "Img0",
-  "contactId" : 0
-}, {
-  "id" : 0,
-  "name" : "Rossi's Farm",
-  "description" : "Farm managed by Rossi's Family",
-  "openingTimes" : "7.00 - 14.00, 17.00 - 19.30",
-  "FarmImg" : "Img0",
-  "contactId" : 0
-} ];
-    if (Object.keys(examples).length > 0) {
-      resolve(examples[Object.keys(examples)[0]]);
-    } else {
-      resolve();
-    }
-  });
+  if (!limit)
+    limit = 20;
+  return sqlDb("farm")
+    .limit(limit)
+    .offset(offset);
 }
 
 
@@ -44,22 +49,8 @@ exports.farmsGET = function(offset,limit) {
  * returns Farm
  **/
 exports.getFarmById = function(farmId) {
-  return new Promise(function(resolve, reject) {
-    var examples = {};
-    examples['application/json'] = {
-  "id" : 0,
-  "name" : "Rossi's Farm",
-  "description" : "Farm managed by Rossi's Family",
-  "openingTimes" : "7.00 - 14.00, 17.00 - 19.30",
-  "FarmImg" : "Img0",
-  "contactId" : 0
-};
-    if (Object.keys(examples).length > 0) {
-      resolve(examples[Object.keys(examples)[0]]);
-    } else {
-      resolve();
-    }
-  });
+  return sqlDb("farm")
+    .where("id", farmId);
 }
 
 
@@ -71,21 +62,7 @@ exports.getFarmById = function(farmId) {
  * returns Farm
  **/
 exports.getFarmByName = function(farmName) {
-  return new Promise(function(resolve, reject) {
-    var examples = {};
-    examples['application/json'] = {
-  "id" : 0,
-  "name" : "Rossi's Farm",
-  "description" : "Farm managed by Rossi's Family",
-  "openingTimes" : "7.00 - 14.00, 17.00 - 19.30",
-  "FarmImg" : "Img0",
-  "contactId" : 0
-};
-    if (Object.keys(examples).length > 0) {
-      resolve(examples[Object.keys(examples)[0]]);
-    } else {
-      resolve();
-    }
-  });
+  return sqlDb("farm")
+    .where("name", farmName);
 }
 

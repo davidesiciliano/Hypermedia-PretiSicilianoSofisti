@@ -40,5 +40,5 @@
 - [x] Contact
 - [x] Event
 - [x] Faq
-- [ ] Farm
+- [x] Farm
 - [x] Person

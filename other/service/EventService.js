@@ -13,10 +13,13 @@ exports.eventDbSetup = function (connection) {
           tableBuilder.increments();
           tableBuilder.integer("id");
           tableBuilder.text("name");
-          tableBuilder.text("description");
-          tableBuilder.text("openingTimes");
-          tableBuilder.text("farmImg")
-          tableBuilder.integer("contactId");
+          tableBuilder.text("date");
+          tableBuilder.text("hours");
+          tableBuilder.text("location");
+          tableBuilder.text("smallDescription");
+          tableBuilder.text("completeDescription");
+          tableBuilder.text("eventImg")
+          tableBuilder.integer("personId");
         });
       } else {
         console.log("Table already exists");
