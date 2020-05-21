@@ -28,7 +28,7 @@ exports.contactsDbSetup = function (connection) {
  * contactId Long ID of contact to return
  * returns Contact
  **/
-exports.getContactById = function(contactId) {
+exports.getContactById = function (contactId) {
   return sqlDb("contact")
     .where("id", contactId);
 }

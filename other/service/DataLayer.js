@@ -1,6 +1,8 @@
-let { contactsDbSetup } = require("./ContactService");
-let { faqDbSetup } = require("./FAQService")
-let { personDbSetup } = require("./PersonService");
+let {activityDbSetup} = require("./ActivityService")
+let {contactsDbSetup} = require("./ContactService");
+
+let {faqDbSetup} = require("./FAQService")
+let {personDbSetup} = require("./PersonService");
 
 const sqlDbFactory = require("knex");
 
@@ -18,9 +20,10 @@ let sqlDb = sqlDbFactory({
 
 function setupDataLayer() {
   console.log("Setting up data layer");
-  return contactsDbSetup(sqlDb)
+  return activityDbSetup(sqlDb)
+    .then(contactsDbSetup(sqlDb))
     .then(faqDbSetup(sqlDb))
     .then(personDbSetup(sqlDb)); //qua poi faccio then e uso le altre funzioni
 }
 
-module.exports = { database: sqlDb, setupDataLayer };
+module.exports = {database: sqlDb, setupDataLayer};

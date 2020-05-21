@@ -57,7 +57,7 @@ paths:
               $ref: "#/definitions/Activity"
         "404":
           description: "Unexpected error"
-      x-swagger-router-controller: "Contact"
+      x-swagger-router-controller: "Activity"
   /activities/findById/{activityId}:
     get:
       tags:
