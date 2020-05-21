@@ -463,7 +463,7 @@ definitions:
       date: "2020-07-25"
       hours: "21:00"
       location: "Viggiona"
-      smallDescritpion: "small description"
+      smallDescription: "small description"
       completeDescription: "complete description"
       eventImg: "Img0"
       personId: 1
@@ -505,7 +505,7 @@ definitions:
       name: "Rossi's Farm"
       description: "Farm managed by Rossi's Family"
       openingTimes: "7.00 - 14.00, 17.00 - 19.30"
-      FarmImg: "Img0"
+      farmImg: "Img0"
       contactId: 0
   Person:
     type: "object"

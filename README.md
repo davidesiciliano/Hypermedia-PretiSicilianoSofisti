@@ -26,7 +26,7 @@
 - [ ] farms_page.html
 - [ ] events_page.html
 - [ ] people_page.html
-- [x] FAQ_page.html (eliminare parte statica)
+- [x] FAQ_page.html (fare file js esterno) (eliminare parte statica)
 - [ ] singleActivity_page.html
 - [ ] singleFarm_page.html
 - [ ] singleEvent_page.html
@@ -36,9 +36,9 @@
 - [ ] terms_page.html
 
 ##TODO Database
-- [ ] Activities
-- [ ] Contact
-- [ ] Event
+- [x] Activities
+- [x] Contact
+- [x] Event
 - [x] Faq
 - [ ] Farm
-- [ ] Person
+- [x] Person
