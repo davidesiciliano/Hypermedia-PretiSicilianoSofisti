@@ -1,8 +1,8 @@
 'use strict';
 
 var fs = require('fs'),
-    path = require('path'),
-    http = require('http');
+  path = require('path'),
+  http = require('http');
 
 var app = require('connect')();
 var swaggerTools = require('swagger-tools');
@@ -10,7 +10,7 @@ var jsyaml = require('js-yaml');
 var serverPort = 5000;
 
 let serveStatic = require("serve-static");
-let { setupDataLayer } = require("./other/service/DataLayer");
+let {setupDataLayer} = require("./other/service/DataLayer");
 
 // swaggerRouter configuration
 var options = {
@@ -20,7 +20,7 @@ var options = {
 };
 
 // The Swagger document (require it, build it programmatically, fetch it from a URL, ...)
-var spec = fs.readFileSync(path.join(__dirname,'other/api/swagger.yaml'), 'utf8');
+var spec = fs.readFileSync(path.join(__dirname, 'other/api/swagger.yaml'), 'utf8');
 var swaggerDoc = jsyaml.safeLoad(spec);
 
 // Initialize the Swagger middleware
@@ -41,13 +41,13 @@ swaggerTools.initializeMiddleware(swaggerDoc, function (middleware) {
   app.use(serveStatic(__dirname + "/public")); //location where static files are located
 
   // Start the server
-  setupDataLayer().then( () => {
+  setupDataLayer().then(() => {
     http.createServer(app).listen(serverPort, function () {
       console.log('Your server is listening on port %d (http://localhost:%d)',
-          serverPort,
-          serverPort);
+        serverPort,
+        serverPort);
       console.log('Swagger-ui is available on http://localhost:%d/docs',
-          serverPort);
+        serverPort);
     });
   });
 });
