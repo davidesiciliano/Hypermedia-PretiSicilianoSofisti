@@ -14,6 +14,17 @@ module.exports.getPersonById = function getPersonById (req, res, next) {
     });
 };
 
+module.exports.getPersonByRole = function getPersonByRole (req, res, next) {
+  var personRole = req.swagger.params['personRole'].value;
+  Person.getPersonByRole(personRole)
+    .then(function (response) {
+      utils.writeJson(res, response);
+    })
+    .catch(function (response) {
+      utils.writeJson(res, response);
+    });
+};
+
 module.exports.peopleGET = function peopleGET (req, res, next) {
   var offset = req.swagger.params['offset'].value;
   var limit = req.swagger.params['limit'].value;

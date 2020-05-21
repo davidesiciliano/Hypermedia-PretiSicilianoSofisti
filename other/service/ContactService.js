@@ -1,34 +1,25 @@
 'use strict';
 
+let sqlDb;
 
-/**
- * Contact of Person or Farm
- * List of contacts
- *
- * offset Integer Pagination offset. Default is 0. (optional)
- * limit Integer Maximum number of items per page. Default is 20 and cannot exceed 500. (optional)
- * returns List
- **/
-exports.contactGET = function(offset,limit) {
-  return new Promise(function(resolve, reject) {
-    var examples = {};
-    examples['application/json'] = [ {
-  "id" : 0,
-  "email" : "davide@siciliano.it",
-  "phoneNumber" : "12345"
-}, {
-  "id" : 0,
-  "email" : "davide@siciliano.it",
-  "phoneNumber" : "12345"
-} ];
-    if (Object.keys(examples).length > 0) {
-      resolve(examples[Object.keys(examples)[0]]);
-    } else {
-      resolve();
-    }
-  });
-}
-
+exports.contactsDbSetup = function (connection) {
+  sqlDb = connection;
+  console.log("Checking if the contact table exists");
+  return sqlDb.schema.hasTable("contact")
+    .then((exists) => {
+      if (!exists) {
+        console.log("It does not exist so create it");
+        return sqlDb.schema.createTable("contact", tableBuilder => {
+          tableBuilder.increments();
+          tableBuilder.integer("id");
+          tableBuilder.text("email");
+          tableBuilder.text("phoneNumber");
+        });
+      } else {
+        console.log("Table already exists");
+      }
+    }).catch(error => console.log(error));
+};
 
 /**
  * Find contact by ID
@@ -38,18 +29,7 @@ exports.contactGET = function(offset,limit) {
  * returns Contact
  **/
 exports.getContactById = function(contactId) {
-  return new Promise(function(resolve, reject) {
-    var examples = {};
-    examples['application/json'] = {
-  "id" : 0,
-  "email" : "davide@siciliano.it",
-  "phoneNumber" : "12345"
-};
-    if (Object.keys(examples).length > 0) {
-      resolve(examples[Object.keys(examples)[0]]);
-    } else {
-      resolve();
-    }
-  });
+  return sqlDb("contact")
+    .where("id", contactId);
 }
 
