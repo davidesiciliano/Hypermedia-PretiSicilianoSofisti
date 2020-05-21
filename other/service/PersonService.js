@@ -31,23 +31,22 @@ exports.personDbSetup = function (connection) {
  * personId Long ID of person to return
  * returns Person
  **/
-exports.getPersonById = function (personId) {
-  return new Promise(function (resolve, reject) {
-    var examples = {};
-    examples['application/json'] = {
-      "id": 0,
-      "name": "Davide",
-      "surname": "Siciliano",
-      "role": "Founder",
-      "personImg": "Img0",
-      "contactId": 0
-    };
-    if (Object.keys(examples).length > 0) {
-      resolve(examples[Object.keys(examples)[0]]);
-    } else {
-      resolve();
-    }
-  });
+exports.getPersonById = function(personId) {
+  return sqlDb("person")
+    .where("id", personId);
+}
+
+
+/**
+ * Find people by role
+ * Returns all people with a specific role
+ *
+ * personRole String Role of people to return
+ * returns Person
+ **/
+exports.getPersonByRole = function(personRole) {
+  return sqlDb("person")
+    .where("role", personRole);
 }
 
 
@@ -59,11 +58,11 @@ exports.getPersonById = function (personId) {
  * limit Integer Maximum number of items per page. Default is 20 and cannot exceed 500. (optional)
  * returns List
  **/
-exports.peopleGET = function (offset, limit) {
+exports.peopleGET = function(offset,limit) {
   if (!limit)
-    limit = 10;
+    limit = 20;
   return sqlDb("person")
     .limit(limit)
     .offset(offset);
-};
+}
 
