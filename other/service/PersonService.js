@@ -31,11 +31,10 @@ exports.personDbSetup = function (connection) {
  * personId Long ID of person to return
  * returns Person
  **/
-exports.getPersonById = function(personId) {
+exports.getPersonById = function (personId) {
   return sqlDb("person")
     .where("id", personId);
 }
-
 
 /**
  * Find people by role
@@ -44,25 +43,7 @@ exports.getPersonById = function(personId) {
  * personRole String Role of people to return
  * returns Person
  **/
-exports.getPersonByRole = function(personRole) {
+exports.getPersonByRole = function (personRole) {
   return sqlDb("person")
     .where("role", personRole);
 }
-
-
-/**
- * People who work for the association
- * List of people in the association
- *
- * offset Integer Pagination offset. Default is 0. (optional)
- * limit Integer Maximum number of items per page. Default is 20 and cannot exceed 500. (optional)
- * returns List
- **/
-exports.peopleGET = function(offset,limit) {
-  if (!limit)
-    limit = 20;
-  return sqlDb("person")
-    .limit(limit)
-    .offset(offset);
-}
-

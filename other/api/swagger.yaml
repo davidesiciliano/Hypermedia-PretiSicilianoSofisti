@@ -255,37 +255,6 @@ paths:
         "404":
           description: "Farm not found"
       x-swagger-router-controller: "Farm"
-  /people:
-    get:
-      tags:
-      - "person"
-      summary: "People who work for the association"
-      description: "List of people in the association"
-      operationId: "peopleGET"
-      produces:
-      - "application/json"
-      parameters:
-      - name: "offset"
-        in: "query"
-        description: "Pagination offset. Default is 0."
-        required: false
-        type: "integer"
-      - name: "limit"
-        in: "query"
-        description: "Maximum number of items per page. Default is 20 and cannot exceed\
-          \ 500."
-        required: false
-        type: "integer"
-      responses:
-        "200":
-          description: "A collection of People"
-          schema:
-            type: "array"
-            items:
-              $ref: "#/definitions/Person"
-        "404":
-          description: "Unexpected error"
-      x-swagger-router-controller: "Person"
   /people/findById/{personId}:
     get:
       tags:
@@ -312,7 +281,7 @@ paths:
         "404":
           description: "Person not found"
       x-swagger-router-controller: "Person"
-  /people/findByRole{personRole}:
+  /people/findByRole/{personRole}:
     get:
       tags:
       - "person"
