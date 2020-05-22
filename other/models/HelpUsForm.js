@@ -10,6 +10,6 @@ const table = {
   phoneNumber: "phoneNumber",
   email: "email",
   skills: "skills"
-}
+};
 
 module.exports = table;

@@ -37,7 +37,7 @@ exports.helpUsFormDbSetup = function (connection) {
  * helpUsform HelpUsForm the form to insert (optional)
  * no response value expected for this operation
  **/
-exports.helpUsFormPOST = function(helpUsForm) {
+exports.helpUsFormPOST = function (helpUsForm) {
   return sqlDb(HelpUs.getTable)
     .insert({
       id: helpUsForm.id,

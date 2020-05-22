@@ -1,22 +1,24 @@
 'use strict';
 
+let Farm = require("../models/Farm")
+
 let sqlDb;
 
 exports.farmDbSetup = function (connection) {
   sqlDb = connection;
   console.log("Checking if the event table exists");
-  return sqlDb.schema.hasTable("farm")
+  return sqlDb.schema.hasTable(Farm.getTable)
     .then((exists) => {
       if (!exists) {
         console.log("It does not exist so create it");
-        return sqlDb.schema.createTable("farm", tableBuilder => {
+        return sqlDb.schema.createTable(Farm.getTable, tableBuilder => {
           tableBuilder.increments();
-          tableBuilder.integer("id");
-          tableBuilder.text("name");
-          tableBuilder.text("description");
-          tableBuilder.text("openingTimes");
-          tableBuilder.text("farmImg")
-          tableBuilder.integer("contactId");
+          tableBuilder.integer(Farm.id);
+          tableBuilder.text(Farm.name);
+          tableBuilder.text(Farm.description);
+          tableBuilder.text(Farm.openingTimes);
+          tableBuilder.text(Farm.farmImg)
+          tableBuilder.integer(Farm.contactId);
         });
       } else {
         console.log("Table already exists");
@@ -32,10 +34,10 @@ exports.farmDbSetup = function (connection) {
  * limit Integer Maximum number of items per page. Default is 20 and cannot exceed 500. (optional)
  * returns List
  **/
-exports.farmsGET = function(offset,limit) {
+exports.farmsGET = function (offset, limit) {
   if (!limit)
     limit = 20;
-  return sqlDb("farm")
+  return sqlDb(Farm.getTable)
     .limit(limit)
     .offset(offset);
 }
@@ -48,9 +50,9 @@ exports.farmsGET = function(offset,limit) {
  * farmId Long ID of farm to return
  * returns Farm
  **/
-exports.getFarmById = function(farmId) {
-  return sqlDb("farm")
-    .where("id", farmId);
+exports.getFarmById = function (farmId) {
+  return sqlDb(Farm.getTable)
+    .where(Farm.id, farmId);
 }
 
 
@@ -61,8 +63,8 @@ exports.getFarmById = function(farmId) {
  * farmName String Name of farms to return
  * returns Farm
  **/
-exports.getFarmByName = function(farmName) {
-  return sqlDb("farm")
-    .where("name", farmName);
+exports.getFarmByName = function (farmName) {
+  return sqlDb(Farm.getTable)
+    .where(Farm.name, farmName);
 }
 

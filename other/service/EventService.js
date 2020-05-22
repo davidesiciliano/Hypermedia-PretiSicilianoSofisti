@@ -1,25 +1,27 @@
 'use strict';
 
+let Event = require("../models/Event")
+
 let sqlDb;
 
 exports.eventDbSetup = function (connection) {
   sqlDb = connection;
   console.log("Checking if the event table exists");
-  return sqlDb.schema.hasTable("event")
+  return sqlDb.schema.hasTable(Event.getTable)
     .then((exists) => {
       if (!exists) {
         console.log("It does not exist so create it");
-        return sqlDb.schema.createTable("event", tableBuilder => {
+        return sqlDb.schema.createTable(Event.getTable, tableBuilder => {
           tableBuilder.increments();
-          tableBuilder.integer("id");
-          tableBuilder.text("name");
-          tableBuilder.text("date");
-          tableBuilder.text("hours");
-          tableBuilder.text("location");
-          tableBuilder.text("smallDescription");
-          tableBuilder.text("completeDescription");
-          tableBuilder.text("eventImg")
-          tableBuilder.integer("personId");
+          tableBuilder.integer(Event.id);
+          tableBuilder.text(Event.name);
+          tableBuilder.text(Event.date);
+          tableBuilder.text(Event.hours);
+          tableBuilder.text(Event.location);
+          tableBuilder.text(Event.smallDescription);
+          tableBuilder.text(Event.completeDescription);
+          tableBuilder.text(Event.eventImg);
+          tableBuilder.integer(Event.personId);
         });
       } else {
         console.log("Table already exists");
@@ -38,7 +40,7 @@ exports.eventDbSetup = function (connection) {
 exports.eventsGET = function (offset, limit) {
   if (!limit)
     limit = 20;
-  return sqlDb("event")
+  return sqlDb(Event.getTable)
     .limit(limit)
     .offset(offset);
 }
@@ -52,8 +54,8 @@ exports.eventsGET = function (offset, limit) {
  * returns Event
  **/
 exports.getEventById = function (eventId) {
-  return sqlDb("event")
-    .where("id", eventId);
+  return sqlDb(Event.getTable)
+    .where(Event.id, eventId);
 }
 
 
@@ -65,7 +67,7 @@ exports.getEventById = function (eventId) {
  * returns Event
  **/
 exports.getEventByName = function (eventName) {
-  return sqlDb("event")
-    .where("name", eventName);
+  return sqlDb(Event.getTable)
+    .where(Event.name, eventName);
 }
 
