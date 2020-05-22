@@ -12,42 +12,44 @@ info:
 host: "localhost:8080"
 basePath: "/v2"
 tags:
-- name: "activity"
-  description: "Activity offered by the association"
-- name: "contact"
-  description: "Contact of Person or Farm"
-- name: "event"
-  description: "Event organized by the association"
-- name: "FAQ"
-  description: "FAQ asked by users"
-- name: "farm"
-  description: "Farm involved in the association"
-- name: "person"
-  description: "Person of the volontariato"
+  - name: "activity"
+    description: "Activity offered by the association"
+  - name: "contact"
+    description: "Contact of Person or Farm"
+  - name: "event"
+    description: "Event organized by the association"
+  - name: "FAQ"
+    description: "FAQ asked by users"
+  - name: "farm"
+    description: "Farm involved in the association"
+  - name: "helpUsForm"
+    description: "From sent to contact the association"
+  - name: "person"
+    description: "Person of the volontariato"
 schemes:
-- "http"
+  - "http"
 paths:
   /activities:
     get:
       tags:
-      - "activity"
+        - "activity"
       summary: "Activities of the association"
       description: "List of activities offered by association"
       operationId: "activityGET"
       produces:
-      - "application/json"
+        - "application/json"
       parameters:
-      - name: "offset"
-        in: "query"
-        description: "Pagination offset. Default is 0."
-        required: false
-        type: "integer"
-      - name: "limit"
-        in: "query"
-        description: "Maximum number of items per page. Default is 20 and cannot exceed\
+        - name: "offset"
+          in: "query"
+          description: "Pagination offset. Default is 0."
+          required: false
+          type: "integer"
+        - name: "limit"
+          in: "query"
+          description: "Maximum number of items per page. Default is 20 and cannot exceed\
           \ 500."
-        required: false
-        type: "integer"
+          required: false
+          type: "integer"
       responses:
         "200":
           description: "A collection of Activities"
@@ -61,19 +63,19 @@ paths:
   /activities/findById/{activityId}:
     get:
       tags:
-      - "activity"
+        - "activity"
       summary: "Find activity by ID"
       description: "Returns an activity"
       operationId: "getActivityById"
       produces:
-      - "application/json"
+        - "application/json"
       parameters:
-      - name: "activityId"
-        in: "path"
-        description: "ID of activity to return"
-        required: true
-        type: "integer"
-        format: "int64"
+        - name: "activityId"
+          in: "path"
+          description: "ID of activity to return"
+          required: true
+          type: "integer"
+          format: "int64"
       responses:
         "200":
           description: "successful operation"
@@ -87,18 +89,18 @@ paths:
   /activities/findByName/{activityName}:
     get:
       tags:
-      - "activity"
+        - "activity"
       summary: "Find activity by Name"
       description: "Returns the activities with a specific name"
       operationId: "getActivityByName"
       produces:
-      - "application/json"
+        - "application/json"
       parameters:
-      - name: "activityName"
-        in: "path"
-        description: "Name of the activities to return"
-        required: true
-        type: "string"
+        - name: "activityName"
+          in: "path"
+          description: "Name of the activities to return"
+          required: true
+          type: "string"
       responses:
         "200":
           description: "successful operation"
@@ -112,19 +114,19 @@ paths:
   /contacts/findById/{contactId}:
     get:
       tags:
-      - "contact"
+        - "contact"
       summary: "Find contact by ID"
       description: "Returns a contact"
       operationId: "getContactById"
       produces:
-      - "application/json"
+        - "application/json"
       parameters:
-      - name: "contactId"
-        in: "path"
-        description: "ID of contact to return"
-        required: true
-        type: "integer"
-        format: "int64"
+        - name: "contactId"
+          in: "path"
+          description: "ID of contact to return"
+          required: true
+          type: "integer"
+          format: "int64"
       responses:
         "200":
           description: "successful operation"
@@ -138,24 +140,24 @@ paths:
   /events:
     get:
       tags:
-      - "event"
+        - "event"
       summary: "Events organized by the association"
       description: "List of events of the association"
       operationId: "eventsGET"
       produces:
-      - "application/json"
+        - "application/json"
       parameters:
-      - name: "offset"
-        in: "query"
-        description: "Pagination offset. Default is 0."
-        required: false
-        type: "integer"
-      - name: "limit"
-        in: "query"
-        description: "Maximum number of items per page. Default is 20 and cannot exceed\
+        - name: "offset"
+          in: "query"
+          description: "Pagination offset. Default is 0."
+          required: false
+          type: "integer"
+        - name: "limit"
+          in: "query"
+          description: "Maximum number of items per page. Default is 20 and cannot exceed\
           \ 500."
-        required: false
-        type: "integer"
+          required: false
+          type: "integer"
       responses:
         "200":
           description: "A collection of Events"
@@ -169,19 +171,19 @@ paths:
   /events/findById/{eventId}:
     get:
       tags:
-      - "event"
+        - "event"
       summary: "Find event by ID"
       description: "Returns an event"
       operationId: "getEventById"
       produces:
-      - "application/json"
+        - "application/json"
       parameters:
-      - name: "eventId"
-        in: "path"
-        description: "ID of event to return"
-        required: true
-        type: "integer"
-        format: "int64"
+        - name: "eventId"
+          in: "path"
+          description: "ID of event to return"
+          required: true
+          type: "integer"
+          format: "int64"
       responses:
         "200":
           description: "successful operation"
@@ -195,18 +197,18 @@ paths:
   /events/findByName/{eventName}:
     get:
       tags:
-      - "event"
+        - "event"
       summary: "Find evens by name"
       description: "Returns events with a specific name"
       operationId: "getEventByName"
       produces:
-      - "application/json"
+        - "application/json"
       parameters:
-      - name: "eventName"
-        in: "path"
-        description: "Name of events to return"
-        required: true
-        type: "string"
+        - name: "eventName"
+          in: "path"
+          description: "Name of events to return"
+          required: true
+          type: "string"
       responses:
         "200":
           description: "successful operation"
@@ -220,24 +222,24 @@ paths:
   /faq:
     get:
       tags:
-      - "FAQ"
+        - "FAQ"
       summary: "FAQs of the Association"
       description: "List of Frequent Asked Questions"
       operationId: "faqGET"
       produces:
-      - "application/json"
+        - "application/json"
       parameters:
-      - name: "offset"
-        in: "query"
-        description: "Pagination offset. Default is 0."
-        required: false
-        type: "integer"
-      - name: "limit"
-        in: "query"
-        description: "Maximum number of items per page. Default is 20 and cannot exceed\
+        - name: "offset"
+          in: "query"
+          description: "Pagination offset. Default is 0."
+          required: false
+          type: "integer"
+        - name: "limit"
+          in: "query"
+          description: "Maximum number of items per page. Default is 20 and cannot exceed\
           \ 500."
-        required: false
-        type: "integer"
+          required: false
+          type: "integer"
       responses:
         "200":
           description: "A collection of FAQ"
@@ -251,24 +253,24 @@ paths:
   /farms:
     get:
       tags:
-      - "farm"
+        - "farm"
       summary: "Farm enrolled in the association"
       description: "List of farms in the association"
       operationId: "farmsGET"
       produces:
-      - "application/json"
+        - "application/json"
       parameters:
-      - name: "offset"
-        in: "query"
-        description: "Pagination offset. Default is 0."
-        required: false
-        type: "integer"
-      - name: "limit"
-        in: "query"
-        description: "Maximum number of items per page. Default is 20 and cannot exceed\
+        - name: "offset"
+          in: "query"
+          description: "Pagination offset. Default is 0."
+          required: false
+          type: "integer"
+        - name: "limit"
+          in: "query"
+          description: "Maximum number of items per page. Default is 20 and cannot exceed\
           \ 500."
-        required: false
-        type: "integer"
+          required: false
+          type: "integer"
       responses:
         "200":
           description: "A collection of Farms"
@@ -282,19 +284,19 @@ paths:
   /farms/findById/{farmId}:
     get:
       tags:
-      - "farm"
+        - "farm"
       summary: "Find farm by ID"
       description: "Returns a farm"
       operationId: "getFarmById"
       produces:
-      - "application/json"
+        - "application/json"
       parameters:
-      - name: "farmId"
-        in: "path"
-        description: "ID of farm to return"
-        required: true
-        type: "integer"
-        format: "int64"
+        - name: "farmId"
+          in: "path"
+          description: "ID of farm to return"
+          required: true
+          type: "integer"
+          format: "int64"
       responses:
         "200":
           description: "successful operation"
@@ -308,18 +310,18 @@ paths:
   /farms/findByName/{farmName}:
     get:
       tags:
-      - "farm"
+        - "farm"
       summary: "Find farms by name"
       description: "Return farms with the specified name"
       operationId: "getFarmByName"
       produces:
-      - "application/json"
+        - "application/json"
       parameters:
-      - name: "farmName"
-        in: "path"
-        description: "Name of farms to return"
-        required: true
-        type: "string"
+        - name: "farmName"
+          in: "path"
+          description: "Name of farms to return"
+          required: true
+          type: "string"
       responses:
         "200":
           description: "successful operation"
@@ -330,22 +332,48 @@ paths:
         "404":
           description: "Farm not found"
       x-swagger-router-controller: "Farm"
+  /helpUsForm/sendForm:
+    post:
+      tags:
+        - "helpUsForm"
+      summary: "HelpUs form"
+      description: "Send a form to be recontacted"
+      operationId: "helpUsFormPOST"
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      parameters:
+        - in: "body"
+          name: "helpUsform"
+          description: "the form to insert"
+          required: false
+          schema:
+            $ref: "#/definitions/HelpUsForm"
+      responses:
+        "201":
+          description: "OK"
+        "400":
+          description: "invalid input"
+        "404":
+          description: "unauthorized"
+      x-swagger-router-controller: "HelpUsForm"
   /people/findById/{personId}:
     get:
       tags:
-      - "person"
+        - "person"
       summary: "Find person by ID"
       description: "Returns a person"
       operationId: "getPersonById"
       produces:
-      - "application/json"
+        - "application/json"
       parameters:
-      - name: "personId"
-        in: "path"
-        description: "ID of person to return"
-        required: true
-        type: "integer"
-        format: "int64"
+        - name: "personId"
+          in: "path"
+          description: "ID of person to return"
+          required: true
+          type: "integer"
+          format: "int64"
       responses:
         "200":
           description: "successful operation"
@@ -359,22 +387,22 @@ paths:
   /people/findByRole/{personRole}:
     get:
       tags:
-      - "person"
+        - "person"
       summary: "Find people by role"
       description: "Returns all people with a specific role"
       operationId: "getPersonByRole"
       produces:
-      - "application/json"
+        - "application/json"
       parameters:
-      - name: "personRole"
-        in: "path"
-        description: "Role of people to return"
-        required: true
-        type: "string"
-        enum:
-        - "Founder"
-        - "Expert"
-        - "Volunteer"
+        - name: "personRole"
+          in: "path"
+          description: "Role of people to return"
+          required: true
+          type: "string"
+          enum:
+            - "Founder"
+            - "Expert"
+            - "Volunteer"
       responses:
         "200":
           description: "successful operation"
@@ -507,6 +535,42 @@ definitions:
       openingTimes: "7.00 - 14.00, 17.00 - 19.30"
       farmImg: "Img0"
       contactId: 0
+  HelpUsForm:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+      name:
+        type: "string"
+      surname:
+        type: "string"
+      birthDate:
+        type: "string"
+      address:
+        type: "string"
+      city:
+        type: "string"
+      province:
+        type: "string"
+      phoneNumber:
+        type: "string"
+      email:
+        type: "string"
+      skills:
+        type: "string"
+    title: "HelpUsForm"
+    description: "A form sent to the organizers"
+    example:
+      id: "0"
+      name: "Davide"
+      surname: "Siciliano"
+      birthDate: "28-7-96"
+      address: "address"
+      city: "city"
+      province: "province"
+      phoneNumber: "1234567"
+      email: "davide.siciliano"
+      skills: "some skills"
   Person:
     type: "object"
     properties:
@@ -521,9 +585,9 @@ definitions:
         type: "string"
         description: "role of the person in the association"
         enum:
-        - "Founder"
-        - "Expert"
-        - "Volunteer"
+          - "Founder"
+          - "Expert"
+          - "Volunteer"
       description:
         type: "string"
       personImg:
