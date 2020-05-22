@@ -213,7 +213,6 @@ nav {
 .nextEvents {
   background: #F1F1F1;
   width: 100%;
-  height: 414px;
   left: 0px;
 }
 
@@ -1044,4 +1043,77 @@ input {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
+}
+
+.grid-container {
+  /* Grid styles */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.single-farm .activities {
+  background-color: #F1F1F1;
+  padding-top: 20px;
+  padding-bottom: 25px;
+}
+
+.activity-list {
+  background-color: #F1F1F1;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+ .activities .grid-container {
+  padding: 20px 3rem;
+  grid-gap: 5rem;
+}
+
+.activities .card {
+  height: 350px;
+  max-width: 420px;
+  margin: auto;
+  background-color: #F1F1F1;
+}
+
+.activities .card .container {
+  margin: auto;
+  text-align: center;
+  padding: 0px;
+}
+
+.activities .card .container h4 {
+  padding-left: 0px;
+  color: black;
+}
+
+
+/* Card styles */
+
+.card {
+  border: 1px solid #E2E2E2;
+  border-radius: .5rem;
+
+  margin: auto auto;
+
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.card img {
+  width: 100%;
+  overflow: hidden;
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+  position: relative;
+  object-fit: cover;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.activity .card img {
+  height: 85%;
 }
