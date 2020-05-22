@@ -1,23 +1,25 @@
 'use strict';
 
+let Person = require("../models/Peson")
+
 let sqlDb;
 
 exports.personDbSetup = function (connection) {
   sqlDb = connection;
   console.log("Checking if the person table exists");
-  return sqlDb.schema.hasTable("person")
+  return sqlDb.schema.hasTable(Person.getTable)
     .then((exists) => {
       if (!exists) {
         console.log("It does not exist so create it");
-        return sqlDb.schema.createTable("person", tableBuilder => {
+        return sqlDb.schema.createTable(Person.getTable, tableBuilder => {
           tableBuilder.increments();
-          tableBuilder.integer("id");
-          tableBuilder.text("name");
-          tableBuilder.text("surname");
-          tableBuilder.enum("role", ["Founder", "Expert", "Volunteer"]);
-          tableBuilder.text("description")
-          tableBuilder.text("personImg");
-          tableBuilder.integer("contactId");
+          tableBuilder.integer(Person.id);
+          tableBuilder.text(Person.name);
+          tableBuilder.text(Person.surname);
+          tableBuilder.enum(Person.role, ["Founder", "Expert", "Volunteer"]);
+          tableBuilder.text(Person.description)
+          tableBuilder.text(Person.personImg);
+          tableBuilder.integer(Person.contactId);
         });
       } else {
         console.log("Table already exists");
@@ -33,8 +35,8 @@ exports.personDbSetup = function (connection) {
  * returns Person
  **/
 exports.getPersonById = function (personId) {
-  return sqlDb("person")
-    .where("id", personId);
+  return sqlDb(Person.getTable)
+    .where(Person.id, personId);
 }
 
 /**
@@ -45,6 +47,6 @@ exports.getPersonById = function (personId) {
  * returns Person
  **/
 exports.getPersonByRole = function (personRole) {
-  return sqlDb("person")
-    .where("role", personRole);
+  return sqlDb(Person.getTable)
+    .where(Person.role, personRole);
 }

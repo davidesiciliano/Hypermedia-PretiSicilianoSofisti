@@ -3,6 +3,7 @@ let {contactsDbSetup} = require("./ContactService");
 let {eventDbSetup} = require("./EventService")
 let {faqDbSetup} = require("./FAQService")
 let {farmDbSetup} = require("./FarmService")
+let {helpUsFormDbSetup} = require("./HelpUsFormService")
 let {personDbSetup} = require("./PersonService");
 
 const sqlDbFactory = require("knex");
@@ -26,6 +27,7 @@ function setupDataLayer() {
     .then(eventDbSetup(sqlDb))
     .then(faqDbSetup(sqlDb))
     .then(farmDbSetup(sqlDb))
+    .then(helpUsFormDbSetup(sqlDb))
     .then(personDbSetup(sqlDb));
 }
 
