@@ -1117,3 +1117,9 @@ input {
 .activity .card img {
   height: 85%;
 }
+
+/* Header selected*/
+
+.nav-links .selected {
+  text-decoration: underline;
+}
