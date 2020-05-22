@@ -5,11 +5,11 @@ let sqlDb;
 exports.farmDbSetup = function (connection) {
   sqlDb = connection;
   console.log("Checking if the event table exists");
-  return sqlDb.schema.hasTable("event")
+  return sqlDb.schema.hasTable("farm")
     .then((exists) => {
       if (!exists) {
         console.log("It does not exist so create it");
-        return sqlDb.schema.createTable("event", tableBuilder => {
+        return sqlDb.schema.createTable("farm", tableBuilder => {
           tableBuilder.increments();
           tableBuilder.integer("id");
           tableBuilder.text("name");
