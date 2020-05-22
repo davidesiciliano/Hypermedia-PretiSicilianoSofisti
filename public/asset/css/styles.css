@@ -141,6 +141,10 @@ nav {
     display: none;
   }
 
+  .navInfo{
+    display: none;
+  }
+
   .links {
     display: none;
   }
@@ -379,42 +383,6 @@ nav {
 .footer .footer-content .contact-form .contact-btn a {
   padding: 10px;
 }
-
-/*Carousel*/
-.carousel-container {
-  overflow: hidden;
-  position: relative;
-}
-
-.carousel-slide {
-  display: flex;
-}
-
-.carousel-slide img {
-  width: 100%;
-  border: 1px solid red; /*justr for debug*/
-}
-
-#prevBtn {
-  position: absolute;
-  top: 50%;
-  left: 5%;
-  font-size: 30px;
-  color: white;
-  opacity: 20;
-  cursor: pointer;
-}
-
-#nextBtn {
-  position: absolute;
-  top: 50%;
-  right: 5%;
-  font-size: 30px;
-  color: white;
-  opacity: 10;
-  cursor: pointer;
-}
-
 
 .joinUsBtnContainer {
   width: 100%;
@@ -983,56 +951,6 @@ input {
 .accordion-item:target .accordion-link .fa-minus {
   display: block;
 }
-
-/* New carusel 
-
-.slider{
-  overflow: hidden;
-}
-
-.slider .figure{
-  position: relative;
-  width: 500%;
-  margin: 0;
-  left: 0;
-  animation: 20s slider infinite;
-}
-
-.slider .figure img{
-  float: left;
-  width: 20%;
-}
-
-@keyframes slider{
-  0%{
-    left: 0;
-  }
-  20%{
-    left: 0;
-  }
-  25%{
-    left: -100%;
-  }
-  45%{
-    left: -100%;
-  }
-  50%{
-    left: -200%;
-  }
-  70%{
-    left: -200%;
-  }
-  75%{
-    left: -300%;
-  }
-  90%{
-    left: -300%;
-  }
-  100%{
-    left: -400%;
-  }
-}
-*/
 
 .contents .slider .title {
   position: absolute;
