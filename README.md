@@ -21,7 +21,7 @@
 # TODO Backend:
 - [ ] index.html               
 - [ ] association_page.html
-- [ ] activities_page.html
+- [x] activities_page.html
 - [ ] helpUs_page.html
 - [ ] farms_page.html
 - [ ] events_page.html
