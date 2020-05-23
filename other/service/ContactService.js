@@ -1,19 +1,21 @@
 'use strict';
 
+let Contact = require("../models/Contact")
+
 let sqlDb;
 
 exports.contactsDbSetup = function (connection) {
   sqlDb = connection;
   console.log("Checking if the contact table exists");
-  return sqlDb.schema.hasTable("contact")
+  return sqlDb.schema.hasTable(Contact.getTable)
     .then((exists) => {
       if (!exists) {
         console.log("It does not exist so create it");
-        return sqlDb.schema.createTable("contact", tableBuilder => {
+        return sqlDb.schema.createTable(Contact.getTable, tableBuilder => {
           tableBuilder.increments();
-          tableBuilder.integer("id");
-          tableBuilder.text("email");
-          tableBuilder.text("phoneNumber");
+          tableBuilder.integer(Contact.id);
+          tableBuilder.text(Contact.email);
+          tableBuilder.text(Contact.phoneNumber);
         });
       } else {
         console.log("Table already exists");
@@ -29,7 +31,7 @@ exports.contactsDbSetup = function (connection) {
  * returns Contact
  **/
 exports.getContactById = function (contactId) {
-  return sqlDb("contact")
-    .where("id", contactId);
+  return sqlDb(Contact.getTable)
+    .where(Contact.id, contactId);
 }
 

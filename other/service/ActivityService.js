@@ -1,22 +1,24 @@
 'use strict';
 
+let Activity = require("../models/Activity");
+
 let sqlDb;
 
 exports.activityDbSetup = function (connection) {
   sqlDb = connection;
   console.log("Checking if the activity table exists");
-  return sqlDb.schema.hasTable("activity")
+  return sqlDb.schema.hasTable(Activity.getTable)
     .then((exists) => {
       if (!exists) {
         console.log("Id does not exist so create it");
-        return sqlDb.schema.createTable("activity", tableBuilder => {
+        return sqlDb.schema.createTable(Activity.getTable, tableBuilder => {
           tableBuilder.increments();
-          tableBuilder.integer("id");
-          tableBuilder.text("name");
-          tableBuilder.text("description");
-          tableBuilder.text("startDate");
-          tableBuilder.text("endDate");
-          tableBuilder.text("activityImg");
+          tableBuilder.integer(Activity.id);
+          tableBuilder.text(Activity.name);
+          tableBuilder.text(Activity.description);
+          tableBuilder.text(Activity.startDate);
+          tableBuilder.text(Activity.endDate);
+          tableBuilder.text(Activity.activityImg);
         });
       } else {
         console.log("Table already exists");
@@ -35,7 +37,7 @@ exports.activityDbSetup = function (connection) {
 exports.activityGET = function (offset, limit) {
   if (!limit)
     limit = 20;
-  return sqlDb("activity")
+  return sqlDb(Activity.getTable)
     .limit(limit)
     .offset(offset);
 }
@@ -49,8 +51,8 @@ exports.activityGET = function (offset, limit) {
  * returns Activity
  **/
 exports.getActivityById = function (activityId) {
-  return sqlDb("activity")
-    .where("id", activityId);
+  return sqlDb(Activity.getTable)
+    .where(Activity.id, activityId);
 }
 
 
@@ -62,7 +64,7 @@ exports.getActivityById = function (activityId) {
  * returns Activity
  **/
 exports.getActivityByName = function (activityName) {
-  return sqlDb("activity")
-    .where("name", activityName);
+  return sqlDb(Activity.getTable)
+    .where(Activity.name, activityName);
 }
 

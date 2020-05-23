@@ -48,6 +48,28 @@ p {
   padding-right: 2em;
   padding-left: 2em;
 }
+.personImageResize{
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.contents .slider .title h2{
+  position: absolute;
+  font-family: 'Poppins', sans-serif;
+  font-style: italic;
+  color: white;
+  font-weight: 800;
+  font-size: 59px;
+  top: 50%;
+  left: 50%;
+  text-shadow:   2px  2px 4px #777,
+                -2px -2px 4px #777;
+  transform: translate(-50%, -220%);
+  z-index: 1;
+}
 
 /*HEADER*/
 nav {
@@ -129,15 +151,34 @@ nav {
     padding-top: 23px;
     font-size: 22px;
   }
-
+  .contents .slider .title h2{
+    font-size: 40px;
+    transform: translate(-50%, -320%);
+  }
 }
 
 @media screen and (max-width: 1024px) {
+  .personImageResize{
+    display: block;
+  }
+
+  .column1{
+    display: none;
+  }
+  .contents .slider .title h2{
+    font-size: 18px;
+    transform: translate(-50%, -900%);
+  }
+
   body {
     overflow-x: hidden;
   }
 
   .contact-form {
+    display: none;
+  }
+
+  .navInfo{
     display: none;
   }
 
@@ -378,42 +419,6 @@ nav {
 .footer .footer-content .contact-form .contact-btn a {
   padding: 10px;
 }
-
-/*Carousel*/
-.carousel-container {
-  overflow: hidden;
-  position: relative;
-}
-
-.carousel-slide {
-  display: flex;
-}
-
-.carousel-slide img {
-  width: 100%;
-  border: 1px solid red; /*justr for debug*/
-}
-
-#prevBtn {
-  position: absolute;
-  top: 50%;
-  left: 5%;
-  font-size: 30px;
-  color: white;
-  opacity: 20;
-  cursor: pointer;
-}
-
-#nextBtn {
-  position: absolute;
-  top: 50%;
-  right: 5%;
-  font-size: 30px;
-  color: white;
-  opacity: 10;
-  cursor: pointer;
-}
-
 
 .joinUsBtnContainer {
   width: 100%;
@@ -1123,3 +1128,4 @@ input {
 .nav-links .selected {
   text-decoration: underline;
 }
+
