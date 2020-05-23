@@ -26,6 +26,7 @@ function loadHeader() {
     </div>
   `;
 
+  if (currentPage !== "homepageH")
   document.getElementById(currentPage).classList.add("selected");
 }
 
