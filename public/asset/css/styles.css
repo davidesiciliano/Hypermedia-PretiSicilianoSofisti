@@ -49,6 +49,18 @@ p {
   padding-left: 2em;
 }
 
+.contents .slider .title h2{
+  position: absolute;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  font-weight: 800;
+  font-size: 59px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -220%);
+  z-index: 1;
+}
+
 /*HEADER*/
 nav {
   display: flex;
@@ -129,10 +141,19 @@ nav {
     padding-top: 23px;
     font-size: 22px;
   }
-
+  .contents .slider .title h2{
+    font-size: 40px;
+    transform: translate(-50%, -320%);
+  }
 }
 
 @media screen and (max-width: 1024px) {
+  
+  .contents .slider .title h2{
+    font-size: 18px;
+    transform: translate(-50%, -900%);
+  }
+
   body {
     overflow-x: hidden;
   }
@@ -952,14 +973,3 @@ input {
   display: block;
 }
 
-.contents .slider .title {
-  position: absolute;
-  font-family: 'Poppins', sans-serif;
-  color: white;
-  font-weight: 800;
-  font-size: 60px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-}
