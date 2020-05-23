@@ -13,7 +13,6 @@ exports.helpUsFormDbSetup = function (connection) {
         console.log("It does not exist so create it");
         return sqlDb.schema.createTable(HelpUs.getTable, tableBuilder => {
           tableBuilder.increments();
-          tableBuilder.integer(HelpUs.id);
           tableBuilder.text(HelpUs.name);
           tableBuilder.text(HelpUs.surname);
           tableBuilder.text(HelpUs.birthDate);
@@ -40,7 +39,6 @@ exports.helpUsFormDbSetup = function (connection) {
 exports.helpUsFormPOST = function (helpUsForm) {
   return sqlDb(HelpUs.getTable)
     .insert({
-      id: helpUsForm.id,
       name: helpUsForm.name,
       surname: helpUsForm.surname,
       birthDate: helpUsForm.birthDate,
