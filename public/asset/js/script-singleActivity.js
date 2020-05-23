@@ -24,16 +24,28 @@ function loadPage() {
       fetch("../v2/relatedTo/findRelatedEvents/" + activityId).then(function (response) { //fetch related events
         return response.json();
       }).then(function (relatedEventsJson) {
+        var eventsList = document.getElementById("relatedEventsToActivity");
         for (var i=0; i<relatedEventsJson.length; i++) {
           let eventId = relatedEventsJson[i].eventId;
-          //TODO qua devo fare il fetch degli eventi
+          fetch("../v2/events/findById/" + eventId).then(function (response) {
+            return response.json();
+          }).then(function (eventJson) {
+            let {id, name, date, hours, location, smallDescription, completeDescription, eventImg, personId} = eventJson[0];
+            eventsList.innerHTML += addRelatedEvent(id, name); //TODO QUA VEDERE COS'ALTRO VA MESSO
+          });
         }
         fetch("../v2/offers/findInterestedFarms/" +activityId).then(function (response) { //fetch interested farms
           return response.json();
         }).then(function (interestedFarmsJson) {
+          var farmsList = document.getElementById("involvedFarmsToActivity");
           for (var i=0; i<interestedFarmsJson.length; i++) {
-            let farmId = relatedEventsJson[i].farmId;
-            //TODO qua devo fare il fetch degli eventi
+            let farmId = interestedFarmsJson[i].farmId;
+            fetch("../v2/farms/findById/" + farmId).then(function (response) {
+              return response.json();
+            }).then(function (farmJson) {
+              let {id, name, description, openingTimes, farmImg, contactId} = farmJson[0];
+              farmsList.innerHTML += addInterestedFarm(id, name); //TODO QUA VEDERE COS'ALTRO VA MESSO
+            });
           }
         })
       })
@@ -65,10 +77,12 @@ function addActivityData(name, description, startDate, endDate, activityImg) { /
     </div>
     <div class="nextEvents">
       <h2>Related events</h2>
+      <ul id="relatedEventsToActivity"></ul>
     </div>
   
     <div class="farm-section">
       <h2>Interested farms</h2>
+      <ul id="involvedFarmsToActivity"></ul>
     </div>
   `;
 }
@@ -76,6 +90,18 @@ function addActivityData(name, description, startDate, endDate, activityImg) { /
 function addAssignedVolunteer(id, name, surname) {
   return `
     <li><a href="./singleVolunteer_page.html?activityId=`+ id +`"><p>`+ name +` `+ surname +`</p></a></li>
+  `;
+}
+
+function addRelatedEvent(id, name) {
+  return `
+    <li><a href="./singleEvent_page.html?eventId=`+ id +`"><p>`+ name +`</p></a></li>
+  `;
+}
+
+function addInterestedFarm(id, name) {
+  return `
+    <li><a href="./singleFarm_page.html?farmId=`+ id +`"><p>`+ name +`</p></a></li>
   `;
 }
 
