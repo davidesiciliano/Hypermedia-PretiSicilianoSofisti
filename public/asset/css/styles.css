@@ -52,6 +52,7 @@ p {
 .contents .slider .title h2{
   position: absolute;
   font-family: 'Poppins', sans-serif;
+  font-style: italic;
   color: white;
   font-weight: 800;
   font-size: 59px;
