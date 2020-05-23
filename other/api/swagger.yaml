@@ -720,7 +720,7 @@ definitions:
         type: "integer"
         format: "int64"
     example:
-      personId: 6
+      eventId: 6
       activityId: 3
 externalDocs:
   description: "Find out more about Swagger"
