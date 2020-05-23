@@ -1142,7 +1142,7 @@ input {
 /* PEOPLE */
 
 .people .person-card {
-  height: 400px;
+  height: 350px;
   background-color: #F1F1F1;
   overflow: hidden;
   transition-property: background;
@@ -1153,7 +1153,7 @@ input {
 .people .people-grid-container {
   /* Grid styles */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 
   margin: 20px 0px;
   grid-gap: 1px;
@@ -1169,12 +1169,12 @@ input {
 
 .people .circle-container {
   border-radius: 50%;
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   display:block;
   margin-left:auto;
   margin-right:auto;
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .people .person-card:hover {
