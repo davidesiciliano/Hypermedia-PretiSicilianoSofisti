@@ -1,6 +1,8 @@
 function loadFooter() {
-  var header = document.querySelector(".footer");
-  header.innerHTML = `
+  var footer = document.querySelector(".footer");
+  var currentPage = footer.id.replace("Footer", "F");
+
+  footer.innerHTML = `
     <div class="footer-content">
     
       <div class="footer-section about">
@@ -22,8 +24,8 @@ function loadFooter() {
         <h2>Quick Links</h2>
         <br>
         <ul>
-          <li><a href="../../pages/terms_page.html">Terms</a></li>
-          <li><a href="../../pages/FAQ_page.html">FAQ</a></li>
+          <li id="termsF"><a href="../../pages/terms_page.html">Terms</a></li>
+          <li id="faqF"><a href="../../pages/FAQ_page.html">FAQ</a></li>
         </ul>
       </div>
   
@@ -44,6 +46,9 @@ function loadFooter() {
       &copy; volontariatodimontagna.com | Designed by Preti Siciliano Sofisti
     </div>
     `;
+
+  if (currentPage === "termsF" || currentPage === "faqF")
+    document.getElementById(currentPage).className = "selected";
 }
 
 loadFooter();
