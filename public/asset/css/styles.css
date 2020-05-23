@@ -48,7 +48,14 @@ p {
   padding-right: 2em;
   padding-left: 2em;
 }
-
+.personImageResize{
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 .contents .slider .title h2{
   position: absolute;
   font-family: 'Poppins', sans-serif;
@@ -149,7 +156,13 @@ nav {
 }
 
 @media screen and (max-width: 1024px) {
-  
+  .personImageResize{
+    display: block;
+  }
+
+  .column1{
+    display: none;
+  }
   .contents .slider .title h2{
     font-size: 18px;
     transform: translate(-50%, -900%);
