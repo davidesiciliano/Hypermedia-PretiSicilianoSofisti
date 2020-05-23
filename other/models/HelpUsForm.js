@@ -1,6 +1,5 @@
 const table = {
   getTable: "helpUsForm",
-  id: "id",
   name: "name",
   surname: "surname",
   birthDate: "birthDate",

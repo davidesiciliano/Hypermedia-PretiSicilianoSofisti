@@ -7,10 +7,12 @@ function loadPage() {
       let {id, name, description, startDate, endDate, activityImg} = json[i];
       activityList.innerHTML += `
         <div class="card">
-          <img src="../asset/img/Activities/A1-formaggio.png" alt=""> 
-          <div class="container">
-            <h4>`+ name +`</h4>
-          </div>
+          <a href="./singleActivity_page.html?activityId=`+ id +`"> 
+            <img src="../asset/img/Activities/A1-formaggio.png" alt=""> 
+            <div class="container">
+              <h4>`+ name +`</h4>
+            </div>
+          </a>
         </div>
       `;
     }
