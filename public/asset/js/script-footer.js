@@ -22,7 +22,7 @@ function loadFooter() {
         <h2>Quick Links</h2>
         <br>
         <ul>
-          <li><a href="../../pages/terms_page.html" style="text-decoration: underline;">Terms</a></li>
+          <li><a href="../../pages/terms_page.html">Terms</a></li>
           <li><a href="../../pages/FAQ_page.html">FAQ</a></li>
         </ul>
       </div>

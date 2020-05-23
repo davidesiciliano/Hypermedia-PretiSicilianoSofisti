@@ -18,30 +18,7 @@
 
 <body>
 <!--header-->
-<nav>
-  <div class="logo">
-    <a href="../index.html">
-      <img src="../asset/img/Logo.png" alt="logo"/>
-    </a>
-    <h1><a href="../index.html">Volontariato di Montagna</a></h1>
-  </div>
-  <ul class="nav-links">
-    <li><a href="../pages/association_page.html">Association</a></li>
-    <li><a href="../pages/farms_page.html">Farms</a></li>
-    <li><a href="../pages/activities_page.html">Activities</a></li>
-    <li><a href="../pages/events_page.html">Events</a></li>
-    <li><a href="../pages/people_page.html">People</a></li>
-    <li class="selected"><a href="../pages/helpUs_page.html">Help Us</a></li>
-    <li class="FAQLink"><a href="../pages/FAQ_page.html">FAQ</a></li>
-    <li class="TermsLink"><a href="../pages/terms_page.html">Terms</a></li>
-  </ul>
-  <div class="burger">
-    <div class="line1"></div>
-    <div class="line2"></div>
-    <div class="line3"></div>
-  </div>
-</nav>
-
+<nav class="header" id="helpUsPage"></nav>
 
 <!--contents-->
 <div class="contents">
@@ -113,6 +90,7 @@
         </div>
 
         <script>
+          //TODO aggiungere messaggio quando viene inviato correttamente
           const url = "http://localhost:5000";
 
           var button = document.getElementById("sendForm");
@@ -167,52 +145,10 @@
 
 
 <!--footer-->
-<div class="footer">
+<div class="footer"></div>
 
-  <div class="footer-content">
-
-    <div class="footer-section about">
-      <h2>Contacts</h2>
-      <p>Contact us for more informations:</p>
-      <div class="contact">
-        <span><a class="fas fa-phone">&nbsp;</a><a href="tel:+39 02 50204018">02 50204018</a></span>
-        <span><a class="fas fa-envelope">&nbsp;</a><a href="mailto: info@volontariatodimontagna.it">info@volontariatodimontagna.it</a></span>
-      </div>
-      <div class="socials">
-        <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
-        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-        <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-        <a href="https://youtube.com/"><i class="fab fa-youtube"></i></a>
-      </div>
-    </div>
-
-    <div class="footer-section links">
-      <h2>Quick Links</h2>
-      <br>
-      <ul>
-        <li><a href="../pages/terms_page.html">Terms</a></li>
-        <li><a href="../pages/FAQ_page.html">FAQ</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-section contact-form">
-      <h2>Contact Us</h2>
-      <br>
-      <form action="" method="post">
-        <input type="email" name="email" class="text-input contact-input" placeholder="Your email address..."></input>
-        <textarea name="message" class="text-input contact-input" placeholder="Your message..."></textarea>
-        <button type="submit" class="btn btn-big contact-btn">
-          <i class="fas fa-envelope">&nbsp;</i><a> Send</a>
-        </button>
-      </form>
-    </div>
-
-  </div>
-
-  <div class="footer-bottom">
-    &copy; volontariatodimontagna.com | Designed by Preti Siciliano Sofisti
-  </div>
-</div>
 </body>
+<script src="../asset/js/script-header.js"></script>
+<script src="../asset/js/script-footer.js"></script>
 <script src="../asset/js/script.js"></script>
 </html>
