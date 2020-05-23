@@ -194,15 +194,15 @@ nav {
     position: absolute;
     right: 0px;
     height: 40vh;
-    top: 4vh;
-    background-color: #0F4D71;
+    top: 4.9vh;
+    background-color:rgb(18, 88, 129);
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 50%;
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
-    z-index: 1;
+    z-index: 2;
   }
 
   .nav-links li {
