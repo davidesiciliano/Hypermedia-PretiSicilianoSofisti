@@ -6,17 +6,17 @@ function loadPage() {
   fetch("../v2/people/findById/" + personId).then(function (response) {
     return response.json();
   }).then(function (personJson) {
-    let {personId, name, surname, role, personImg, contactId} = personJson[0];
+    let {personId, name, surname, role, description, personImg, contactId} = personJson[0];
     fetch("../v2/contacts/findById/" + contactId).then(function (response) {
       return response.json();
     }).then(function (contactJson) {
       let {contactId, email, phoneNumber} = contactJson[0];
-      founderDescription.innerHTML = addFounderData(name, surname, personImg, email, phoneNumber);
+      founderDescription.innerHTML = addFounderData(name, surname, description, personImg, email, phoneNumber);
     });
   });
 }
 
-function addFounderData(name, surname, personImg, email, phoneNumber) {
+function addFounderData(name, surname, description, personImg, email, phoneNumber) {
   return `
     <div class="topSection">
       <div class="name"><a href="./people_page.html"><i class="fas fa-chevron-left"></i>` + name + ` ` + surname + `</a></div>
@@ -28,7 +28,7 @@ function addFounderData(name, surname, personImg, email, phoneNumber) {
         <img src="../asset/img/Founders/1.jfif" alt="">
       </div>
       <div class="column2">
-        <p>` + "AGGIUNGERE DESCRIZIONE IN DATABASE" + `</p>
+        <p>` + description + `</p>
         <h3>Contacts</h3>
         <p>Telephone: ` + phoneNumber + `</p>
         <p>Email: ` + email + `</p>

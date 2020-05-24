@@ -2,9 +2,9 @@ function loadPage() {
   var activityList = document.querySelector(".grid-container");
   fetch("../v2/activities").then(function (response) {
     return response.json();
-  }).then(function (json) {
-    for (var i = 0; i < json.length; i++) {
-      let {id, name, description, startDate, endDate, activityImg} = json[i];
+  }).then(function (activityJson) {
+    for (var i = 0; i < activityJson.length; i++) {
+      let {id, name, description, startDate, endDate, activityImg} = activityJson[i];
       activityList.innerHTML += `
         <div class="card">
           <a href="./singleActivity_page.html?activityId=`+ id +`"> 

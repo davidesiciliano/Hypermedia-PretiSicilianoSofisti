@@ -31,7 +31,7 @@ function loadPage() {
             return response.json();
           }).then(function (eventJson) {
             let {id, name, date, hours, location, smallDescription, completeDescription, eventImg, personId} = eventJson[0];
-            eventsList.innerHTML += addRelatedEvent(id, name); //TODO QUA VEDERE COS'ALTRO VA MESSO
+            eventsList.innerHTML += addRelatedEvent(id, name); //TODO QUA VEDERE COS'ALTRO VA MESSO TRA I PARAMETRI
           });
         }
         fetch("../v2/offers/findInterestedFarms/" +activityId).then(function (response) { //fetch interested farms
@@ -44,7 +44,7 @@ function loadPage() {
               return response.json();
             }).then(function (farmJson) {
               let {id, name, description, openingTimes, farmImg, contactId} = farmJson[0];
-              farmsList.innerHTML += addInterestedFarm(id, name); //TODO QUA VEDERE COS'ALTRO VA MESSO
+              farmsList.innerHTML += addInterestedFarm(id, name); //TODO QUA VEDERE COS'ALTRO VA MESSO  TRA I PARAMETRI
             });
           }
         })
