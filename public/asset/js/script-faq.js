@@ -2,9 +2,9 @@ function loadPage() {
   var faqList = document.querySelector(".accordion");
   fetch("../v2/faq").then(function (response) {
     return response.json();
-  }).then(function (json) {
-    for (var i = 0; i < json.length; i++) {
-      let {id, question, answer} = json[i];
+  }).then(function (faqJson) {
+    for (var i = 0; i < faqJson.length; i++) {
+      let {id, question, answer} = faqJson[i];
       faqList.innerHTML += `
         <div class="accordion">
           <div class="accordion-item" id="`+ id +`">

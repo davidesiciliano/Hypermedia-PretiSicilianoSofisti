@@ -1,10 +1,13 @@
 let {activityDbSetup} = require("./ActivityService")
 let {contactsDbSetup} = require("./ContactService");
-let {eventDbSetup} = require("./EventService")
-let {faqDbSetup} = require("./FAQService")
-let {farmDbSetup} = require("./FarmService")
-let {helpUsFormDbSetup} = require("./HelpUsFormService")
+let {eventDbSetup} = require("./EventService");
+let {faqDbSetup} = require("./FAQService");
+let {farmDbSetup} = require("./FarmService");
+let {helpUsFormDbSetup} = require("./HelpUsFormService");
+let {isInvolvedInDbSetup} = require("./IsInvolvedInService");
+let {offersDbSetup} = require("./OffersService");
 let {personDbSetup} = require("./PersonService");
+let {relatedToDbSetup} = require("./RelatedToService");
 
 const sqlDbFactory = require("knex");
 
@@ -28,7 +31,10 @@ function setupDataLayer() {
     .then(faqDbSetup(sqlDb))
     .then(farmDbSetup(sqlDb))
     .then(helpUsFormDbSetup(sqlDb))
-    .then(personDbSetup(sqlDb));
+    .then(isInvolvedInDbSetup(sqlDb))
+    .then(offersDbSetup(sqlDb))
+    .then(personDbSetup(sqlDb))
+    .then(relatedToDbSetup(sqlDb));
 }
 
 module.exports = {database: sqlDb, setupDataLayer};
