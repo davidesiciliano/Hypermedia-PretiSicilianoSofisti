@@ -46,17 +46,17 @@
 
 # TODO: Page Polish
 - [ ] index.html                            homepage title
-- [ ] association_page.html
+- [x] association_page.html
 - [ ] activities_page.html
-- [ ] helpUs_page.html
+- [x] helpUs_page.html
 - [ ] farms_page.html
 - [ ] events_page.html
 - [ ] people_page.html
-- [ ] FAQ_page.html            
-- [ ] singleActivity_page.html
-- [ ] singleFarm_page.html
-- [ ] singleEvent_page.html
-- [ ] singleVolunteer_page.html
-- [ ] singleExpert_page.html
-- [ ] singleFounder_page.html
-- [ ] terms_page.html
+- [ ] FAQ_page.html                 problem scroll down     
+- [ ] singleActivity_page.html      image resized to be improved visualization 
+- [ ] singleFarm_page.html                  
+- [ ] singleEvent_page.html         image resized to be improved visualization 
+- [ ] singleVolunteer_page.html     image resized to be improved visualization 
+- [ ] singleExpert_page.html        image resized to be improved visualization 
+- [ ] singleFounder_page.html       image resized to be improved visualization 
+- [x] terms_page.html
