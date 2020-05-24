@@ -22,6 +22,7 @@ exports.helpUsFormDbSetup = function (connection) {
           tableBuilder.text(HelpUs.phoneNumber);
           tableBuilder.text(HelpUs.email);
           tableBuilder.text(HelpUs.skills);
+          tableBuilder.text(HelpUs.description);
         });
       } else {
         console.log("Table already exists");
@@ -47,7 +48,8 @@ exports.helpUsFormPOST = function (helpUsForm) {
       province: helpUsForm.province,
       phoneNumber: helpUsForm.phoneNumber,
       email: helpUsForm.email,
-      skills: helpUsForm.skills
+      skills: helpUsForm.skills,
+      description: helpUsForm.description
     });
 }
 

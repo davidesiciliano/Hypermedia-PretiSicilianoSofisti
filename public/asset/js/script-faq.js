@@ -1,5 +1,5 @@
 function loadPage() {
-  var faqList = document.querySelector(".accordion");
+  var faqList = document.getElementById("faqSection");
   fetch("../v2/faq").then(function (response) {
     return response.json();
   }).then(function (faqJson) {

@@ -4,6 +4,7 @@ const table = {
   name: "name",
   description: "description",
   openingTimes: "openingTimes",
+  gallery: "gallery",
   farmImg: "farmImg",
   contactId: "contactId"
 };

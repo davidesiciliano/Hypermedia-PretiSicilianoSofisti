@@ -605,6 +605,10 @@ definitions:
         type: "string"
       openingTimes:
         type: "string"
+      gallery:
+        type: "array"
+        items:
+          type: "string"
       farmImg:
         type: "string"
       contactId:
@@ -617,6 +621,9 @@ definitions:
       name: "Rossi's Farm"
       description: "Farm managed by Rossi's Family"
       openingTimes: "7.00 - 14.00, 17.00 - 19.30"
+      gallery:
+      - "img1"
+      - "img2"
       farmImg: "Img0"
       contactId: 0
   HelpUsForm:
@@ -640,6 +647,8 @@ definitions:
         type: "string"
       skills:
         type: "string"
+      description:
+        type: "string"
     title: "HelpUsForm"
     description: "A form sent to the organizers"
     example:
@@ -653,6 +662,7 @@ definitions:
       phoneNumber: "1234567"
       email: "davide.siciliano"
       skills: "some skills"
+      description: "a description"
   IsInvolvedIn:
     type: "object"
     properties:
