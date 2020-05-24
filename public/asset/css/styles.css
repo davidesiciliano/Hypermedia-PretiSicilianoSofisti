@@ -1179,6 +1179,61 @@ input {
 
 .people .person-card:hover {
   background-color: white;
-
 }
 
+/* Activities */
+
+.activities-grid-container {
+  /* Grid styles */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  margin: 0px 0px;
+  grid-gap: 2px;
+  padding: 0px;
+}
+
+.activities-list .activities-grid-container {
+  background-color: white;
+}
+
+.single-farm .activity-card {
+  background-color: #F1F1F1;
+}
+
+.activity-card {
+  height: 350px;
+  overflow: hidden;
+  transition-property: background;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+.activities-list .activity-card {
+  background-color: #F1F1F1;
+}
+
+.single-farm .activity-card {
+  background-color: white;
+}
+
+.activity-card img {
+  width: 100%;
+}
+
+.activity-card .rectangle-container {
+  width: 80%;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top: 25px;
+  overflow: hidden;
+}
+
+.activities-list .activity-card:hover {
+  background-color: white;
+}
+
+.single-farm .activity-card:hover {
+  background-color: #F1F1F1;
+}
