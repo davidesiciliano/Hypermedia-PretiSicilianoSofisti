@@ -17,7 +17,8 @@ exports.farmDbSetup = function (connection) {
           tableBuilder.text(Farm.name);
           tableBuilder.text(Farm.description);
           tableBuilder.text(Farm.openingTimes);
-          tableBuilder.text(Farm.farmImg)
+          tableBuilder.text(Farm.gallery);
+          tableBuilder.text(Farm.farmImg);
           tableBuilder.integer(Farm.contactId);
         });
       } else {

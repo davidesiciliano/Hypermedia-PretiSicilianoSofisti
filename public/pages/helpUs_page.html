@@ -85,11 +85,15 @@
         <div class="input-group">
           <input class="input--style-1" type="text" placeholder="SKILLS" name="skills" id="inputSkills">
         </div>
+        <div class="input-group">
+          <input class="input--style-1" type="text" placeholder="DESCRIPTION" name="description" id="inputDescription">
+        </div>
         <div class="button-container">
           <button class="joinUsBtn" type="submit" id="sendForm"><a href="">Submit</a></button>
         </div>
 
         <script>
+          //TODO AGGIUNGERE DESCRIZIONE SULLA PAGINA
           //TODO aggiungere messaggio quando viene inviato correttamente
           const url = "http://localhost:5000";
 
@@ -105,6 +109,7 @@
             var phoneNumber = document.getElementById("inputPhoneNumber").value;
             var email = document.getElementById("inputEmail").value;
             var skills = document.getElementById("inputSkills").value;
+            var description = document.getElementById("inputDescription").value;
 
             const data = {
               name: name,
@@ -115,7 +120,8 @@
               province: province,
               phoneNumber: phoneNumber,
               email: email,
-              skills: skills
+              skills: skills,
+              description: description
             };
 
             fetch(url + "/v2/helpUsForm/sendForm", {

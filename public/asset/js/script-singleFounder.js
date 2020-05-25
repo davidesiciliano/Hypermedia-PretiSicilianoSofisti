@@ -2,7 +2,7 @@ function loadPage() {
   const urlParams = new URLSearchParams(window.location.search);
   const personId = urlParams.get('personId');
 
-  var founderDescription = document.querySelector(".contents");
+  var founderDescription = document.getElementById("founderInfo");
   fetch("../v2/people/findById/" + personId).then(function (response) {
     return response.json();
   }).then(function (personJson) {
@@ -22,10 +22,10 @@ function addFounderData(name, surname, description, personImg, email, phoneNumbe
       <div class="name"><a href="./people_page.html"><i class="fas fa-chevron-left"></i>` + name + ` ` + surname + `</a></div>
       <div class="navInfo"><a href="./people_page.html">People</a></div>
     </div>
-    <img class="personImageResize" src="../asset/img/Founders/1.jfif" alt="">
+    <img class="personImageResize" src="../asset/img/Founders/` + personImg + `" alt="">
     <div class="eventDescription">
       <div class="column1">
-        <img src="../asset/img/Founders/1.jfif" alt="">
+        <img src="../asset/img/Founders/` + personImg + `" alt="">
       </div>
       <div class="column2">
         <p>` + description + `</p>

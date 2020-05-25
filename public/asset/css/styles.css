@@ -156,6 +156,22 @@ nav {
   margin: 5px;
   transition: all 0.3s ease;
 }
+.contents .topImage {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.contents .topImage .title {
+  position: absolute;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 60px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 
 @media screen and (min-width: 1025px) {
   .FAQLink {
@@ -185,9 +201,16 @@ nav {
     font-size: 40px;
     transform: translate(-50%, -320%);
   }
+  .contents .topImage .title {
+    font-size: 40px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
+  .contents .topImage .title {
+    font-size: 30px;
+  }
+
   .personImageResize {
     display: block;
   }
@@ -704,21 +727,7 @@ h1 {
   text-align: center;
 }
 
-.contents .topImage {
-  position: relative;
-  text-align: center;
-  color: white;
-}
 
-.contents .topImage .title {
-  position: absolute;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 800;
-  font-size: 60px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
 
 .small {
   bottom: 0px;
@@ -1301,6 +1310,7 @@ display: inline-block;
 /*  background-color: #F1F1F1;*/
 /*}*/
 
+
 .row {
   display: -ms-flexbox; /* IE10 */
   display: flex;
@@ -1321,7 +1331,6 @@ display: inline-block;
   margin-top: 16px;
   vertical-align: middle;
   width: 100%;
-  border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -1341,4 +1350,3 @@ display: inline-block;
     flex: 100%;
     max-width: 100%;
   }
-

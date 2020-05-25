@@ -8,7 +8,8 @@ const table = {
   province: "province",
   phoneNumber: "phoneNumber",
   email: "email",
-  skills: "skills"
+  skills: "skills",
+  description: "description"
 };
 
 module.exports = table;

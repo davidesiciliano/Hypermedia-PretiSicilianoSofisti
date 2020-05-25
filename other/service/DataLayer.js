@@ -14,14 +14,14 @@ const sqlDbFactory = require("knex");
 let sqlDb = sqlDbFactory({
   client: "pg",
   connection: { //process.env.DATABASE_URL,
-    host: "localhost",
-    user: "postgres",
-    password: "postgres",
-    database: "VolontariatoDiMontagnaDB",
+    host: "ec2-176-34-97-213.eu-west-1.compute.amazonaws.com",
+    user: "pkuvwhdfluphfy",
+    password: "6662683a4619db58d3a01906492e70bb6a7593d0a9d6ea37e8db93c72dbf1239",
+    database: "d1eh20mpmvnvc3",
+    ssl: { rejectUnauthorized: false }
   },
   debug: true,
-  ssl: true
-});
+})
 
 function setupDataLayer() {
   console.log("Setting up data layer");
