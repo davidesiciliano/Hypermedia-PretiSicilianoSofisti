@@ -22,62 +22,14 @@
 
 <!--contents-->
 
-<div class="contents">
-
-  <div class="topSection">  <!--topSection div-->
-    <div class="name"><a href="../pages/people_page.html"><i class="fas fa-chevron-left"></i> Founder Name</a></div>
-    <!--name div-->
-    <div class="navInfo"><a href="../pages/people_page.html">People</a></div>  <!--People div-->
-  </div>
-  <img class="personImageResize" src="../asset/img/Founders/1.jfif" alt="">
-  <div class="eventDescription"> <!--person description div-->
-    <div class="column1">  <!--col1 div-->
-      <img src="../asset/img/Founders/1.jfif" alt="">
-    </div>
-    <div class="column2">  <!--col2 div-->
-      <p>Camilla is one of the tree founders of the association. She created Volontariato di montagna in 2018 with other
-        two friends after the end of his study carrier and a digree in economics with a thesis in Sustainable
-        development of italian small Farms where she studied more in depth those realities and got the idea of the
-        asssociation. She is dynamic and corious.</p>
-      <h3>Contacts</h3>
-      <p>Telephone</p>
-      <p>Email</p>
-    </div>
-  </div>
-</div>
-<!--
-<div class="contents"></div>
-
-<script>
-  const urlParams = new URLSearchParams(window.location.search);
-  const personId = urlParams.get('personId');
-  var founderDescription = document.querySelector(".contents");
-  fetch("../v2/people/findById/" + personId).then(function (response) {
-    return response.json();
-  }).then(function (personJson) {
-    let {personId, name, surname, role, personImg, contactId} = personJson[0];
-    fetch("../v2/contacts/" + contactId).then(function (response) {
-      return response.json();
-    }).then(function (contactJson) {
-      let {contactId, email, phoneNumber} = contactJson[0];
-
-      //top section
-      var topSection = document.createElement("div");
-      topSection.className = "topSection";
-
-
-      //person description
-    });
-  });
-
-</script>
--->
+<div class="contents" id="founderInfo"></div>
 
 <!--footer-->
 <div class="footer" id="peopleFooter"></div>
 
 </body>
 <script src="../asset/js/script-header.js"></script>
+<script src="../asset/js/script-singleFounder.js"></script>
 <script src="../asset/js/script-footer.js"></script>
 <script src="../asset/js/script.js"></script>
 </html>

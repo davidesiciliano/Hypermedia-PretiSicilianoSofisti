@@ -1,6 +1,7 @@
 const table = {
   getTable: "event",
   id: "id",
+  name: "name",
   date: "date",
   hours: "hours",
   location: "location",

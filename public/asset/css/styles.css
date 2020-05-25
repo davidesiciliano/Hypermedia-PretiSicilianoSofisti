@@ -156,6 +156,22 @@ nav {
   margin: 5px;
   transition: all 0.3s ease;
 }
+.contents .topImage {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.contents .topImage .title {
+  position: absolute;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 60px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 
 @media screen and (min-width: 1025px) {
   .FAQLink {
@@ -185,9 +201,16 @@ nav {
     font-size: 40px;
     transform: translate(-50%, -320%);
   }
+  .contents .topImage .title {
+    font-size: 40px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
+  .contents .topImage .title {
+    font-size: 30px;
+  }
+
   .personImageResize {
     display: block;
   }
@@ -293,13 +316,6 @@ nav {
   left: 0px;
 }
 
-.gallery .row {
-  display: flex;
-}
-
-.gallery .row .column {
-  flex: auto;
-}
 
 
 .partners .row {
@@ -487,20 +503,6 @@ nav {
 .middle-section {
   background-color: #F1F1F1;
   width: 100%;
-}
-
-.gallery {
-  height: 400px;
-  text-align: center;
-}
-
-
-.gallery img {
-  overflow: hidden;
-  width: 200px;
-  height: 100px;
-  border-radius: 10px;
-  box-shadow: 0 0 4px #666;
 }
 
 
@@ -725,21 +727,7 @@ h1 {
   text-align: center;
 }
 
-.contents .topImage {
-  position: relative;
-  text-align: center;
-  color: white;
-}
 
-.contents .topImage .title {
-  position: absolute;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 800;
-  font-size: 60px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
 
 .small {
   bottom: 0px;
@@ -1182,3 +1170,42 @@ input {
 
 }
 
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.gallery .column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 8px;
+}
+
+.gallery .column img {
+  margin-top: 16px;
+  vertical-align: middle;
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .gallery .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .gallery .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }

@@ -1,6 +1,5 @@
 const table = {
   getTable: "helpUsForm",
-  id: "id",
   name: "name",
   surname: "surname",
   birthDate: "birthDate",
@@ -9,7 +8,8 @@ const table = {
   province: "province",
   phoneNumber: "phoneNumber",
   email: "email",
-  skills: "skills"
+  skills: "skills",
+  description: "description"
 };
 
 module.exports = table;

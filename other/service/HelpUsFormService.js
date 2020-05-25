@@ -13,7 +13,6 @@ exports.helpUsFormDbSetup = function (connection) {
         console.log("It does not exist so create it");
         return sqlDb.schema.createTable(HelpUs.getTable, tableBuilder => {
           tableBuilder.increments();
-          tableBuilder.integer(HelpUs.id);
           tableBuilder.text(HelpUs.name);
           tableBuilder.text(HelpUs.surname);
           tableBuilder.text(HelpUs.birthDate);
@@ -23,6 +22,7 @@ exports.helpUsFormDbSetup = function (connection) {
           tableBuilder.text(HelpUs.phoneNumber);
           tableBuilder.text(HelpUs.email);
           tableBuilder.text(HelpUs.skills);
+          tableBuilder.text(HelpUs.description);
         });
       } else {
         console.log("Table already exists");
@@ -40,7 +40,6 @@ exports.helpUsFormDbSetup = function (connection) {
 exports.helpUsFormPOST = function (helpUsForm) {
   return sqlDb(HelpUs.getTable)
     .insert({
-      id: helpUsForm.id,
       name: helpUsForm.name,
       surname: helpUsForm.surname,
       birthDate: helpUsForm.birthDate,
@@ -49,7 +48,8 @@ exports.helpUsFormPOST = function (helpUsForm) {
       province: helpUsForm.province,
       phoneNumber: helpUsForm.phoneNumber,
       email: helpUsForm.email,
-      skills: helpUsForm.skills
+      skills: helpUsForm.skills,
+      description: helpUsForm.description
     });
 }
 

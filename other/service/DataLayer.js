@@ -1,24 +1,27 @@
 let {activityDbSetup} = require("./ActivityService")
 let {contactsDbSetup} = require("./ContactService");
-let {eventDbSetup} = require("./EventService")
-let {faqDbSetup} = require("./FAQService")
-let {farmDbSetup} = require("./FarmService")
-let {helpUsFormDbSetup} = require("./HelpUsFormService")
+let {eventDbSetup} = require("./EventService");
+let {faqDbSetup} = require("./FAQService");
+let {farmDbSetup} = require("./FarmService");
+let {helpUsFormDbSetup} = require("./HelpUsFormService");
+let {isInvolvedInDbSetup} = require("./IsInvolvedInService");
+let {offersDbSetup} = require("./OffersService");
 let {personDbSetup} = require("./PersonService");
+let {relatedToDbSetup} = require("./RelatedToService");
 
 const sqlDbFactory = require("knex");
 
 let sqlDb = sqlDbFactory({
   client: "pg",
   connection: { //process.env.DATABASE_URL,
-    host: "localhost",
-    user: "postgres",
-    password: "postgres",
-    database: "VolontariatoDiMontagnaDB",
+    host: "ec2-176-34-97-213.eu-west-1.compute.amazonaws.com",
+    user: "pkuvwhdfluphfy",
+    password: "6662683a4619db58d3a01906492e70bb6a7593d0a9d6ea37e8db93c72dbf1239",
+    database: "d1eh20mpmvnvc3",
+    ssl: { rejectUnauthorized: false }
   },
   debug: true,
-  ssl: true
-});
+})
 
 function setupDataLayer() {
   console.log("Setting up data layer");
@@ -28,7 +31,10 @@ function setupDataLayer() {
     .then(faqDbSetup(sqlDb))
     .then(farmDbSetup(sqlDb))
     .then(helpUsFormDbSetup(sqlDb))
-    .then(personDbSetup(sqlDb));
+    .then(isInvolvedInDbSetup(sqlDb))
+    .then(offersDbSetup(sqlDb))
+    .then(personDbSetup(sqlDb))
+    .then(relatedToDbSetup(sqlDb));
 }
 
 module.exports = {database: sqlDb, setupDataLayer};
