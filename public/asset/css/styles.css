@@ -1168,7 +1168,7 @@ input {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 
   margin: 0px 0px;
-  grid-gap: 2px;
+  grid-gap: 5px;
   padding: 0px;
 }
 
@@ -1198,6 +1198,7 @@ input {
 
 .activity-card img {
   width: 100%;
+  border-radius: 5px;
 }
 
 .activity-card .rectangle-container {
@@ -1217,6 +1218,88 @@ input {
   background-color: #F1F1F1;
 }
 
+/* Farm */
+
+.farms-grid-container {
+  /* Grid styles */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+
+  margin: 0px 0px;
+  grid-gap: 5px;
+  padding: 0px;
+}
+
+.farms-list .activities-grid-container {
+  background-color: white;
+}
+
+/*.single-farm .activity-card {*/
+/*  background-color: #F1F1F1;*/
+/*}*/
+
+.farm-card {
+  /*height: 250px;*/
+  overflow: hidden;
+  transition-property: background;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+.farms-list .farm-card {
+  background-color: #F1F1F1;
+}
+
+/*.single-farm .activity-card {*/
+/*  background-color: white;*/
+/*}*/
+
+.farm-card img {
+  max-height:100%;
+  /*max-height:100%;*/
+  /*height: auto;*/
+  border-radius: 5px;
+  position: relative;
+  margin: 20px 20px;
+}
+
+.farm-card .rectangle-container {
+  margin-left: 2%;
+  overflow: hidden;
+  background-color: #0F4D71;
+display: inline-block;
+}
+
+.farms-list .farm-card:hover {
+  background-color: white;
+}
+
+.farm-card .card-content {
+  margin-left: 5%;
+  display: inline-block;
+  width: 50%;
+  overflow: visible;
+  /*padding-left: 0px;*/
+  word-wrap:break-word;
+}
+
+.card-content p {
+  text-align: left;
+  padding-left: 0px;
+}
+
+.card-content h2 {
+  text-align: left;
+  margin-left: 0px;
+}
+
+.card-content h4 {
+  padding-left: 0px;
+}
+
+/*.single-farm .activity-card:hover {*/
+/*  background-color: #F1F1F1;*/
+/*}*/
 
 .row {
   display: -ms-flexbox; /* IE10 */
