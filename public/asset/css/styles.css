@@ -1127,6 +1127,49 @@ input {
   text-decoration: underline;
 }
 
+/* PEOPLE */
+
+.people .person-card {
+  height: 350px;
+  background-color: #F1F1F1;
+  overflow: hidden;
+  transition-property: background;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+.people .people-grid-container {
+  /* Grid styles */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  margin: 20px 0px;
+  grid-gap: 1px;
+  padding: 0px;
+  background-color: white;
+}
+
+.people .person-card img {
+  width: 100%;
+  border-radius: 50%;
+  /*filter: grayscale(100%);*/
+}
+
+.people .circle-container {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top: 25px;
+}
+
+.people .person-card:hover {
+  background-color: white;
+
+}
+
 .row {
   display: -ms-flexbox; /* IE10 */
   display: flex;
