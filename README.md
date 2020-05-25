@@ -41,8 +41,7 @@
     - homepage title
 - [x] association_page.html
 - [ ] activities_page.html
-- [ ] helpUs_page.html 
-    - (guardare sezione descrizione e vedere se farla come il mockup o va bene così)
+- [x] helpUs_page.html   Descrizione ok così
 - [ ] farms_page.html
 - [ ] events_page.html
 - [ ] people_page.html
