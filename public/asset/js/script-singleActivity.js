@@ -2,7 +2,7 @@ function loadPage() {
   const urlParams = new URLSearchParams(window.location.search);
   const activityId = urlParams.get('activityId');
 
-  var singleActivity = document.querySelector(".contents");
+  var singleActivity = document.getElementById("farmDescription");
   fetch("../v2/activities/findById/" + activityId).then(function (response) {
     return response.json();
   }).then(function (activityJson) {
@@ -89,7 +89,7 @@ function addActivityData(name, description, startDate, endDate, activityImg) { /
 
 function addAssignedVolunteer(id, name, surname) {
   return `
-    <li><a href="./singleVolunteer_page.html?activityId=`+ id +`"><p>`+ name +` `+ surname +`</p></a></li>
+    <li><a href="./singleVolunteer_page.html?personId=`+ id +`"><p>`+ name +` `+ surname +`</p></a></li>
   `;
 }
 
