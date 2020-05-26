@@ -36,5 +36,5 @@ function addFounderData(name, surname, description, personImg, email, phoneNumbe
     </div>
   `;
 }
-//TODO AGGIUNGERE IMMAGINE
+
 loadPage();
