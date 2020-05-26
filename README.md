@@ -35,6 +35,17 @@
 - [x] singleFounder_page.html
 - [x] terms_page.html
 
+#TODO: Database
+- [ ] Activities
+- [ ] Contact (todo farms part)
+- [ ] Event
+- [x] Faq
+- [ ] Farm
+- [ ] IsInvolvedIn
+- [ ] Offers
+- [x] Person
+- [ ] RelatedTo
+
 # TODO: Page Polish
 - [ ] problema sul resizing
 - [ ] index.html                            
@@ -58,6 +69,7 @@
 - [ ] singleExpert_page.html        
     - image resized to be improved visualization 
     - (magari fare immagine tonda come la pagina people e centrata nel "rettangolo" della foto)
+    - Limitare dimensioni card related events
 - [ ] singleFounder_page.html       
     - image resized to be improved visualization 
     - (magari fare immagine tonda come la pagina people e centrata nel "rettangolo" della foto) 
