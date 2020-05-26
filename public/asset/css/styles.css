@@ -91,6 +91,8 @@ p {
   flex: 50%;
   padding-right: 20px;
   padding-left: 20px;
+  background-color: #0F4D71;
+  margin-left: 20px;
 }
 
 .bottom-section .column p {
@@ -99,6 +101,15 @@ p {
   text-align: left;
 }
 
+.detailed-card {
+  padding-bottom: 20px;
+  display: flex;
+  background-color: #F1F1F1;
+
+  transition-property: background;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
 
 /*HEADER*/
 nav {
@@ -215,11 +226,18 @@ nav {
     display: block;
   }
 
-  .bottom-section{
+  .bottom-section {
     display: block;
     padding-left: 20px;
     padding-right: 20px;
   }
+
+  .detailed-card {
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   .column1 {
     display: none;
   }
@@ -271,8 +289,6 @@ nav {
   .burger {
     display: block;
   }
-
-;
 }
 
 .nav-active {
@@ -1167,8 +1183,127 @@ input {
 
 .people .person-card:hover {
   background-color: white;
-
 }
+
+/* Activities */
+
+.activities-grid-container {
+  /* Grid styles */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  margin: 0px 0px;
+  grid-gap: 5px;
+  padding: 0px;
+}
+
+.activities-list .activities-grid-container {
+  background-color: white;
+}
+
+.single-farm .activity-card {
+  background-color: #F1F1F1;
+}
+
+.activity-card {
+  height: 300px;
+  overflow: hidden;
+  transition-property: background;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+.activities-list .activity-card {
+  background-color: #F1F1F1;
+}
+
+.single-farm .activity-card {
+  background-color: white;
+}
+
+.activity-card .rectangle-container {
+  width: 80%;
+  max-height: 70%;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top: 25px;
+  overflow: hidden;
+}
+
+.activities-list .activity-card:hover {
+  background-color: white;
+}
+
+.single-farm .activity-card:hover {
+  background-color: #F1F1F1;
+}
+
+/* Farm */
+
+.farms-grid-container {
+  /* Grid styles */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+
+  margin: 0px 0px;
+  grid-gap: 5px;
+  padding: 0px;
+}
+
+.farms-list .activities-grid-container {
+  background-color: white;
+}
+
+.single-farm .activity-card {
+  background-color: #F1F1F1;
+}
+
+.farms-list .detailed-card {
+  background-color: #F1F1F1;
+}
+
+.farms-grid-container img {
+  width: 100%;
+  height: auto;
+  min-width: 300px;
+  max-width: 400px;
+  border-radius: 10px;
+  max-height: 250px;
+}
+
+.detailed-card .rectangle-container {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.farms-list .detailed-card:hover {
+  background-color: white;
+}
+
+.detailed-card .card-content {
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-left: 3%;
+  overflow: visible;
+  word-wrap:break-word;
+  overflow-wrap: break-word;
+}
+
+.card-content p {
+  text-align: left;
+  padding-left: 0px;
+}
+
+.card-content h2 {
+  text-align: left;
+  margin-left: 0px;
+}
+
+.card-content h4 {
+  padding-left: 0px;
+}
+
 
 .row {
   display: -ms-flexbox; /* IE10 */
@@ -1209,3 +1344,9 @@ input {
     flex: 100%;
     max-width: 100%;
   }
+}
+
+/* bs*/
+
+
+
