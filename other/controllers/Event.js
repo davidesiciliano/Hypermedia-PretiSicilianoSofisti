@@ -36,3 +36,14 @@ module.exports.getEventByName = function getEventByName (req, res, next) {
       utils.writeJson(res, response);
     });
 };
+
+module.exports.getEventsByPersonId = function getEventsByPersonId (req, res, next) {
+  var personId = req.swagger.params['personId'].value;
+  Event.getEventsByPersonId(personId)
+    .then(function (response) {
+      utils.writeJson(res, response);
+    })
+    .catch(function (response) {
+      utils.writeJson(res, response);
+    });
+};
