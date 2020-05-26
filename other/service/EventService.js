@@ -71,3 +71,14 @@ exports.getEventByName = function (eventName) {
     .where(Event.name, eventName);
 }
 
+/**
+ * Find events related to a personId
+ * Returns events related to a person
+ *
+ * personId Integer PersonId of considered person
+ * returns Event
+ **/
+exports.getEventsByPersonId = function(personId) {
+  return sqlDb(Event.getTable)
+    .where(Event.personId, personId);
+}

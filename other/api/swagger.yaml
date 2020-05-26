@@ -204,7 +204,7 @@ paths:
     get:
       tags:
       - "event"
-      summary: "Find evens by name"
+      summary: "Find events by name"
       description: "Returns events with a specific name"
       operationId: "getEventByName"
       produces:
@@ -222,6 +222,31 @@ paths:
             $ref: "#/definitions/Event"
         "400":
           description: "Invalid Name supplied"
+        "404":
+          description: "Event not found"
+      x-swagger-router-controller: "Event"
+  /events/findByPersonId/{personId}:
+    get:
+      tags:
+      - "event"
+      summary: "Find events related to a personId"
+      description: "Returns events related to a person"
+      operationId: "getEventsByPersonId"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "personId"
+        in: "path"
+        description: "PersonId of considered person"
+        required: true
+        type: "integer"
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/Event"
+        "400":
+          description: "Invalid PersonId supplied"
         "404":
           description: "Event not found"
       x-swagger-router-controller: "Event"
@@ -369,7 +394,7 @@ paths:
       tags:
       - "isInvolvedIn"
       summary: "Find all people involved in a specific activity"
-      description: "Returns a list of people"
+      description: "Returns a list of couples person-activity"
       operationId: "getPeopleByActivityId"
       produces:
       - "application/json"
@@ -377,6 +402,32 @@ paths:
       - name: "activityId"
         in: "path"
         description: "ID of the considered activity"
+        required: true
+        type: "integer"
+        format: "int64"
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/IsInvolvedIn"
+        "400":
+          description: "Invalid ID supplied"
+        "404":
+          description: "Activity not found"
+      x-swagger-router-controller: "IsInvolvedIn"
+  /isInvolvedIn/findAssignedActivities/{personId}:
+    get:
+      tags:
+      - "isInvolvedIn"
+      summary: "Find all activities assigned to a specific person"
+      description: "Returns a list of couples person-activity"
+      operationId: "getActivitiesByPersonId"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "personId"
+        in: "path"
+        description: "ID of the considered person"
         required: true
         type: "integer"
         format: "int64"
@@ -599,9 +650,15 @@ definitions:
       id:
         type: "integer"
         format: "int64"
-      name:
+      farmName:
         type: "string"
-      description:
+      ownerName:
+        type: "string"
+      shortDescription:
+        type: "string"
+      completeDescription:
+        type: "string"
+      address:
         type: "string"
       openingTimes:
         type: "string"
@@ -618,8 +675,11 @@ definitions:
     description: "A farm involved in the association"
     example:
       id: 0
-      name: "Rossi's Farm"
-      description: "Farm managed by Rossi's Family"
+      farmName: "Rossi's Farm"
+      ownerName: "Mario Rossi"
+      shortDescription: "Farm managed by Rossi's Family"
+      completeDescription: "A long description"
+      address: "via fattoria, 10"
       openingTimes: "7.00 - 14.00, 17.00 - 19.30"
       gallery:
       - "img1"

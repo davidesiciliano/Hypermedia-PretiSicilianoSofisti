@@ -34,3 +34,14 @@ exports.getPeopleByActivityId = function(activityId) {
     .where(IsInvolvedIn.activityId, activityId);
 }
 
+/**
+ * Find all activities assigned to a specific person
+ * Returns a list of couples person-activity
+ *
+ * personId Long ID of the considered person
+ * returns IsInvolvedIn
+ **/
+exports.getActivitiesByPersonId = function(personId) {
+  return sqlDb(IsInvolvedIn.getTable)
+    .where(IsInvolvedIn.personId, personId);
+}

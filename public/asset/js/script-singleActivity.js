@@ -2,7 +2,7 @@ function loadPage() {
   const urlParams = new URLSearchParams(window.location.search);
   const activityId = urlParams.get('activityId');
 
-  var singleActivity = document.querySelector(".contents");
+  var singleActivity = document.getElementById("farmDescription");
   fetch("../v2/activities/findById/" + activityId).then(function (response) {
     return response.json();
   }).then(function (activityJson) {
@@ -31,7 +31,7 @@ function loadPage() {
             return response.json();
           }).then(function (eventJson) {
             let {id, name, date, hours, location, smallDescription, completeDescription, eventImg, personId} = eventJson[0];
-            eventsList.innerHTML += addRelatedEvent(id, name); //TODO QUA VEDERE COS'ALTRO VA MESSO TRA I PARAMETRI
+            eventsList.innerHTML += addRelatedEvent(id, name, eventImg);
           });
         }
         fetch("../v2/offers/findInterestedFarms/" +activityId).then(function (response) { //fetch interested farms
@@ -44,32 +44,32 @@ function loadPage() {
               return response.json();
             }).then(function (farmJson) {
               let {id, name, description, openingTimes, farmImg, contactId} = farmJson[0];
-              farmsList.innerHTML += addInterestedFarm(id, name); //TODO QUA VEDERE COS'ALTRO VA MESSO  TRA I PARAMETRI
+              farmsList.innerHTML += addInterestedFarm(id, name, farmImg);
             });
           }
-        })
-      })
+        });
+      });
     });
   });
 }
 
-function addActivityData(name, description, startDate, endDate, activityImg) { //TODO SISTEMARE IMMAGINE
+function addActivityData(name, description, startDate, endDate, activityImg) {
   return `
     <div class="topSection">
       <div class="name"><a href="../pages/activities_page.html"><i class="fas fa-chevron-left"></i>`+ name +`</a></div>
       <div class="navInfo"><a href="../pages/activities_page.html">Activities</a></div>
     </div>
-    <img class="personImageResize" src="../asset/img/Farm/farm1.jfif" alt="">
+    <img class="personImageResize" src="../asset/img/Activities/` + activityImg + `" alt="">
     <div class="eventDescription">
       <div class="column1">
-        <img src="../asset/img/Farm/farm1.jfif" alt="">
+        <img src="../asset/img/Activities/` + activityImg + `" alt="">
       </div>
       <div class="column2">
         <h4>`+ startDate +` - `+ endDate +`</h4>
         <p>`+ description +`</p>
         <div class="contacts">
           <div class="columnA">
-            <h3>Assigned volunteers (i nomi ci sono ma trasparenti o bianchi come dice Giorgio)</h3>
+            <h3>Assigned volunteers</h3>
             <ul class="slds-list_dotted" id="assignedVolunteersToActivity"></ul>
           </div>
         </div>
@@ -79,7 +79,6 @@ function addActivityData(name, description, startDate, endDate, activityImg) { /
       <h2>Related events</h2>
       <ul id="relatedEventsToActivity"></ul>
     </div>
-  
     <div class="farm-section">
       <h2>Interested farms</h2>
       <ul id="involvedFarmsToActivity"></ul>
@@ -89,7 +88,7 @@ function addActivityData(name, description, startDate, endDate, activityImg) { /
 
 function addAssignedVolunteer(id, name, surname) {
   return `
-    <li><a href="./singleVolunteer_page.html?activityId=`+ id +`"><p>`+ name +` `+ surname +`</p></a></li>
+    <li><a href="./singleVolunteer_page.html?personId=`+ id +`"><p>`+ name +` `+ surname +`</p></a></li>
   `;
 }
 
