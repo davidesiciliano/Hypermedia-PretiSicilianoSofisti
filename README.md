@@ -60,6 +60,7 @@
     - problem scroll down     
 - [ ] singleActivity_page.html      
     - image resized to be improved visualization 
+    - cambiare colore assigned volunteers
 - [ ] singleFarm_page.html                  
 - [ ] singleEvent_page.html         
     - image resized to be improved visualization 
