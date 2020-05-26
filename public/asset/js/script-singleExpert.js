@@ -24,8 +24,6 @@ function loadPage() {
       })
     });
   });
-
-
 }
 
 function addExpertData(name, surname, description, personImg, email, phoneNumber) {
@@ -64,7 +62,6 @@ function addRelatedEvent(eventId, name, eventImg) {
     </a>
   </div>
   `;
-
 }
 
 loadPage();

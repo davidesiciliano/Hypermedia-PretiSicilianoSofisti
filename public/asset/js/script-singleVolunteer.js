@@ -29,8 +29,6 @@ function loadPage() {
       });
     });
   });
-
-
 }
 
 function addVolunteerData(name, surname, description, personImg, email, phoneNumber) {
@@ -69,7 +67,6 @@ function addAssignedActivity(activityId, name, activityImg) {
     </a>
   </div>
   `;
-
 }
 
 loadPage();
