@@ -1206,7 +1206,7 @@ input {
 }
 
 .activity-card {
-  height: 300px;
+  height: 350px;
   overflow: hidden;
   transition-property: background;
   transition-duration: 0.3s;
@@ -1251,18 +1251,6 @@ input {
   padding: 0px;
 }
 
-.farms-list .activities-grid-container {
-  background-color: white;
-}
-
-.single-farm .activity-card {
-  background-color: #F1F1F1;
-}
-
-.farms-list .detailed-card {
-  background-color: #F1F1F1;
-}
-
 .farms-grid-container img {
   width: 100%;
   height: auto;
@@ -1304,7 +1292,6 @@ input {
   padding-left: 0px;
 }
 
-
 .row {
   display: -ms-flexbox; /* IE10 */
   display: flex;
@@ -1345,8 +1332,6 @@ input {
     max-width: 100%;
   }
 }
-
-/* bs*/
 
 
 
