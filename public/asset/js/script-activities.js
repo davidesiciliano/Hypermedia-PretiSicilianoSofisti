@@ -1,22 +1,26 @@
 function loadPage() {
-  var activityList = document.querySelector(".grid-container");
+  var activityList = document.getElementById("activitiesGrid");
   fetch("../v2/activities").then(function (response) {
     return response.json();
   }).then(function (activityJson) {
     for (var i = 0; i < activityJson.length; i++) {
       let {id, name, description, startDate, endDate, activityImg} = activityJson[i];
-      activityList.innerHTML += `
-        <div class="card">
-          <a href="./singleActivity_page.html?activityId=`+ id +`"> 
-            <img src="../asset/img/Activities/A1-formaggio.png" alt=""> 
-            <div class="container">
-              <h4>`+ name +`</h4>
-            </div>
-          </a>
-        </div>
-      `;
+      activityList.innerHTML += addActivity(id, name, activityImg);
     }
   });
 }
-//TODO SISTEMARE NOME IMMAGINE QUANDO NE AVREMO
+
+function addActivity(id, name, activityImg) {
+  return `
+  <div class="activity-card">
+    <a href="./singleActivity_page.html?activityId=` + id + `">
+      <div class="rectangle-container">
+        <img src="../asset/img/Activities/` + activityImg + `" alt="">
+      </div>
+      <h2>` + name + `</h2>
+    </a>
+  </div>
+  `;
+}
+
 loadPage();
