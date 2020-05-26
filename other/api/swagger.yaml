@@ -624,9 +624,15 @@ definitions:
       id:
         type: "integer"
         format: "int64"
-      name:
+      farmName:
         type: "string"
-      description:
+      ownerName:
+        type: "string"
+      shortDescription:
+        type: "string"
+      completeDescription:
+        type: "string"
+      address:
         type: "string"
       openingTimes:
         type: "string"
@@ -643,8 +649,11 @@ definitions:
     description: "A farm involved in the association"
     example:
       id: 0
-      name: "Rossi's Farm"
-      description: "Farm managed by Rossi's Family"
+      farmName: "Rossi's Farm"
+      ownerName: "Mario Rossi"
+      shortDescription: "Farm managed by Rossi's Family"
+      completeDescription: "A long description"
+      address: "via fattoria, 10"
       openingTimes: "7.00 - 14.00, 17.00 - 19.30"
       gallery:
       - "img1"

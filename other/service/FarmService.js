@@ -14,8 +14,11 @@ exports.farmDbSetup = function (connection) {
         return sqlDb.schema.createTable(Farm.getTable, tableBuilder => {
           tableBuilder.increments();
           tableBuilder.integer(Farm.id);
-          tableBuilder.text(Farm.name);
-          tableBuilder.text(Farm.description);
+          tableBuilder.text(Farm.farmName);
+          tableBuilder.text(Farm.ownerName);
+          tableBuilder.text(Farm.shortDescription);
+          tableBuilder.text(Farm.completeDescription);
+          tableBuilder.text(Farm.address);
           tableBuilder.text(Farm.openingTimes);
           tableBuilder.text(Farm.gallery);
           tableBuilder.text(Farm.farmImg);

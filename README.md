@@ -37,10 +37,10 @@
 
 #TODO: Database
 - [ ] Activities
-- [ ] Contact (todo farms part)
+- [x] Contact
 - [ ] Event
-- [x] Faq
-- [ ] Farm
+- [ ] Faq (mancano risposte)
+- [ ] Farm (mancano foto e diversi campi)
 - [ ] IsInvolvedIn
 - [ ] Offers
 - [x] Person

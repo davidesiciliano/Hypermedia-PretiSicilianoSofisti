@@ -1,8 +1,11 @@
 const table = {
   getTable: "farm",
   id: "id",
-  name: "name",
-  description: "description",
+  farmName: "farmName",
+  ownerName: "ownerName",
+  shortDescription: "shortDescription",
+  completeDescription: "completeDescription",
+  address: "address",
   openingTimes: "openingTimes",
   gallery: "gallery",
   farmImg: "farmImg",

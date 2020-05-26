@@ -45,6 +45,7 @@ function addExpertData(name, surname, description, personImg, email, phoneNumber
         <p>Telephone: ` + phoneNumber + `</p>
         <p>Email: ` + email + `</p>
         <div class="activities-list">
+          <h3>Related Events</h3>
           <div class="activities-grid-container" id="expertRelatedEvent"></div>
         </div>
       </div>
