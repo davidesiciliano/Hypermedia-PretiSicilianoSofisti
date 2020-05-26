@@ -204,7 +204,7 @@ paths:
     get:
       tags:
       - "event"
-      summary: "Find evens by name"
+      summary: "Find events by name"
       description: "Returns events with a specific name"
       operationId: "getEventByName"
       produces:
@@ -222,6 +222,31 @@ paths:
             $ref: "#/definitions/Event"
         "400":
           description: "Invalid Name supplied"
+        "404":
+          description: "Event not found"
+      x-swagger-router-controller: "Event"
+  /events/findByPersonId/{personId}:
+    get:
+      tags:
+      - "event"
+      summary: "Find events related to a personId"
+      description: "Returns events related to a person"
+      operationId: "getEventsByPersonId"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "personId"
+        in: "path"
+        description: "PersonId of considered person"
+        required: true
+        type: "integer"
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/Event"
+        "400":
+          description: "Invalid PersonId supplied"
         "404":
           description: "Event not found"
       x-swagger-router-controller: "Event"
