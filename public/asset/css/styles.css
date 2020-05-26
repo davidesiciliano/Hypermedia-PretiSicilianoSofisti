@@ -58,21 +58,6 @@ p {
   padding-bottom: 20px;
 }
 
-.contents .slider .title h2 {
-  position: absolute;
-  font-family: 'Poppins', sans-serif;
-  font-style: italic;
-  color: white;
-  font-weight: 800;
-  font-size: 59px;
-  top: 50%;
-  left: 50%;
-  text-shadow: 2px 2px 4px #777,
-  -2px -2px 4px #777;
-  transform: translate(-50%, -220%);
-  z-index: 1;
-}
-
 
 .map {
   width: 100%;
@@ -199,7 +184,6 @@ nav {
 
   .contents .slider .title h2 {
     font-size: 40px;
-    transform: translate(-50%, -320%);
   }
   .contents .topImage .title {
     font-size: 40px;
@@ -226,7 +210,6 @@ nav {
 
   .contents .slider .title h2 {
     font-size: 18px;
-    transform: translate(-50%, -900%);
   }
 
   body {
@@ -1038,17 +1021,23 @@ input {
 */
 
 .contents .slider .title {
-  position: absolute;
+  position: relative;
   font-family: 'Poppins', sans-serif;
+  font-style: italic;
   color: white;
   font-weight: 800;
-  font-size: 60px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  font-size: 40px;
+  text-shadow: 2px 2px 4px #777,
+  -2px -2px 4px #777;
   z-index: 1;
 }
-
+.contents .slider .title h2{
+  position: absolute;
+  vertical-align: middle;
+  margin-top: 10%;
+  color: white;
+  text-align: center;
+}
 .grid-container {
   /* Grid styles */
   display: grid;
