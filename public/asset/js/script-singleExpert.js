@@ -13,13 +13,13 @@ function loadPage() {
       let {contactId, email, phoneNumber} = contactJson[0];
       expertDescription.innerHTML = addExpertData(name, surname, description, personImg, email, phoneNumber);
 
-      var relatedEvenets = document.getElementById("expertRelatedEvent");
+      var relatedEvents = document.getElementById("expertRelatedEvent");
       fetch("../v2/events/findByPersonId/" + personId).then(function (response) {
         return response.json();
       }).then(function (eventsJson) {
         for (var i = 0; i < eventsJson.length; i++) {
           let {eventId, name, date, hours, location, smallDescription, completeDescription, eventImg, personIdE} = eventsJson[i];
-          relatedEvenets.innerHTML += addRelatedEvent(eventId, name, eventImg);
+          relatedEvents.innerHTML += addRelatedEvent(eventId, name, eventImg);
         }
       })
     });
