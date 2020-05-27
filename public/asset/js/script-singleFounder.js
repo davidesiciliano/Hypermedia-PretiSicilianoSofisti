@@ -30,8 +30,14 @@ function addFounderData(name, surname, description, personImg, email, phoneNumbe
       <div class="column2">
         <p>` + description + `</p>
         <h3>Contacts</h3>
-        <p>Telephone: ` + phoneNumber + `</p>
-        <p>Email: ` + email + `</p>
+          <div class="personContact">
+          <span>
+            <a class="fas fa-phone"></a><a href="tel:` + phoneNumber + `">` + phoneNumber + `</a>
+          </span>
+          <span>
+            <a class="fas fa-envelope"></a><a href="mailto: ` + email + `">` + email + `</a>
+          </span>
+        </div>
       </div>
     </div>
   `;

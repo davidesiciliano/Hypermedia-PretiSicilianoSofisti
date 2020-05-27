@@ -34,7 +34,7 @@ function loadPage() {
 function addVolunteerData(name, surname, description, personImg, email, phoneNumber) {
   return `
     <div class="topSection">
-      <div class="name"><a href="./people_page.html"><i class="fas fa-chevron-left"></i>` + name + ` ` + surname + `</a></div>
+      <div class="name"><a href="./people_page.html"><i class="fas fa-chevron-left"></i> ` + name + ` ` + surname + `</a></div>
       <div class="navInfo"><a href="./people_page.html">People</a></div>
     </div>
     <img class="personImageResize" src="../asset/img/People/Volunteers/` + personImg + `" alt="">
@@ -45,8 +45,14 @@ function addVolunteerData(name, surname, description, personImg, email, phoneNum
       <div class="column2">
         <p>` + description + `</p>
         <h3>Contacts</h3>
-        <p>Telephone: ` + phoneNumber + `</p>
-        <p>Email: ` + email + `</p>
+        <div class="personContact">
+        <span>
+          <a class="fas fa-phone"></a><a href="tel:` + phoneNumber + `">` + phoneNumber + `</a>
+        </span>
+        <span>
+          <a class="fas fa-envelope"></a><a href="mailto: ` + email + `">` + email + `</a>
+        </span>
+      </div>
         <div class="activities-list">
           <h3>Assigned Activities</h3>
           <div class="activities-grid-container" id="volunteerAssignedActivities"></div>
