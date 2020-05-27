@@ -30,7 +30,7 @@ function loadPage() {
           fetch("../v2/events/findById/" + eventId).then(function (response) {
             return response.json();
           }).then(function (eventJson) {
-            let {id, name, date, hours, location, smallDescription, completeDescription, eventImg, personId} = eventJson[0];
+            let {id, name, date, hours, location, smallDescription, completeDescription, eventImg, personId, farmId} = eventJson[0];
             eventsList.innerHTML += addRelatedEvent(id, name, eventImg);
           });
         }
@@ -43,8 +43,8 @@ function loadPage() {
             fetch("../v2/farms/findById/" + farmId).then(function (response) {
               return response.json();
             }).then(function (farmJson) {
-              let {id, name, description, openingTimes, farmImg, contactId} = farmJson[0];
-              farmsList.innerHTML += addInterestedFarm(id, name, farmImg);
+              let {id, farmName, ownerName, shortDescription, completeDescription, address, coordinates, openingTimes, farmImg, contactId} = farmJson[0];
+              farmsList.innerHTML += addInterestedFarm(id, farmName, farmImg);
             });
           }
         });

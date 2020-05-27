@@ -8,7 +8,8 @@ const table = {
   smallDescription: "smallDescription",
   completeDescription: "completeDescription",
   eventImg: "eventImg",
-  personId: "personId"
+  personId: "personId",
+  farmId: "farmId"
 };
 
 module.exports = table;

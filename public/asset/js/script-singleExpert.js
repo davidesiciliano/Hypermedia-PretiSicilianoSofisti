@@ -18,7 +18,7 @@ function loadPage() {
         return response.json();
       }).then(function (eventsJson) {
         for (var i = 0; i < eventsJson.length; i++) {
-          let {eventId, name, date, hours, location, smallDescription, completeDescription, eventImg, personIdE} = eventsJson[i];
+          let {eventId, name, date, hours, location, smallDescription, completeDescription, eventImg, personIdE, farmId} = eventsJson[i];
           relatedEvents.innerHTML += addRelatedEvent(eventId, name, eventImg);
         }
       })
