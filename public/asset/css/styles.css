@@ -570,10 +570,12 @@ h4 {
 
 .eventDescription .column2 p {
   text-align: justify;
+  padding-bottom: 20px;
 }
 
 .eventDescription .column2 .contacts .columnA {
   flex: 50%;
+  padding-top: 25px;
 }
 
 .eventDescription .column2 .contacts .columnB {
@@ -1416,4 +1418,18 @@ input {
   font-size: 1.1em;
   margin-top: 10px;
   margin-bottom: 20px;
+}
+
+.bottom-section a{
+  font-size: 16px;
+  color: black;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.columnB a{
+  font-size: 16px;
+  text-align: justify;
+  margin-top: 0;
+  padding-bottom: 0;
+  color: black;
 }
