@@ -57,12 +57,22 @@ p {
   display: none;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 50%;
   width: 50%;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-
+.eventImageResizeContainer {
+  padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+.eventImageResize {
+  display: none;
+  
+  width: 100%;
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
 .map {
   width: 100%;
   height: 350px;
@@ -76,11 +86,11 @@ p {
   background-color: #F1F1F1;
 }
 
+
 .bottom-section .column {
   flex: 50%;
   padding-right: 20px;
   padding-left: 20px;
-  background-color: #0F4D71;
   margin-left: 20px;
 }
 
@@ -167,6 +177,8 @@ nav {
   font-family: 'Poppins', sans-serif;
   font-weight: 800;
   font-size: 60px;
+  text-shadow: 2px 2px 4px #777,
+  -2px -2px 4px #777;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -213,6 +225,17 @@ nav {
   .personImageResize {
     display: block;
   }
+  .personDescription{
+    padding-top: 20px;
+  }
+
+  .eventImageResize {
+    display: block;
+  }
+  .eventDescription{
+    padding-top: 20px;
+  }
+
 
   .bottom-section {
     display: block;
@@ -517,14 +540,13 @@ nav {
 .eventDescription .column1 {
   flex: auto;
   padding-left: 40px;
-  border: 1px solid red; /*justr for debug*/
   min-height: 300px;
 }
 
 .eventDescription .column1 img {
-  border-radius: 10px;
   width: auto;
   max-width: 300px;
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .eventDescription h3 {
@@ -539,7 +561,6 @@ h4 {
 }
 
 .eventDescription .column2 {
-  border: 1px solid red; /*justr for debug*/
   width: 100%;
 }
 
@@ -561,6 +582,56 @@ h4 {
 }
 
 /*People*/
+
+.personDescription {
+  padding-bottom: 20px;
+  display: flex;
+}
+
+.personDescription .column1 {
+  flex: auto;
+  padding-left: 40px;
+  min-height: 300px;
+}
+
+.personDescription .column1 img {
+  width: auto;
+  max-width: 300px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.personDescription h3 {
+  padding-left: 30px;
+}
+
+h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  padding-left: 30px;
+  color: #0F4D71;
+}
+
+.personDescription .column2 {
+  width: 100%;
+}
+
+.personDescription .column2 .contacts {
+  display: flex;
+}
+
+.personDescription .column2 p {
+  text-align: justify;
+}
+
+.personDescription .column2 .contacts .columnA {
+  flex: 50%;
+}
+
+.personDescription .column2 .contacts .columnB {
+  flex: 50%;
+  padding-top: 50px;
+}
 .pic {
   display: flex;
   justify-content: center;
@@ -574,6 +645,7 @@ h4 {
   border-radius: 10px;
   box-shadow: 0 0 4px #666;
   z-index: 0;
+
 }
 
 .name-box {
@@ -587,10 +659,9 @@ h4 {
 .topSection {
   height: 60px;
   padding: 20px;
-  padding-bottom: 40px;
+  padding-bottom: 50px;
   position: relative;
   text-align: center;
-  padding-bottom: 0;
 }
 
 .topSection a {
@@ -1224,6 +1295,9 @@ input {
   margin-right:auto;
   margin-top: 25px;
   overflow: hidden;
+}
+.card-content p{
+  color: black;
 }
 
 .activities-list .activity-card:hover {

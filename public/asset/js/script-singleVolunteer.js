@@ -38,7 +38,7 @@ function addVolunteerData(name, surname, description, personImg, email, phoneNum
       <div class="navInfo"><a href="./people_page.html">People</a></div>
     </div>
     <img class="personImageResize" src="../asset/img/People/Volunteers/` + personImg + `" alt="">
-    <div class="eventDescription">
+    <div class="personDescription">
       <div class="column1">
         <img src="../asset/img/People/Volunteers/` + personImg + `" alt="">
       </div>

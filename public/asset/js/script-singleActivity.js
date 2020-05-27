@@ -59,7 +59,9 @@ function addActivityData(name, description, startDate, endDate, activityImg) {
       <div class="name"><a href="../pages/activities_page.html"><i class="fas fa-chevron-left"></i>`+ name +`</a></div>
       <div class="navInfo"><a href="../pages/activities_page.html">Activities</a></div>
     </div>
-    <img class="personImageResize" src="../asset/img/Activities/` + activityImg + `" alt="">
+    <div class= "eventImageResizeContainer">
+      <img class="eventImageResize" src="../asset/img/Activities/` + activityImg + `" alt="">
+    </div>
     <div class="eventDescription">
       <div class="column1">
         <img src="../asset/img/Activities/` + activityImg + `" alt="">

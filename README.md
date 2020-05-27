@@ -48,40 +48,25 @@
 # TODO: Page Polish
 - [ ] problema sul resizing
 - [ ] index.html
-    - direi di togliere la sezione next events
-- [ ] association_page.html
-    - cambiare stile titolo come la homepage
+    - direi di togliere la sezione next events SE TIRATI CON I TEMPI
+- [x] association_page.html
 - [ ] activities_page.html
     - sistemare immagini (problema dopo ultimo merge delle farms)
-- [x] helpUs_page.html   Descrizione ok così
+- [x] helpUs_page.html
 - [ ] farms_page.html
-    - cambiare colore descrizione
+    - fix overflow quando è tutto stretto a destra
 - [ ] events_page.html
 - [x] people_page.html
 - [ ] FAQ_page.html                 
-    - problem scroll down     
+    - problem scroll down  Caused by anchor DA CHIEDERE AI TUTOR
 - [ ] singleActivity_page.html      
-    - image resized to be improved visualization 
     - cambiare colore assigned volunteers
     - sistemare cards people
-- [ ] singleFarm_page.html
-    - collegamento alla farm page non si vede, cambiare colore o poszione, o anche l'immagine dietro                
-    - la parte sotto è diventata blu
-- [ ] singleEvent_page.html
-    - Da fare    
-    - image resized to be improved visualization 
-- [ ] singleVolunteer_page.html     
-    - image resized to be improved visualization 
-    - magari fare immagine tonda come la pagina people
-    - immagine non centrata
-- [ ] singleExpert_page.html        
-    - image resized to be improved visualization 
-    - (magari fare immagine tonda come la pagina people
-    - immagine non centrata
+- [x] singleFarm_page.html
+- [x] singleEvent_page.html
+- [ ] singleVolunteer_page.html 
+    - Limitare dimensioni card related activities
+- [ ] singleExpert_page.html
     - Limitare dimensioni card related events
-- [ ] singleFounder_page.html       
-    - image resized to be improved visualization 
-    - magari fare immagine tonda come la pagina people 
-    - nome e collegamento a people non sono centrate nella barra bianca
-    - immagine non centrata
+- [x] singleFounder_page.html 
 - [x] terms_page.html
