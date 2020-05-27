@@ -11,7 +11,7 @@ function loadHeader() {
     </div>
     <ul class="nav-links">
       <li id="associationH"><a href="../../pages/association_page.html">Association</a></li>
-      <li id="farmsH"><a href="../../pages/farms_page.html">Farms</a></liid>
+      <li id="farmsH"><a href="../../pages/farms_page.html">Farms</a></li>
       <li id ="activitiesH"><a href="../../pages/activities_page.html">Activities</a></li>
       <li id="eventsH"><a href="../../pages/events_page.html">Events</a></li>
       <li id="peopleH"><a href="../../pages/people_page.html">People</a></li>
