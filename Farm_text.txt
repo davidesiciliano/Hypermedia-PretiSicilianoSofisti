@@ -81,7 +81,7 @@ A big farm where visitors can taste and touch the real Farmer life. The Farm hav
 
 Long text
 ---------
-MISSING
+Mario represent the fourth generation of farmers and with his borders has renovated and enlarged the farm. He is a modern farmer and he mix technology with traditions in a innovative and extravagant way. 
 
 Activities
 ---------
@@ -106,11 +106,11 @@ sun-sat: 10.00-12.00
 
 Short text
 ----------
-Corno is an hystorical farm sited in the middle of the Rista Valley and even if is not open to the pubblic its product are sold in the Farm store.
+Corno is an hystorical farm sited in the middle of the Rista Valley and even if is not open to the pubblic its product are sold in the Farm's store.
 
 Long text
 ---------
-MISSING
+The farm is specialized in milk cow and mountain cheese. They transform all the milk internally with old techniques handed down from generation to generation. The farm has a shop where all the products are sold.
 
 Activities
 ---------
@@ -141,7 +141,8 @@ Ferdy is a innovative farm that mix new approaches to old traditions with a big 
 
 Long text
 ---------
-MISSING
+Ferdy is a farm that offer a full experience of rural life, it organize countless events and activities for all the ages. It’s a big farm with also possibility to sleep in farm and offer many other services for clients to experience.
+
 
 Activities
 ---------
@@ -171,7 +172,9 @@ Stambecco is a small farm with cow for milk production from which they obtain wo
 
 Long text
 ---------
-MISSING
+They transform all the milk internally with old techniques handed down from generation to generation. The farm has a shop where all the products are sold and sustain the farmer family.
+
+
 
 Activities
 ---------
