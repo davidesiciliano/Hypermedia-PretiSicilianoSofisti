@@ -81,7 +81,7 @@ A big farm where visitors can taste and touch the real Farmer life. The Farm hav
 
 Long text
 ---------
-Mario represent the fourth generation of farmers and with his borders has renovated and enlarged the farm. He is a modern farmer and he mix technology with traditions in a innovative and extravagant way. 
+Mario represents the fourth generation of farmers and with his borders has renovated and enlarged the farm. He is a modern farmer and he mix technology with traditions in a innovative and extravagant way.
 
 Activities
 ---------
@@ -106,7 +106,7 @@ sun-sat: 10.00-12.00
 
 Short text
 ----------
-Corno is an hystorical farm sited in the middle of the Rista Valley and even if is not open to the pubblic its product are sold in the Farm's store.
+Corno is an historical farm sited in the middle of the Rista Valley and even if is not open to the pubblic its product are sold in the Farm's store.
 
 Long text
 ---------
