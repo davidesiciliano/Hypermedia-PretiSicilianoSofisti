@@ -48,31 +48,37 @@
 
 # TODO: Page Polish
 - [ ] problema sul resizing
-- [ ] index.html                            
-    - homepage title
-- [x] association_page.html
+- [x] index.html
+- [ ] association_page.html
+    - cambiare stile titolo come la homepage
 - [ ] activities_page.html
+    - sistemare immagini (problema dopo ultimo merge delle farms)
 - [x] helpUs_page.html   Descrizione ok così
 - [ ] farms_page.html
+    - cambiare colore descrizione
 - [ ] events_page.html
-- [ ] people_page.html
+- [x] people_page.html
 - [ ] FAQ_page.html                 
     - problem scroll down     
 - [ ] singleActivity_page.html      
     - image resized to be improved visualization 
     - cambiare colore assigned volunteers
+    - sistemare cards people
 - [ ] singleFarm_page.html                  
 - [ ] singleEvent_page.html         
     - image resized to be improved visualization 
 - [ ] singleVolunteer_page.html     
     - image resized to be improved visualization 
-    - (magari fare immagine tonda come la pagina people e centrata nel "rettangolo" della foto)
+    - magari fare immagine tonda come la pagina people
+    - immagine non centrata
 - [ ] singleExpert_page.html        
     - image resized to be improved visualization 
-    - (magari fare immagine tonda come la pagina people e centrata nel "rettangolo" della foto)
+    - (magari fare immagine tonda come la pagina people
+    - immagine non centrata
     - Limitare dimensioni card related events
 - [ ] singleFounder_page.html       
     - image resized to be improved visualization 
-    - (magari fare immagine tonda come la pagina people e centrata nel "rettangolo" della foto) 
+    - magari fare immagine tonda come la pagina people 
     - nome e collegamento a people non sono centrate nella barra bianca
+    - immagine non centrata
 - [x] terms_page.html
