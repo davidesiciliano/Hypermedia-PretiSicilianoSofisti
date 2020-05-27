@@ -1053,6 +1053,11 @@ input {
   padding: 2rem;
 }
 
+.answer a {
+  color: #0F4D71;
+  text-decoration: underline;
+}
+
 .accordion-item:target .answer {
   max-height: 20rem;
 }
