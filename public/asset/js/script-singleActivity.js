@@ -18,7 +18,7 @@ function loadPage() {
           return response.json();
         }).then(function (personJson) {
           let {id, name, surname, role, description, personImg, contactId} = personJson[0];
-          peopleList.innerHTML += addAssignedVolunteer(id, name, surname);
+          peopleList.innerHTML += addAssignedVolunteer(id, name, surname, personImg);
         });
       }
       fetch("../v2/relatedTo/findRelatedEvents/" + activityId).then(function (response) { //fetch related events
@@ -70,7 +70,7 @@ function addActivityData(name, description, startDate, endDate, activityImg) {
         <div class="contacts">
           <div class="columnA">
             <h3>Assigned volunteers</h3>
-            <ul class="slds-list_dotted" id="assignedVolunteersToActivity"></ul>
+            <div class="people people-grid-container" id="assignedVolunteersToActivity"></div>
           </div>
         </div>
       </div>
@@ -86,9 +86,16 @@ function addActivityData(name, description, startDate, endDate, activityImg) {
   `;
 }
 
-function addAssignedVolunteer(id, name, surname) {
+function addAssignedVolunteer(id, name, surname, personImg) {
   return `
-    <li><a href="./singleVolunteer_page.html?personId=`+ id +`"><p>`+ name +` `+ surname +`</p></a></li>
+    <div class="person-card">
+      <a href="./singleVolunteer_page.html?personId=` + id + `">
+        <div class="circle-container">
+          <img src="../asset/img/People/Volunteers/` + personImg + `" alt="">
+          <h2>` + name + ` ` + surname + `</h2>
+        </div>
+      </a>
+    </div>
   `;
 }
 
