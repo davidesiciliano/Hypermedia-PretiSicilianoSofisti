@@ -135,6 +135,7 @@ nav {
 
 .logo h1 {
   padding-top: 18px;
+  font-weight: bold;
 }
 
 
@@ -1432,4 +1433,23 @@ input {
   margin-top: 0;
   padding-bottom: 0;
   color: black;
+}
+
+.nav-links a:hover{
+  font-weight: bold;
+}
+
+.logo h1:hover{
+  font-weight: bolder;
+}
+.footer-content a:hover{
+ font-weight: bold;
+}
+
+.joinUsBtnContainer a:hover{
+  font-weight: bold;
+}
+
+.button-container a:hover{
+  font-weight: bold;
 }
