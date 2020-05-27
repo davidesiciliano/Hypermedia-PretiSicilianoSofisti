@@ -6,6 +6,7 @@ const table = {
   shortDescription: "shortDescription",
   completeDescription: "completeDescription",
   address: "address",
+  coordinates: "coordinates",
   openingTimes: "openingTimes",
   gallery: "gallery",
   farmImg: "farmImg",

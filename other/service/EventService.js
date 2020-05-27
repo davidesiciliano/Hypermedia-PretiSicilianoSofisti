@@ -22,6 +22,7 @@ exports.eventDbSetup = function (connection) {
           tableBuilder.text(Event.completeDescription);
           tableBuilder.text(Event.eventImg);
           tableBuilder.integer(Event.personId);
+          tableBuilder.integer(Event.farmId);
         });
       } else {
         console.log("Table already exists");

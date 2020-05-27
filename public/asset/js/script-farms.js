@@ -4,7 +4,7 @@ function loadPage() {
     return response.json();
   }).then(function (farmsJson) {
     for (var i = 0; i < farmsJson.length; i++) {
-      let {id, farmName, ownerName, shortDescription, completeDescription, address, openingTimes, gallery, farmImg, contactId} = farmsJson[i];
+      let {id, farmName, ownerName, shortDescription, completeDescription, address, coordinates, openingTimes, gallery, farmImg, contactId} = farmsJson[i];
       farmsList.innerHTML += insertFarm(id, farmName, shortDescription, address, farmImg);
     }
   })
