@@ -1,17 +1,17 @@
 Events
+i contatti sono quelli della farm
 
 
 
-
-RONCHELLO FARM
+Az. Agr. Ronchello
 Festa della malga   (Terme, Bg)
 14/07/2020
 Roberto Ricci
 
 Come and visit a typical Mountain Farm called Malga and experience some of the activities that every day the Farmer have to do.
 
-The event allow the participants to visit the newly renewed Farm Ronchello and enjoy some typical activities, taste some products and spend a day between the mountains. The Party will start in the morning and will include a refreshment for all the participants. During the evening will be organized all the activities.
-The event will be held by <a href="./singleExpert_page.html?personId=3">Roberto Ricci</a>, an expert of Rural activities and the responsible for the renovation of Ronchello farm.
+The event allow the partecipants to visit the newly renued Farm Ronchello and enjoy some typical activities, taste some products and spend a day between the mountains. The Party will start in the morning and will include a refreshment for all the partecipants. During the evening will be orgnaized all the activities.
+The event will be held by <a href="./singleExpert_page.html?personId=3">Roberto Ricci</a>, an expert of Rural activities and the responsable for the renovation of Ronchello farm.
 
 RELATED Activities
 Collect hay
@@ -23,13 +23,15 @@ Serve
 
 
 
+Az. Agr. Prati
 
-Sagra della Carne  (Selva, SO)
+Sagra della Carne  (Serle, BS)
 25/07/2020
-Gianni Serio
+EXPERT 1
 
-A festival dedicated to the tasting of grilled meat!
+A festival dedicated to tasting of grilled meat!
 
+During the event attendees will learn the techniques to cook a perfect barbecue of meet. All the meet is biologic and produced by the farm. The event expert <a href="./singleExpert_page.html?personId=1">m NOME ESPERTO 1 DA METTTTERE SICI</a> will teach you some techniques and tricks to obtain super tasty results.
 
 
 
@@ -41,10 +43,119 @@ Clean
 
 
 
-Estate al pascolo (Terme, BS)
-20/08/2020
-Carlo Crotti
 
-A unique experience for all ages, live the pasture in the mountains. a day immersed in nature to learn the stages of montagna cattle breeding with a longtime herdsman.
+
+Az. Agr. Soma
+
+Estate al pascolo (Pista, Ve)
+20/08/2020
+EXPERT 2
+
+A unique experience for all ages, live the pasture in the mountains. a day immersed in nature to learn the stages of montgana cattle breeding with a longtime herdsman.
+
+The activity starts with one hour hike in the mountain form the stable to the pasture. Here <a href="./singleExpert_page.html?personId=2">NOME ESPERTO “</a> will teach you how to milk and feed cows. After that you will eat some typical products and during the evening you will make cheese with the milk of the day.
+
+RELATED Activities
+Cut hay
+collect grass
+
+
+
+
+
+
+
+Az. Agr. Corno
+
+Grow your food (Rista, Tn)
+28/08/2020
+Roberto Ricci
+
+MISSING SHORT
+
+MISSING LONG <a href="./singleExpert_page.html?personId=3">Roberto Ricci “</a>
+
+RELATED Activities
+Gardening
+Cleaning
+
+
+
+
+
+
+
+
+
+
+
+Az. Agr. Ferdy
+
+
+Frutta che passione! (Sarnico, Bg)
+15/09/2020
+EXPERRRT 4
+
+MISSING SHORT
+
+MISSING LONG <a href="./singleExpert_page.html?personId=4">EXPERT 4 “</a>
+
+RELATED Activities
+Pruning
+Hervest
+
+
+
+
+
+
+
+
+
+
+
+
+Az. Agr. Stambecco
+
+Foresta, un bene prezioso (Pago, Tn)
+20/09/2020
+EXPERT 2
+
+MISSING SHORT
+
+MISSING LONG <a href="./singleExpert_page.html?personId=2">Expert 2 name“</a>
+
+RELATED Activities
+Forestry
+Mantainance
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Az. Agr. Corno
+
+Winter is coming (Rista, Tn)
+25/09/2020
+EXPERT 4
+
+MISSING SHORT
+
+MISSING LONG <a href="./singleExpert_page.html?personId=4">EXPERT 4 “</a>
+
+RELATED Activities
+Gardening
+Cleaning
+
 
 
