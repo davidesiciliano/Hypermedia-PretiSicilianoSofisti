@@ -35,13 +35,13 @@
 - [x] terms_page.html
 
 #TODO: Database
-- [ ] Activities
+- [ ] Activities (mancano descrizioni)
 - [x] Contact
 - [ ] Event
-- [ ] Faq (mancano risposte)
+- [x] Faq
 - [ ] Farm (mancano foto e diversi campi)
-- [ ] IsInvolvedIn
-- [ ] Offers
+- [x] IsInvolvedIn
+- [x] Offers
 - [x] Person
 - [ ] RelatedTo
 
