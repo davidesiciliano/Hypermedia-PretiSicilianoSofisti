@@ -6,7 +6,7 @@
   "scripts": {
     "prestart": "npm install | npm install knex | npm install pg | npm install serve-static",
     "start": "node index.js",
-    "test" : "node index.js"
+    "test": "node index.js"
   },
   "keywords": [
     "swagger"
