@@ -3,28 +3,48 @@ function loadPage() {
   const farmId = urlParams.get('farmId');
 
   var farmDescription = document.getElementById("farmInfo");
-  fetch("..v2/farms/findByName/" + farmId).then(function (response) {
+  fetch("../v2/farms/findById/" + farmId).then(function (response) {
     return response.json();
   }).then(function (farmJson) {
     let {id, farmName, ownerName, shortDescription, completeDescription, address, coordinates, openingTimes, gallery, farmImg, contactId} = farmJson[0];
-    fetch("../b2/contacts/findById/" + contactId).then(function (response) {
+
+    fetch("../v2/contacts/findById/" + contactId).then(function (response) {
       return response.json();
     }).then(function (contactJson) {
       let {contactIdC, email, phoneNumber} = contactJson[0];
-      farmDescription.innerHTML += addFarmDescription(farmName, ownerName, completeDescription, address, coordinates, openingTimes, farmImg);
-      //TODO ADD GALLERY
-      //TODO SISTEMO MAPPA
+      farmDescription.innerHTML += addFarmDescription(farmName, ownerName, completeDescription, address, coordinates, openingTimes, farmImg, email, phoneNumber);
+      myMap(coordinates[0], coordinates[1]);
 
-      //TODO FETCH ACTIVITIES, ADD ACTIVITIES
-    })
-  })
+      for (var i = 0; i < gallery.length; i++) {
+        var galleryColumn = document.getElementById("galleryColumn" + i%4);
+        galleryColumn.innerHTML += addGalleryImage(gallery[i]);
+      }
+
+      var activitiesGrid = document.getElementById("activitiesGrid");
+      fetch("../v2/offers/findRelatedActivities/" + farmId).then(function (response) {
+        return response.json();
+      }).then(function (offersJson) {
+        for (var i = 0; i < offersJson.length; i++) {
+          let {farmIdO, activityId} = offersJson[i];
+          fetch("../v2/activities/findById/" + activityId).then(function (response) {
+            return response.json();
+          }).then(function (activityJson) {
+            let {id, name, description, startDate, endDate, activityImg} = activityJson[0];
+            activitiesGrid.innerHTML += addActivity(id, name, activityImg);
+          });
+        }
+      });
+    });
+  });
 }
 
-function addFarmDescription(farmName, ownerName, completeDescription, address, coordinates, openingTimes, farmImg) {
+loadPage();
+
+function addFarmDescription(farmName, ownerName, completeDescription, address, coordinates, openingTimes, farmImg, email, phoneNumber) {
   return `
   <div class="topImage">
-    <img src="../asset/img/image_carusel/3.jpg" alt="text text" style="width:100%">
-    <div class="name"><a href="../pages/people_page.html"><i class="fas fa-chevron-left"></i>` + farmName + `</a></div>
+    <img src="../asset/img/Farms/` + farmImg + `" alt="text text" style="width:100%">
+    <div class="name"><a href="../pages/farms_page.html"><i class="fas fa-chevron-left"></i>` + farmName + `</a></div>
     <div class="navInfo"><a href="../pages/farms_page.html">Farms</a></div>
   </div>
 
@@ -39,7 +59,12 @@ function addFarmDescription(farmName, ownerName, completeDescription, address, c
 
   <div class="gallery">
     <h2>Gallery</h2>
-    <div class="row" id="activityGallery"></div>
+    <div class="row">
+      <div class="column" id="galleryColumn0"></div>
+      <div class="column" id="galleryColumn1"></div>
+      <div class="column" id="galleryColumn2"></div>
+      <div class="column" id="galleryColumn3"></div>
+    </div>
   </div>
 
   <div class="bottom-section">
@@ -49,7 +74,7 @@ function addFarmDescription(farmName, ownerName, completeDescription, address, c
     </div>
     <div class="column">
       <h3>Contacts</h3>
-      <p>Farmer Name: ` + ownerName + `/p>
+      <p>Farmer Name: ` + ownerName + `</p>
       <p>Address: ` + address + `</p>
       <div class="personContact">
       <span>
@@ -66,13 +91,30 @@ function addFarmDescription(farmName, ownerName, completeDescription, address, c
   `;
 }
 
-function myMap() {
+function myMap(x, y) {
   var mapProp = {
-    center: new google.maps.LatLng(51, 0),
+    center: new google.maps.LatLng(x, y),
     zoom: 15,
     mapTypeId: google.maps.MapTypeId.HYBRID
   };
   var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
 }
 
-myMap();
+function addGalleryImage(galleryImg) {
+  return `
+    <img src="../asset/img/FarmsGallery/` + galleryImg + `" alt="">
+  `;
+}
+
+function addActivity(id, name, activityImg) {
+  return `
+  <div class="activity-card">
+    <a href="./singleActivity_page.html?activityId=` + id + `">
+      <div class="rectangle-container">
+        <img src="../asset/img/Activities/` + activityImg + `" alt="">
+      </div>
+      <h2>` + name + `</h2>
+    </a>
+  </div>
+  `;
+}
