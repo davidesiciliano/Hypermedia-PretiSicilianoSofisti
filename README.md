@@ -49,6 +49,7 @@
 - [ ] problema sul resizing
 - [ ] index.html
     - direi di togliere la sezione next events SE TIRATI CON I TEMPI
+    - togliere style da html
 - [x] association_page.html
 - [ ] activities_page.html
     - sistemare immagini (problema dopo ultimo merge delle farms)

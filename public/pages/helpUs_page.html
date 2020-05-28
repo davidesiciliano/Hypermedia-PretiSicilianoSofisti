@@ -17,144 +17,94 @@
 </head>
 
 <body>
-  <div class="wrap">
-<!--header-->
-<nav class="header" id="helpUsHeader"></nav>
+<div class="wrap">
+  <!--header-->
+  <nav class="header" id="helpUsHeader"></nav>
 
-<!--contents-->
-<div class="contents">
-  <div class="help">
-    <div class="presentation">
-      <h2 class="title">Help Us</h2>
-      <p>Many small Farms are at risk of extinction and with them the enormous cultural background of Italian
-        traditions.
-        Help us preserve them and learn by helping local small farmers by donating some of your time to help these
-        activities often run by older people and give life back to the mountains.
-        Joining us is totally free and all people al well accepted!</p>
-    </div>
-    <div class="form">
-      <div class="form-content">
-        <h2 class="title">Apply now</h2>
-        <div class="row row-space">
-          <div class="col-3">
-            <div class="input-group">
-              <input class="input--style-1" type="text" placeholder="NAME" name="name" id="inputName">
+  <!--contents-->
+  <div class="contents">
+    <div class="help">
+      <div class="presentation">
+        <h2 class="title">Help Us</h2>
+        <p>Many small Farms are at risk of extinction and with them the enormous cultural background of Italian
+          traditions.
+          Help us preserve them and learn by helping local small farmers by donating some of your time to help these
+          activities often run by older people and give life back to the mountains.
+          Joining us is totally free and all people al well accepted!</p>
+      </div>
+      <div class="form">
+        <div class="form-content">
+          <h2 class="title">Apply now</h2>
+          <div class="row row-space">
+            <div class="col-3">
+              <div class="input-group">
+                <input class="input--style-1" type="text" placeholder="NAME" name="name" id="inputName">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="input-group">
+                <input class="input--style-1" type="text" placeholder="SURNAME" name="surname" id="inputSurname">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="input-group">
+                <input class="input--style-1" type="text" placeholder="BIRTH DATE" name="birthDate" id="inputBirthDate">
+              </div>
             </div>
           </div>
-          <div class="col-3">
-            <div class="input-group">
-              <input class="input--style-1" type="text" placeholder="SURNAME" name="surname" id="inputSurname">
+          <div class="row row-space">
+            <div class="col-3">
+              <div class="input-group">
+                <input class="input--style-1" type="text" placeholder="ADDRESS" name="address" id="inputAddress">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="input-group">
+                <input class="input--style-1" type="text" placeholder="CITY" name="city" id="inputCity">
+              </div>
+            </div>
+            <div class="province-col">
+              <div class="input-group province">
+                <input class="input--style-1 province" type="text" placeholder="PROVINCE" name="province"
+                       id="inputProvince">
+              </div>
             </div>
           </div>
-          <div class="col-3">
-            <div class="input-group">
-              <input class="input--style-1" type="text" placeholder="BIRTH DATE" name="birthDate" id="inputBirthDate">
+          <div class="row row-space">
+            <div class="col-2">
+              <div class="input-group">
+                <input class="input--style-1" type="text" placeholder="PHONE NUMBER" name="phoneNumber"
+                       id="inputPhoneNumber">
+              </div>
             </div>
+            <div class="col-2">
+              <div class="input-group">
+                <input class="input--style-1" type="text" placeholder="EMAIL" name="email" id="inputEmail">
+              </div>
+            </div>
+          </div>
+          <div class="input-group">
+            <input class="input--style-1" type="text" placeholder="SKILLS" name="skills" id="inputSkills">
+          </div>
+          <div class="input-group">
+            <input class="input--style-1" type="text" placeholder="DESCRIPTION" name="description"
+                   id="inputDescription">
+          </div>
+          <div class="button-container">
+            <button class="joinUsBtn" type="submit" id="sendForm"><a href="">Submit</a></button>
           </div>
         </div>
-        <div class="row row-space">
-          <div class="col-3">
-            <div class="input-group">
-              <input class="input--style-1" type="text" placeholder="ADDRESS" name="address" id="inputAddress">
-            </div>
-          </div>
-          <div class="col-3">
-            <div class="input-group">
-              <input class="input--style-1" type="text" placeholder="CITY" name="city" id="inputCity">
-            </div>
-          </div>
-          <div class="province-col">
-            <div class="input-group province">
-              <input class="input--style-1 province" type="text" placeholder="PROVINCE" name="province"
-                     id="inputProvince">
-            </div>
-          </div>
-        </div>
-        <div class="row row-space">
-          <div class="col-2">
-            <div class="input-group">
-              <input class="input--style-1" type="text" placeholder="PHONE NUMBER" name="phoneNumber"
-                     id="inputPhoneNumber">
-            </div>
-          </div>
-          <div class="col-2">
-            <div class="input-group">
-              <input class="input--style-1" type="text" placeholder="EMAIL" name="email" id="inputEmail">
-            </div>
-          </div>
-        </div>
-        <div class="input-group">
-          <input class="input--style-1" type="text" placeholder="SKILLS" name="skills" id="inputSkills">
-        </div>
-        <div class="input-group">
-          <input class="input--style-1" type="text" placeholder="DESCRIPTION" name="description" id="inputDescription">
-        </div>
-        <div class="button-container">
-          <button class="joinUsBtn" type="submit" id="sendForm"><a href="">Submit</a></button>
-        </div>
-
-        <script>
-          //TODO AGGIUNGERE DESCRIZIONE SULLA PAGINA
-          //TODO aggiungere messaggio quando viene inviato correttamente
-          const url = "http://localhost:5000";
-
-          var button = document.getElementById("sendForm");
-          button.onclick = function () {
-
-            var name = document.getElementById("inputName").value;
-            var surname = document.getElementById("inputSurname").value;
-            var birthDate = document.getElementById("inputBirthDate").value;
-            var address = document.getElementById("inputAddress").value;
-            var city = document.getElementById("inputCity").value;
-            var province = document.getElementById("inputProvince").value;
-            var phoneNumber = document.getElementById("inputPhoneNumber").value;
-            var email = document.getElementById("inputEmail").value;
-            var skills = document.getElementById("inputSkills").value;
-            var description = document.getElementById("inputDescription").value;
-
-            const data = {
-              name: name,
-              surname: surname,
-              birthDate: birthDate,
-              address: address,
-              city: city,
-              province: province,
-              phoneNumber: phoneNumber,
-              email: email,
-              skills: skills,
-              description: description
-            };
-
-            fetch(url + "/v2/helpUsForm/sendForm", {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify(data),
-            })
-              .then(response => response.json())
-              .then(data => {
-                console.log('Success:', data);
-              })
-              .catch((error) => {
-                console.error('Error:', error);
-              });
-          }
-
-        </script>
-
-        </form>
       </div>
     </div>
   </div>
 </div>
 
-
 <!--footer-->
 <div class="footer" id="helpUsFooter"></div>
-</div>
+
 </body>
 <script src="../asset/js/script-header.js"></script>
+<script src="../asset/js/script-helpUs.js"></script>
 <script src="../asset/js/script-footer.js"></script>
 <script src="../asset/js/script.js"></script>
 </html>
