@@ -70,9 +70,9 @@ function addActivityData(name, description, startDate, endDate, activityImg) {
         <h4>`+ startDate +` - `+ endDate +`</h4>
         <p>`+ description +`</p>
         <div class="contacts">
-          <div class="columnA">
+          <div class="columnA people">
             <h3>Assigned volunteers</h3>
-            <div class="people people-grid-container" id="assignedVolunteersToActivity"></div>
+            <div class="people-grid-container" id="assignedVolunteersToActivity"></div>
           </div>
         </div>
       </div>

@@ -1152,12 +1152,17 @@ input {
 .people .people-grid-container {
   /* Grid styles */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 
   margin: 20px 0px;
   grid-gap: 1px;
   padding: 0px;
   background-color: white;
+}
+
+.founders .people-grid-container {
+  /* Grid styles */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .people .person-card img {
