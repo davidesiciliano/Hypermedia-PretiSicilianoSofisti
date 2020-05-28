@@ -1277,7 +1277,7 @@ input {
 .activities-grid-container {
   /* Grid styles */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 
   margin: 0px 0px;
   grid-gap: 5px;
