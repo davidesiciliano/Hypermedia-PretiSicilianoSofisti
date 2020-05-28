@@ -16,7 +16,10 @@ function loadPage() {
       myMap(coordinates[0], coordinates[1]);
 
       for (var i = 0; i < gallery.length; i++) {
-        var galleryColumn = document.getElementById("galleryColumn" + i%4);
+        if (i === 7)
+          var galleryColumn = document.getElementById("galleryColumn3");
+        else
+          var galleryColumn = document.getElementById("galleryColumn" + i%3);
         galleryColumn.innerHTML += addGalleryImage(gallery[i]);
       }
 
