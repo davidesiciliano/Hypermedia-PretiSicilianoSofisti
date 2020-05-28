@@ -37,18 +37,19 @@
 #TODO: Database
 - [ ] Activities (mancano descrizioni)
 - [x] Contact
-- [ ] Event
+- [ ] Event (mancano foto)
 - [x] Faq
-- [ ] Farm (mancano foto e diversi campi)
+- [ ] Farm (mancano foto e gallery)
 - [x] IsInvolvedIn
 - [x] Offers
 - [x] Person
-- [ ] RelatedTo
+- [x] RelatedTo
 
 # TODO: Page Polish
 - [ ] problema sul resizing
 - [ ] index.html
     - direi di togliere la sezione next events SE TIRATI CON I TEMPI
+    - togliere style da html
 - [x] association_page.html
 - [ ] activities_page.html
     - sistemare immagini (problema dopo ultimo merge delle farms)

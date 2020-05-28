@@ -51,9 +51,9 @@ Estate al pascolo (Pista, Ve)
 20/08/2020
 Bianca Costa
 
-A unique experience for all ages, live the pasture in the mountains. a day immersed in nature to learn the stages of montgana cattle breeding with a longtime herdsman.
+A unique experience for all ages, live the pasture in the mountains. a day immersed in nature to learn the stages of montagna cattle breeding with a longtime herdsman.
 
-The activity starts with one hour hike in the mountain form the stable to the pasture. Here <a href="./singleExpert_page.html?personId=4">Bianca Costa“</a> will teach you how to milk and feed cows. After that you will eat some typical products and during the evening you will make cheese with the milk of the day.
+The activity starts with one hour hike in the mountain form the stable to the pasture. Here <a href="./singleExpert_page.html?personId=4">Bianca Costa</a> will teach you how to milk and feed cows. After that you will eat some typical products and during the evening you will make cheese with the milk of the day.
 
 RELATED Activities
 Cut hay
@@ -71,7 +71,7 @@ Grow your food (Rista, Tn)
 28/08/2020
 Simone Tosi
 
-Grow your own food is important for your healt, is easy and enjoiable! Learn how to do it.
+Grow your own food is important for your health, is easy and enjoyable! Learn how to do it.
 
 Our expert <a href="./singleExpert_page.html?personId=6">Simone Tosi“</a> will teach you all the secrets for a perfect vegetable garden, biological and healthy for you and your family.
 
@@ -151,7 +151,7 @@ EXPERT 4
 
 MISSING SHORT
 
-MISSING LONG <a href="./singleExpert_page.html?personId=4">EXPERT 4 “</a>
+MISSING LONG <a href="./singleExpert_page.html?personId=4">Bianca Costa</a>
 
 RELATED Activities
 Gardening
