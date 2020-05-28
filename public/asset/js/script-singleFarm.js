@@ -53,8 +53,10 @@ function addFarmDescription(farmName, ownerName, completeDescription, address, c
     <p>` + completeDescription + `</p>
   </div>
 
-  <div class="activities" id="activitiesGrid">
+  <div class="activities-list">
     <h2>Activities</h2>
+    <div class="activities-grid-container" id="activitiesGrid">
+    </div>
   </div>
 
   <div class="gallery">
