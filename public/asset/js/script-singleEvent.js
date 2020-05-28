@@ -38,8 +38,9 @@ function addEventData(name, date, hours, location, completeDescriptionEvent, eve
       <img src="../asset/img/Events/` + eventImg + `" alt="">
     </div>
     <div class="column2">
-      <h4>` + date + ` ` + hours + ` ` + location + `</h4>
-      <p>` + completeDescriptionEvent + `</p>
+      <h4>` + date + `, ` + hours + `</h4>
+      <h4>` + location + `</h4>
+      <p class="event-description"><br>` + completeDescriptionEvent + `</p>
       <div class="contacts">
         <div class="columnA">
           <h3>Contacts</h3>

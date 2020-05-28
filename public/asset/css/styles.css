@@ -1357,3 +1357,8 @@ input {
   color: #0F4D71;
   text-decoration: underline;
 }
+
+.event-description a {
+  color: #0F4D71;
+  text-decoration: underline;
+}
