@@ -1,26 +1,25 @@
 function loadPage() {
     let farmsList = document.getElementById("eventsGrid");
-    fetch("../v2/farms").then(function (response) {
+    fetch("../v2/events").then(function (response) {
         return response.json();
-    }).then(function (farmsJson) {
-        for (var i = 0; i < farmsJson.length; i++) {
-            let {id, farmName, ownerName, shortDescription, completeDescription, address, coordinates, openingTimes, gallery, farmImg, contactId} = farmsJson[i];
-            farmsList.innerHTML += insertFarm(id, farmName, shortDescription, address, farmImg);
+    }).then(function (eventsJson) {
+        for (var i = 0; i < eventsJson.length; i++) {
+            let {id, name, date, hours, location, smallDescription, completeDescription, eventImg, personId, farmId} = eventsJson[i];
+            farmsList.innerHTML += insertFarm(id, name, smallDescription, eventImg);
         }
     })
 }
 
-function insertFarm(id, farmName, shortDescription, address, farmImg) {
+function insertFarm(id, name, smallDescription, eventImg) {
     return `
   <div class="detailed-card">
-    <a href="./singleFarm_page.html?farmId=` + id + `">
+    <a href="./singleEvent_page.html?eventId=` + id + `">
       <div class="rectangle-container">
-        <img src="../asset/img/Farms/` + farmImg + `" alt="">
+        <img src="../asset/img/Event/` + eventImg + `" alt="">
       </div>
       <div class="card-content">
-        <h2>` + farmName + `</h2>
-        <h4>` + address + `</h4>
-        <p>` + shortDescription + `</p>
+        <h2>` + name + `</h2>
+        <p>` + smallDescription + `</p>
       </div>
     </a>
   </div>
