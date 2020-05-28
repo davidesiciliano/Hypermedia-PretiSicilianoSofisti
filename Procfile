@@ -1,1 +1,1 @@
-web: npm install | npm install knex | npm install pg | npm install serve-static | node index.js
+web: node index.js
