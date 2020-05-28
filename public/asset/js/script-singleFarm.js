@@ -16,7 +16,10 @@ function loadPage() {
       myMap(coordinates[0], coordinates[1]);
 
       for (var i = 0; i < gallery.length; i++) {
-        var galleryColumn = document.getElementById("galleryColumn" + i%4);
+        if (i === 7)
+          var galleryColumn = document.getElementById("galleryColumn3");
+        else
+          var galleryColumn = document.getElementById("galleryColumn" + i%3);
         galleryColumn.innerHTML += addGalleryImage(gallery[i]);
       }
 
@@ -53,8 +56,10 @@ function addFarmDescription(farmName, ownerName, completeDescription, address, c
     <p>` + completeDescription + `</p>
   </div>
 
-  <div class="activities" id="activitiesGrid">
+  <div class="activities-list">
     <h2>Activities</h2>
+    <div class="activities-grid-container" id="activitiesGrid">
+    </div>
   </div>
 
   <div class="gallery">
