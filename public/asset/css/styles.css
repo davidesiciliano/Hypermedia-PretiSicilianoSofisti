@@ -661,7 +661,6 @@ h4 {
   border-radius: 10px;
   box-shadow: 0 0 4px #666;
   z-index: 0;
-
 }
 
 .name-box {
@@ -703,97 +702,6 @@ h4 {
 h1 {
   font-family: 'Poppins', sans-serif;
   font-size: 30px;
-}
-
-
-/* GRID container */
-.container {
-  max-width: 1335px;
-  margin: 20px auto;
-}
-
-/* Grid row */
-.grid-row {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-}
-
-.people .grid-row {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-}
-
-/* basic grid item */
-.grid-item {
-  -ms-flex: auto;
-  position: relative;
-  padding: 12px;
-  box-sizing: border-box;
-  overflow: hidden;
-}
-
-.activity .grid-item {
-  -ms-flex: auto;
-  position: relative;
-  padding: 12px;
-  box-sizing: border-box;
-  overflow: hidden;
-  width: 259px;
-  height: 250px;
-}
-
-.founder .grid-item {
-  -ms-flex: auto;
-  position: relative;
-  padding: 12px;
-  box-sizing: border-box;
-  overflow: hidden;
-  width: 255px;
-  min-width: 255px;
-  max-width: 255px;
-  height: 300px;
-}
-
-.volunteer .grid-item {
-  -ms-flex: auto;
-  position: relative;
-  padding: 12px;
-  box-sizing: border-box;
-  overflow: hidden;
-  width: 195px;
-  min-width: 195px;
-  max-width: 195px;
-  height: 233px;
-}
-
-.people .grid-item-wrapper {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  border-radius: 10px;
-  position: relative;
-  text-align: center;
-}
-
-.grid-item-content {
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
-  height: 15%;
-  background: #ececec;
-  opacity: 0.8;
-  border-radius: 10px;
-}
-
-.people .item-title {
-  font-size: 24px;
-  line-height: 26px;
-  font-weight: 700;
-  color: black;
-  position: absolute;
-  width: 100%;
 }
 
 
@@ -1338,9 +1246,10 @@ input {
   background-color: #F1F1F1;
 }
 
-/* Farm */
 
-.farms-grid-container {
+/* Detailed card */
+
+.detailed-grid-container {
   /* Grid styles */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
@@ -1350,7 +1259,7 @@ input {
   padding: 0px;
 }
 
-.farms-grid-container img {
+.detailed-card img {
   width: 100%;
   height: auto;
   min-width: 300px;
@@ -1365,7 +1274,7 @@ input {
   margin-right: 3%;
 }
 
-.farms-list .detailed-card:hover {
+.detailed-card:hover {
   background-color: white;
 }
 
