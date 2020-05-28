@@ -14,10 +14,12 @@
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
 }
-.wrap{
+
+.wrap {
   overflow-x: hidden;
   position: relative
 }
+
 h2 {
   width: 100%;
   text-align: center;
@@ -98,6 +100,7 @@ p {
   padding-left: 8px;
   margin-left: 8px;
 }
+
 .bottom-section .column h3 {
   padding-bottom: 20px;
 }
@@ -1212,8 +1215,7 @@ input {
 .detailed-grid-container {
   /* Grid styles */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
-
+  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
   margin: 0px 0px;
   grid-gap: 5px;
   padding: 0px;
@@ -1269,9 +1271,10 @@ input {
 }
 
 /* Create four equal columns that sits next to each other */
-.gallery{
+.gallery {
   padding-bottom: 20px;
 }
+
 .gallery .column {
   -ms-flex: 25%; /* IE10 */
   flex: 25%;
@@ -1348,4 +1351,9 @@ input {
 
 .button-container a:hover {
   font-weight: bold;
+}
+
+.people-list a {
+  color: #0F4D71;
+  text-decoration: underline;
 }

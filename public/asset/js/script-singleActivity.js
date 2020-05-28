@@ -18,7 +18,7 @@ function loadPage() {
           return response.json();
         }).then(function (personJson) {
           let {id, name, surname, role, description, personImg, contactId} = personJson[0];
-          peopleList.innerHTML += addAssignedVolunteer(id, name, surname, personImg);
+          peopleList.innerHTML += addAssignedVolunteer(id, name, surname);
         });
       }
       fetch("../v2/relatedTo/findRelatedEvents/" + activityId).then(function (response) { //fetch related events
@@ -31,7 +31,7 @@ function loadPage() {
             return response.json();
           }).then(function (eventJson) {
             let {id, name, date, hours, location, smallDescription, completeDescription, eventImg, personId, farmId} = eventJson[0];
-            eventsList.innerHTML += addRelatedEvent(id, name, eventImg);
+            eventsList.innerHTML += addRelatedEvent(id, name, smallDescription, eventImg);
           });
         }
         fetch("../v2/offers/findInterestedFarms/" +activityId).then(function (response) { //fetch interested farms
@@ -44,7 +44,7 @@ function loadPage() {
               return response.json();
             }).then(function (farmJson) {
               let {id, farmName, ownerName, shortDescription, completeDescription, address, coordinates, openingTimes, farmImg, contactId} = farmJson[0];
-              farmsList.innerHTML += addInterestedFarm(id, farmName, farmImg);
+              farmsList.innerHTML += addInterestedFarm(id, farmName, shortDescription, address, farmImg);
             });
           }
         });
@@ -72,44 +72,62 @@ function addActivityData(name, description, startDate, endDate, activityImg) {
         <div class="contacts">
           <div class="columnA people">
             <h3>Assigned volunteers</h3>
-            <div class="people-grid-container" id="assignedVolunteersToActivity"></div>
+            <ul class="people-list" id="assignedVolunteersToActivity"></ul>
           </div>
         </div>
       </div>
     </div>
-    <div class="nextEvents">
+    <div class="contents">
       <h2>Related events</h2>
-      <ul id="relatedEventsToActivity"></ul>
+      <div class="events-list">
+        <div class="detailed-grid-container" id="relatedEventsToActivity"></div>
+      </div>
     </div>
     <div class="farm-section">
       <h2>Interested farms</h2>
-      <ul id="involvedFarmsToActivity"></ul>
+      <div class="farms-list">
+        <div class="detailed-grid-container" id="involvedFarmsToActivity"></div>
+      </div>
     </div>
   `;
 }
 
-function addAssignedVolunteer(id, name, surname, personImg) {
+function addAssignedVolunteer(id, name, surname) {
   return `
-    <div class="person-card">
-      <a href="./singleVolunteer_page.html?personId=` + id + `">
-        <div class="circle-container">
-          <img src="../asset/img/People/Volunteers/` + personImg + `" alt="">
-          <h2>` + name + ` ` + surname + `</h2>
-        </div>
-      </a>
-    </div>
+    <li><a href="./singleVolunteer_page.html?personId=`+ id +`"><p>`+ name +` `+ surname +`</p></a></li>
   `;
 }
 
-function addRelatedEvent(id, name) {
+function addRelatedEvent(id, name, smallDescription, eventImg) {
   return `
-    <li><a href="./singleEvent_page.html?eventId=`+ id +`"><p>`+ name +`</p></a></li>
+  <div class="detailed-card">
+    <a href="./singleEvent_page.html?eventId=` + id + `">
+      <div class="rectangle-container">
+        <img src="../asset/img/Event/` + eventImg + `" alt="">
+      </div>
+      <div class="card-content">
+        <h2>` + name + `</h2>
+        <p>` + smallDescription + `</p>
+      </div>
+    </a>
+  </div>
   `;
 }
 
-function addInterestedFarm(id, name) {
+function addInterestedFarm(id, farmName, shortDescription, address, farmImg) {
   return `
-    <li><a href="./singleFarm_page.html?farmId=`+ id +`"><p>`+ name +`</p></a></li>
+  <div class="detailed-card">
+    <a href="./singleFarm_page.html?farmId=` + id + `">
+      <div class="rectangle-container">
+        <img src="../asset/img/Farms/` + farmImg + `" alt="">
+      </div>
+      <div class="card-content">
+        <h2>` + farmName + `</h2>
+        <h4>` + address + `</h4>
+        <p>` + shortDescription + `</p>
+      </div>
+    </a>
+  </div>
   `;
 }
 
