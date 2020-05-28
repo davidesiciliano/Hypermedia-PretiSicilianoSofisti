@@ -34,3 +34,14 @@ exports.getFarmsByActivityId = function(activityId) {
     .where(Offers.activityId, activityId);
 }
 
+/**
+ * Find all activities offered by a farm
+ * Returns a list of activities
+ *
+ * farmId Long ID of the considered farm
+ * returns Offers
+ **/
+exports.getActivitiesByFarmId = function(farmId) {
+  return sqlDb(Offers.getTable)
+    .where(Offers.farmId, farmId);
+}

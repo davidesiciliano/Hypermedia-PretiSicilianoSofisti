@@ -467,6 +467,32 @@ paths:
         "404":
           description: "Activity not found"
       x-swagger-router-controller: "Offers"
+  /offers/findRelatedActivities/{farmId}:
+    get:
+      tags:
+      - "offers"
+      summary: "Find all activities offered by a farm"
+      description: "Returns a list of activities"
+      operationId: "getActivitiesByFarmId"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "farmId"
+        in: "path"
+        description: "ID of the considered farm"
+        required: true
+        type: "integer"
+        format: "int64"
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/Offers"
+        "400":
+          description: "Invalid ID supplied"
+        "404":
+          description: "Farm not found"
+      x-swagger-router-controller: "Offers"
   /people/findById/{personId}:
     get:
       tags:
