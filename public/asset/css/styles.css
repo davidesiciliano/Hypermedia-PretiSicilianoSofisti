@@ -1297,6 +1297,12 @@ input {
   transition-timing-function: ease-in-out;
 }
 
+.activity-card img {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+}
+
 .activities-list .activity-card {
   background-color: #F1F1F1;
 }
