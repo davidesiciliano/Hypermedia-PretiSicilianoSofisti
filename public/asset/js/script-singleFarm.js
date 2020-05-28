@@ -102,7 +102,7 @@ function myMap(x, y) {
 
 function addGalleryImage(galleryImg) {
   return `
-    <img src="../asset/img/FarmsGallery/` + galleryImg + `" alt="">
+    <img src="../asset/img/Farms/` + galleryImg + `" alt="">
   `;
 }
 
