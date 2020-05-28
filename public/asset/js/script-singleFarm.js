@@ -47,7 +47,7 @@ function addFarmDescription(farmName, ownerName, completeDescription, address, c
   return `
   <div class="topImage">
     <img src="../asset/img/Farms/` + farmImg + `" alt="text text" style="width:100%">
-    <div class="name"><a href="../pages/farms_page.html"><i class="fas fa-chevron-left"></i>` + farmName + `</a></div>
+    <div class="name"><a href="../pages/farms_page.html"><i class="fas fa-chevron-left"></i> ` + farmName + `</a></div>
     <div class="navInfo"><a href="../pages/farms_page.html">Farms</a></div>
   </div>
 
