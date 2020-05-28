@@ -27,11 +27,11 @@ Az. Agr. Prati
 
 Sagra della Carne  (Serle, BS)
 25/07/2020
-EXPERT 1
+Simone Tosi
 
 A festival dedicated to tasting of grilled meat!
 
-During the event attendees will learn the techniques to cook a perfect barbecue of meet. All the meet is biologic and produced by the farm. The event expert <a href="./singleExpert_page.html?personId=1">m NOME ESPERTO 1 DA METTTTERE SICI</a> will teach you some techniques and tricks to obtain super tasty results.
+During the event attendees will learn the techniques to cook a perfect barbecue of meet. All the meet is biologic and produced by the farm. The event expert <a href="./singleExpert_page.html?personId=6">Simone Tosi</a> will teach you some techniques and tricks to obtain super tasty results.
 
 
 
@@ -49,11 +49,11 @@ Az. Agr. Soma
 
 Estate al pascolo (Pista, Ve)
 20/08/2020
-EXPERT 2
+Bianca Costa
 
 A unique experience for all ages, live the pasture in the mountains. a day immersed in nature to learn the stages of montgana cattle breeding with a longtime herdsman.
 
-The activity starts with one hour hike in the mountain form the stable to the pasture. Here <a href="./singleExpert_page.html?personId=2">NOME ESPERTO “</a> will teach you how to milk and feed cows. After that you will eat some typical products and during the evening you will make cheese with the milk of the day.
+The activity starts with one hour hike in the mountain form the stable to the pasture. Here <a href="./singleExpert_page.html?personId=4">Bianca Costa“</a> will teach you how to milk and feed cows. After that you will eat some typical products and during the evening you will make cheese with the milk of the day.
 
 RELATED Activities
 Cut hay
@@ -69,11 +69,11 @@ Az. Agr. Corno
 
 Grow your food (Rista, Tn)
 28/08/2020
-Roberto Ricci
+Simone Tosi
 
-MISSING SHORT
+Grow your own food is important for your healt, is easy and enjoiable! Learn how to do it.
 
-MISSING LONG <a href="./singleExpert_page.html?personId=3">Roberto Ricci “</a>
+Our expert <a href="./singleExpert_page.html?personId=6">Simone Tosi“</a> will teach you all the secrets for a perfect vegetable garden, biological and healthy for you and your family.
 
 RELATED Activities
 Gardening
@@ -94,11 +94,11 @@ Az. Agr. Ferdy
 
 Frutta che passione! (Sarnico, Bg)
 15/09/2020
-EXPERRRT 4
+Simone Tosi
 
-MISSING SHORT
+Biologic fruit is the future, learn how to keep plants healthy with biologic remedies! 
 
-MISSING LONG <a href="./singleExpert_page.html?personId=4">EXPERT 4 “</a>
+With our expert  <a href="./singleExpert_page.html?personId=6">Simone Tosi“</a> you will follow all the steps from pruning to final fruit harvesting. The activity will last all the morning and after that you will bring home the fruit you’ve harvest.
 
 RELATED Activities
 Pruning
@@ -119,11 +119,11 @@ Az. Agr. Stambecco
 
 Foresta, un bene prezioso (Pago, Tn)
 20/09/2020
-EXPERT 2
+Denise Pisa
 
-MISSING SHORT
+Maintaining wood is one of the most important work for small farms like Stambecco. Come and discover more about it!
 
-MISSING LONG <a href="./singleExpert_page.html?personId=2">Expert 2 name“</a>
+During the event our expert in forestry maintenance <a href="./singleExpert_page.html?personId=5">Denise Pisa“</a> will show you the effect of a correct maintenance job done by Stambecco farm in collaboration with our association showing you the benefit on fauna and flora.
 
 RELATED Activities
 Forestry
