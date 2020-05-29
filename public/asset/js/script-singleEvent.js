@@ -25,6 +25,7 @@ function loadPage() {
 
 function addEventData(name, date, hours, location, completeDescriptionEvent, eventImg,
                       ownerName, address, shortDescriptionFarm, farmImg, email, phoneNumber) {
+  var parts = date.split("-");
   return `
   <div class="topSection">
     <div class="name"><a href="./events_page.html"><i class="fas fa-chevron-left"></i>` + name + `</a></div>
@@ -38,7 +39,7 @@ function addEventData(name, date, hours, location, completeDescriptionEvent, eve
       <img src="../asset/img/Events/` + eventImg + `" alt="">
     </div>
     <div class="column2">
-      <h4>` + date + `, ` + hours + `</h4>
+      <h4>` + parts[2] + `/` + parts[1] + `/` + parts[0] + `, ` + hours + `</h4>
       <h4>` + location + `</h4>
       <p class="event-description"><br>` + completeDescriptionEvent + `</p>
       <div class="contacts">
