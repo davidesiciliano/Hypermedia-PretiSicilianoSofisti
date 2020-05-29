@@ -32,12 +32,12 @@ function loadFooter() {
       <div class="footer-section contact-form">
         <h2>Contact Us</h2>
         <br>
-        <form action="" method="post">
+        <form>
           <input type="email" name="email" class="text-input contact-input" placeholder="Your email address..."></input>
           <textarea name="message" class="text-input contact-input" placeholder="Your message..."></textarea>
-          <button type="submit" class="btn btn-big contact-btn">
+          <div class="btn btn-big contact-btn">
             <i class="fas fa-envelope">&nbsp;</i><a>Send</a>
-          </button>
+          </div>
         </form>
       </div>
   
