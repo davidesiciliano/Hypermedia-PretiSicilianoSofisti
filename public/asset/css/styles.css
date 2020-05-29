@@ -626,34 +626,6 @@ h1 {
   transform: scale(1.05);
 }
 
-@media (max-width: 1333px) {
-  .founder .grid-item, .volunteer .grid-item {
-    flex-basis: 100%;
-  }
-}
-
-@media (max-width: 1073px) {
-  .founder .grid-item, .volunteer .grid-item {
-    flex-basis: 25%;
-  }
-}
-
-@media (max-width: 815px) {
-  .founder .grid-item, .volunteer .grid-item {
-    flex-basis: 50%;
-  }
-}
-
-@media (max-width: 555px) {
-  .founder .grid-item {
-    flex-basis: 50%;
-  }
-
-  .volunteer .grid-item {
-    flex-basis: 50%;
-  }
-}
-
 /* Form content structure */
 .form-content {
   overflow: hidden;
@@ -667,14 +639,6 @@ h1 {
   padding: 0 90px;
   padding-top: 55px;
   padding-bottom: 65px;
-}
-
-@media (max-width: 767px) {
-  .form-content {
-    padding: 0 40px;
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
 }
 
 /* Form grid */
@@ -711,30 +675,6 @@ h1 {
 
 .province-col {
   width: 100px;
-}
-
-@media (max-width: 767px) {
-  .col-2, .col-3 {
-    width: 100%;
-  }
-}
-
-@media only screen
-and (device-width: 375px)
-and (device-height: 667px)
-and (-webkit-device-pixel-ratio: 2) {
-  .col-2, .col-3 {
-    width: 100%;
-  }
-}
-
-@media only screen
-and (device-width: 414px)
-and (device-height: 896px)
-and (-webkit-device-pixel-ratio: 2) {
-  .col-2, .col-3 {
-    width: 100%;
-  }
 }
 
 /* Form elements */
@@ -1305,6 +1245,25 @@ farm-section-event {
   filter: saturate(110%);
 }
 
+@media (max-width: 767px) {
+  .col-2, .col-3 {
+    width: 100%;
+  }
+
+  .form-content {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .col-2, .col-3 {
+    width: 100%;
+  }
+
+  .form-content {
+    padding: 40px;
+  }
+}
 
 @media screen and (min-width: 1025px) {
   .FAQLink {
