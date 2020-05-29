@@ -1,7 +1,5 @@
 function loadPage() {
   //TODO aggiungere messaggio quando viene inviato correttamente
-  //TODO sistemare url con quello di heroku
-  const url = "http://localhost:5000";
 
   var button = document.getElementById("sendForm");
   button.onclick = function () {
@@ -30,7 +28,7 @@ function loadPage() {
       description: description
     };
 
-    fetch(url + "/v2/helpUsForm/sendForm", {
+    fetch("../v2/helpUsForm/sendForm", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
