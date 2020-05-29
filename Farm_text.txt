@@ -77,7 +77,7 @@ sun-sat: 10.00-12.00
 
 Short text
 ----------
-A big farm where visitors can taste and touch the real Farmer life. The Farm have the possibility of organized tours and grop activities for all ages.
+A farm where visitors can taste and touch the real Farmer life. The Farm have the possibility of tours and group activities for all ages.
 
 Long text
 ---------

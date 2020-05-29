@@ -77,7 +77,7 @@ function addActivityData(name, description, startDate, endDate, activityImg) {
         </div>
       </div>
     </div>
-    <div class="contents">
+    <div class="related-events">
       <h2>Related events</h2>
       <div class="events-list">
         <div class="detailed-grid-container" id="relatedEventsToActivity"></div>
