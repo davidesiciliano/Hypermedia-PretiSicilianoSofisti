@@ -37,7 +37,7 @@
 #TODO: Database
 - [ ] Activities (mancano descrizioni)
 - [x] Contact
-- [ ] Event (mancano foto)
+- [ ] Event (mancano 2 complete descriptions)
 - [x] Faq
 - [x] Farm
 - [x] IsInvolvedIn
@@ -46,8 +46,7 @@
 - [x] RelatedTo
 
 # TODO: Page Polish
-- [ ] index.html
-    - togliere style da html
+- [x] index.html
 - [x] association_page.html
 - [x] activities_page.html
 - [x] helpUs_page.html
