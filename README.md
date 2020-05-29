@@ -37,37 +37,28 @@
 #TODO: Database
 - [ ] Activities (mancano descrizioni)
 - [x] Contact
-- [ ] Event (mancano foto)
+- [ ] Event (mancano 2 complete descriptions)
 - [x] Faq
-- [ ] Farm (mancano foto e gallery)
+- [x] Farm
 - [x] IsInvolvedIn
 - [x] Offers
 - [x] Person
 - [x] RelatedTo
 
 # TODO: Page Polish
-- [ ] problema sul resizing
-- [ ] index.html
-    - direi di togliere la sezione next events SE TIRATI CON I TEMPI
-    - togliere style da html
+- [x] index.html
 - [x] association_page.html
-- [ ] activities_page.html
-    - sistemare immagini (problema dopo ultimo merge delle farms)
+- [x] activities_page.html
 - [x] helpUs_page.html
-- [ ] farms_page.html
-    - fix overflow quando è tutto stretto a destra
-- [ ] events_page.html
+- [x] farms_page.html
+- [x] events_page.html
 - [x] people_page.html
 - [ ] FAQ_page.html                 
     - problem scroll down  Caused by anchor DA CHIEDERE AI TUTOR
-- [ ] singleActivity_page.html      
-    - cambiare colore assigned volunteers
-    - sistemare cards people
+- [x] singleActivity_page.html
 - [x] singleFarm_page.html
 - [x] singleEvent_page.html
-- [ ] singleVolunteer_page.html 
-    - Limitare dimensioni card related activities
-- [ ] singleExpert_page.html
-    - Limitare dimensioni card related events
+- [x] singleVolunteer_page.html 
+- [x] singleExpert_page.html
 - [x] singleFounder_page.html 
 - [x] terms_page.html

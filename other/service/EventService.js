@@ -43,7 +43,8 @@ exports.eventsGET = function (offset, limit) {
     limit = 20;
   return sqlDb(Event.getTable)
     .limit(limit)
-    .offset(offset);
+    .offset(offset)
+    .orderBy(Event.date);
 }
 
 
