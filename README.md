@@ -39,7 +39,7 @@
 - [x] Contact
 - [ ] Event (mancano foto)
 - [x] Faq
-- [ ] Farm (mancano foto e gallery)
+- [x] Farm
 - [x] IsInvolvedIn
 - [x] Offers
 - [x] Person
