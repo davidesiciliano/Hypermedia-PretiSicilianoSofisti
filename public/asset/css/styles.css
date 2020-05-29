@@ -852,18 +852,18 @@ h1 {
 }
 
 @media only screen
-and (device-width : 375px)
-and (device-height : 667px)
-and (-webkit-device-pixel-ratio : 2) {
+and (device-width: 375px)
+and (device-height: 667px)
+and (-webkit-device-pixel-ratio: 2) {
   .col-2, .col-3 {
     width: 100%;
   }
 }
 
 @media only screen
-and (device-width : 414px)
-and (device-height : 896px)
-and (-webkit-device-pixel-ratio : 2) {
+and (device-width: 414px)
+and (device-height: 896px)
+and (-webkit-device-pixel-ratio: 2) {
   .col-2, .col-3 {
     width: 100%;
   }
@@ -1176,10 +1176,12 @@ input {
 .activities-list .activities-grid-container {
   background-color: white;
 }
+
 .single-farm .activities-list {
   background-color: #F1F1F1;
   padding-bottom: 40px;
 }
+
 .single-farm .activities-grid-container {
   background-color: #F1F1F1;
 }
@@ -1243,7 +1245,7 @@ input {
   background-color: white;
 }
 
-.related-events .detailed-card:hover{
+.related-events .detailed-card:hover {
   background-color: #F1F1F1;
 }
 
@@ -1415,4 +1417,52 @@ farm-section-event {
 
 .help {
   background-color: #F1F1F1;
+}
+
+#slider {
+  overflow: hidden;
+}
+
+#slider figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  animation: 20s slider infinite;
+}
+
+#slider figure img {
+  float: left;
+  width: 20%;
+  filter: saturate(110%);
+}
+
+@keyframes slider {
+  0% {
+    left: 0;
+  }
+  20% {
+    left: 0;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  90% {
+    left: -300%;
+  }
+  100% {
+    left: -400%;
+  }
 }
