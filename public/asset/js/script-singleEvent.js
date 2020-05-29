@@ -71,7 +71,7 @@ function addEventData(name, date, hours, location, completeDescriptionEvent, eve
     <img src="../asset/img/Farms/`+farmImg+`" alt="text text" style="width:100%">
   </div>
 
-  <div class="farm-section">
+  <div class="farm-section-event">
     <h2>The Farm</h2>
     <p>`+shortDescriptionFarm+`</p>
   </div>

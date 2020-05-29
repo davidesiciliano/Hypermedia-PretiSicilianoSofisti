@@ -744,10 +744,6 @@ h1 {
   bottom: 0px;
 }
 
-.farm-section {
-  height: 500px;
-}
-
 /* Image hoover animation */
 .inner-img {
   transition: 0.3s;
@@ -1236,7 +1232,12 @@ input {
 }
 
 .farm-section {
+  height: 500px;
   margin-bottom: 40px;
+}
+
+farm-section-event {
+  margin-bottom: 20px;
 }
 
 
@@ -1396,4 +1397,8 @@ input {
 .event-description a {
   color: #0F4D71;
   text-decoration: underline;
+}
+
+.help {
+  background-color: #F1F1F1;
 }
