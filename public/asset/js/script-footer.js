@@ -35,9 +35,9 @@ function loadFooter() {
         <form>
           <input type="email" name="email" class="text-input contact-input" placeholder="Your email address..."></input>
           <textarea name="message" class="text-input contact-input" placeholder="Your message..."></textarea>
-          <div class="btn btn-big contact-btn">
+          <button class="btn btn-big contact-btn">
             <i class="fas fa-envelope">&nbsp;</i><a>Send</a>
-          </div>
+          </button>
         </form>
       </div>
   
