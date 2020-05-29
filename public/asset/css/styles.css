@@ -860,6 +860,15 @@ and (-webkit-device-pixel-ratio : 2) {
   }
 }
 
+@media only screen
+and (device-width : 414px)
+and (device-height : 896px)
+and (-webkit-device-pixel-ratio : 2) {
+  .col-2, .col-3 {
+    width: 100%;
+  }
+}
+
 /* Form elements */
 input {
   outline: none;
