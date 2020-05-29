@@ -11,7 +11,7 @@ function loadPage() {
         eventList.innerHTML += addMonthSection(parts[1], parts[0]);
       }
       monthList = document.getElementById("eventsMonth" + parts[1]);
-      monthList.innerHTML += insertEvent(id, name, smallDescription, eventImg);
+      monthList.innerHTML += insertEvent(id, name, date, smallDescription, eventImg);
     }
   })
 }
@@ -55,7 +55,8 @@ function getMonthName(month) {
   }
 }
 
-function insertEvent(id, name, smallDescription, eventImg) {
+function insertEvent(id, name, date, smallDescription, eventImg) {
+  var parts = date.split("-");
   return `
   <div class="detailed-card">
     <a href="./singleEvent_page.html?eventId=` + id + `">
@@ -64,6 +65,7 @@ function insertEvent(id, name, smallDescription, eventImg) {
       </div>
       <div class="card-content">
         <h2>` + name + `</h2>
+        <h4>` + parts[2] + `/` + parts[1] + `/` + parts[0] + `</h4>
         <p>` + smallDescription + `</p>
       </div>
     </a>

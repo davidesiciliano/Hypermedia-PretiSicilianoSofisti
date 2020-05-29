@@ -5,12 +5,13 @@ function loadPage() {
   }).then(function (eventsJson) {
     for (var i = 0; i < 3 && i < eventsJson.length; i++) {
       let {id, name, date, hours, location, smallDescription, completeDescription, eventImg, personId, farmId} = eventsJson[i];
-      nextEvents.innerHTML += insertEvent(id, name, smallDescription, eventImg);
+      nextEvents.innerHTML += insertEvent(id, name, date, smallDescription, eventImg);
     }
   })
 }
 
-function insertEvent(id, name, smallDescription, eventImg) {
+function insertEvent(id, name, date, smallDescription, eventImg) {
+  var parts = date.split("-");
   return `
   <div class="detailed-card">
     <a href="./pages/singleEvent_page.html?eventId=` + id + `">
@@ -19,6 +20,7 @@ function insertEvent(id, name, smallDescription, eventImg) {
       </div>
       <div class="card-content">
         <h2>` + name + `</h2>
+         <h4>` + parts[2] + `/` + parts[1] + `/` + parts[0] + `</h4>
         <p>` + smallDescription + `</p>
       </div>
     </a>

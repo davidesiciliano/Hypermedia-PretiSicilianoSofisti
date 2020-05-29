@@ -62,12 +62,6 @@ function addEventData(name, date, hours, location, completeDescriptionEvent, eve
     </div>
   </div>
 
-
-  <div class="nextEvents">
-    <h2>Next events</h2>
-  </div>
-
-
   <div class="bottomImage">
     <img src="../asset/img/Farms/`+farmImg+`" alt="text text" style="width:100%">
   </div>
