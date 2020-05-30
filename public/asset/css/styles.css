@@ -999,7 +999,7 @@ input {
 }
 
 .activity-card {
-  height: 350px;
+  height: 300px;
   max-width: 500px;
   overflow: hidden;
   transition-property: background;
@@ -1034,6 +1034,10 @@ input {
 
 .card-content p {
   color: black;
+}
+
+.activity-card h2 {
+  padding-top: 15px;
 }
 
 .activities-list .activity-card:hover {
