@@ -999,7 +999,7 @@ input {
 }
 
 .activity-card {
-  height: 350px;
+  height: 300px;
   max-width: 500px;
   overflow: hidden;
   transition-property: background;
@@ -1036,6 +1036,10 @@ input {
   color: black;
 }
 
+.activity-card h2 {
+  padding-top: 15px;
+}
+
 .activities-list .activity-card:hover {
   background-color: white;
 }
@@ -1070,7 +1074,7 @@ farm-section-event {
 .detailed-grid-container {
   /* Grid styles */
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(375px, 1fr));
   margin: 0px 0px;
   grid-gap: 5px;
   padding: 0px;
@@ -1262,6 +1266,11 @@ farm-section-event {
 
   .form-content {
     padding: 40px;
+  }
+
+  .detailed-card .card-content {
+    height: auto;
+    padding-bottom: 20px;
   }
 }
 
