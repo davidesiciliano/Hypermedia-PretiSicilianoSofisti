@@ -198,8 +198,8 @@ nav {
   font-family: 'Poppins', sans-serif;
   font-weight: 800;
   font-size: 60px;
-  text-shadow: 2px 2px 4px #777,
-  -2px -2px 4px #777;
+  text-shadow: 2px 2px 40px #777,
+  -2px -2px 40px #777;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -838,8 +838,8 @@ input {
   color: white;
   font-weight: 800;
   font-size: 40px;
-  text-shadow: 2px 2px 4px #777,
-  -2px -2px 4px #777;
+  text-shadow: 2px 2px 25px #777,
+  -2px -2px 25px #777;
   z-index: 1;
 }
 
