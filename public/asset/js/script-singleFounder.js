@@ -19,7 +19,7 @@ function loadPage() {
 function addFounderData(name, surname, description, personImg, email, phoneNumber) {
   return `
     <div class="topSection">
-      <div class="name"><a href="./people_page.html"><i class="fas fa-chevron-left"></i>`+ name + ` ` + surname + `</a></div>
+      <div class="name"><a href="./people_page.html"><i class="fas fa-chevron-left"></i> `+ name + ` ` + surname + `</a></div>
       <div class="navInfo"><a href="./people_page.html">People</a></div>
     </div>
     <img class="personImageResize" src="../asset/img/People/Founders/` + personImg + `" alt="">

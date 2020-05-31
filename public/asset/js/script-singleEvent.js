@@ -28,7 +28,7 @@ function addEventData(name, date, hours, location, completeDescriptionEvent, eve
   var parts = date.split("-");
   return `
   <div class="topSection">
-    <div class="name"><a href="./events_page.html"><i class="fas fa-chevron-left"></i>` + name + `</a></div>
+    <div class="name"><a href="./events_page.html"><i class="fas fa-chevron-left"></i> ` + name + `</a></div>
     <div class="navInfo"><a href="./events_page.html">Events</a></div>
   </div>
   <div class= "eventImageResizeContainer">
