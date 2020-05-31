@@ -485,7 +485,6 @@ h4 {
 .personDescription .column1 {
   flex: auto;
   padding-left: 40px;
-  min-height: 300px;
 }
 
 .personDescription .column2 a {
@@ -530,6 +529,24 @@ h4 {
 .personDescription .column2 .contacts .columnB {
   flex: 50%;
   padding-top: 50px;
+}
+
+#volunteerInfo .activities-list {
+  padding-left: 40px;
+  padding-bottom: 40px;
+}
+
+#volunteerInfo .activities-list h3 {
+  margin-bottom: 15px;
+}
+
+#expertInfo .activities-list {
+  padding-left: 40px;
+  padding-bottom: 40px;
+}
+
+#expertInfo .activities-list h3 {
+  margin-bottom: 15px;
 }
 
 .pic {
@@ -946,7 +963,7 @@ input {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 
   margin: 20px 0px;
-  grid-gap: 1px;
+  grid-gap: 5px;
   padding: 0px;
   background-color: white;
 }
@@ -1166,6 +1183,14 @@ farm-section-event {
     flex: 50%;
     max-width: 50%;
   }
+
+  #volunteerInfo .activities-list h3 {
+    padding-left: 30px;
+  }
+
+  #expertInfo .activities-list h3 {
+    padding-left: 30px;
+  }
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
@@ -1263,7 +1288,7 @@ farm-section-event {
 
 
 /*Smartphopne View*/
-@media screen and (max-width: 1025px) {
+@media screen and (min-width: 768px) and (max-width: 1025px) {
   .nav-links {
     width: 45%;
   }
@@ -1398,6 +1423,22 @@ farm-section-event {
   .burger {
     display: block;
   }
+
+  #volunteerInfo .activities-list {
+    padding-left: 0px;
+  }
+
+  #expertInfo .activities-list {
+    padding-left: 0px;
+  }
+
+  #volunteerInfo .activities-list .activities-grid-container {
+    padding-left: 30px;
+  }
+
+  #expertInfo .activities-list .activities-grid-container {
+    padding-left: 30px;
+  }
 }
 
 /*Smartphopne View*/
@@ -1519,6 +1560,14 @@ farm-section-event {
 
   .burger {
     display: block;
+  }
+
+  #volunteerInfo .activities-list {
+    padding-left: 0px;
+  }
+
+  #expertInfo .activities-list {
+    padding-left: 0px;
   }
 }
 

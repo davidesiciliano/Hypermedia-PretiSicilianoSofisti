@@ -48,12 +48,12 @@ function addExpertData(name, surname, description, personImg, email, phoneNumber
             <a class="fas fa-envelope"></a><a href="mailto: ` + email + `">` + email + `</a>
           </span>
         </div>
-        <div class="activities-list">
-          <h3>Related Events</h3>
-          <div class="activities-grid-container" id="expertRelatedEvent"></div>
-        </div>
       </div>
     </div>
+     <div class="activities-list">
+       <h3>Related Events</h3>
+       <div class="activities-grid-container" id="expertRelatedEvent"></div>
+     </div>
   `;
 }
 

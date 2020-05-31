@@ -53,11 +53,11 @@ function addVolunteerData(name, surname, description, personImg, email, phoneNum
           <a class="fas fa-envelope"></a><a href="mailto: ` + email + `">` + email + `</a>
         </span>
       </div>
-        <div class="activities-list">
-          <h3>Assigned Activities</h3>
-          <div class="activities-grid-container" id="volunteerAssignedActivities"></div>
-        </div>
       </div>
+    </div>
+    <div class="activities-list">
+      <h3>Assigned Activities</h3>
+      <div class="activities-grid-container" id="volunteerAssignedActivities"></div>
     </div>
   `;
 }
