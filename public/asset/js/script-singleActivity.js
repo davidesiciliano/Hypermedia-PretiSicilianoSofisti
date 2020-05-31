@@ -56,7 +56,7 @@ function loadPage() {
 function addActivityData(name, description, startDate, endDate, activityImg) {
   return `
     <div class="topSection">
-      <div class="name"><a href="../pages/activities_page.html"><i class="fas fa-chevron-left"></i>`+ name +`</a></div>
+      <div class="name"><a href="../pages/activities_page.html"><i class="fas fa-chevron-left"></i> `+ name +`</a></div>
       <div class="navInfo"><a href="../pages/activities_page.html">Activities</a></div>
     </div>
     <div class= "eventImageResizeContainer">
