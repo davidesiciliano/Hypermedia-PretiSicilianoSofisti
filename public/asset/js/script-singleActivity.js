@@ -56,7 +56,7 @@ function loadPage() {
 function addActivityData(name, description, startDate, endDate, activityImg) {
   return `
     <div class="topSection">
-      <div class="name"><a href="../pages/activities_page.html"><i class="fas fa-chevron-left"></i>`+ name +`</a></div>
+      <div class="name"><a href="../pages/activities_page.html"><i class="fas fa-chevron-left"></i> `+ name +`</a></div>
       <div class="navInfo"><a href="../pages/activities_page.html">Activities</a></div>
     </div>
     <div class= "eventImageResizeContainer">
@@ -103,7 +103,7 @@ function addRelatedEvent(id, name, smallDescription, eventImg) {
   <div class="detailed-card">
     <a href="./singleEvent_page.html?eventId=` + id + `">
       <div class="rectangle-container">
-        <img src="../asset/img/Event/` + eventImg + `" alt="">
+        <img src="../asset/img/Events/` + eventImg + `" alt="">
       </div>
       <div class="card-content">
         <h2>` + name + `</h2>
