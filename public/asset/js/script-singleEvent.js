@@ -17,14 +17,14 @@ function loadPage() {
         let {contactIdC, email, phoneNumber} = contactJson[0];
         eventDescription.innerHTML += addEventData(
           name, date, hours, location, completeDescription, eventImg,
-          ownerName, address, shortDescription, farmImg, email, phoneNumber);
+          farmId, farmName, ownerName, address, shortDescription, farmImg, email, phoneNumber);
       });
     });
   });
 }
 
 function addEventData(name, date, hours, location, completeDescriptionEvent, eventImg,
-                      ownerName, address, shortDescriptionFarm, farmImg, email, phoneNumber) {
+                      farmId, farmName, ownerName, address, shortDescriptionFarm, farmImg, email, phoneNumber) {
   var parts = date.split("-");
   return `
   <div class="topSection">
@@ -63,12 +63,12 @@ function addEventData(name, date, hours, location, completeDescriptionEvent, eve
   </div>
 
   <div class="bottomImage">
-    <img src="../asset/img/Farms/`+farmImg+`" alt="text text" style="width:100%">
+    <img src="../asset/img/Farms/` + farmImg + `" alt="text text" style="width:100%">
   </div>
 
   <div class="farm-section-event">
-    <h2>The Farm</h2>
-    <p>`+shortDescriptionFarm+`</p>
+    <h2><a href="./singleFarm_page.html?farmId=` + farmId + `">` + farmName + `</a></h2>
+    <p>` + shortDescriptionFarm + `</p>
   </div>
   `;
 }

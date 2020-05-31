@@ -835,6 +835,11 @@ input {
   text-decoration: underline;
 }
 
+.farm-section-event a {
+  color: #0F4D71;
+  text-decoration: underline;
+}
+
 .accordion-item:target .answer {
   max-height: 20rem;
 }
@@ -846,7 +851,6 @@ input {
 .accordion-item:target .accordion-link .fa-minus {
   display: block;
 }
-
 
 .contents .slider .title {
   position: relative;
@@ -1286,7 +1290,6 @@ farm-section-event {
   }
 }
 
-
 /*Ipad View*/
 @media screen and (min-width: 768px) and (max-width: 1025px) {
   .nav-links {
@@ -1309,6 +1312,7 @@ farm-section-event {
   .contents .topImage .title {
     font-size: 40px;
   }
+
   .contents-FAQ {
     width: 100%;
     max-width: 80rem;
@@ -1319,6 +1323,7 @@ farm-section-event {
   .accordion-link {
     font-size: 1.1rem;
   }
+
   .topSection a {
     font-size: 30px;
   }
@@ -1360,8 +1365,8 @@ farm-section-event {
     padding-top: 18px;
     font-size: 25px;
   }
-  
-  .logo img{  
+
+  .logo img {
     padding-top: 10px;
     width: auto;
     height: 70px;
@@ -1455,6 +1460,7 @@ farm-section-event {
   .accordion-link {
     font-size: 1.1rem;
   }
+
   .topSection a {
     font-size: 30px;
   }
@@ -1496,8 +1502,8 @@ farm-section-event {
     padding-top: 15px;
     font-size: 19px;
   }
-  
-  .logo img{  
+
+  .logo img {
     padding-top: 10px;
     width: auto;
     height: 55px;
