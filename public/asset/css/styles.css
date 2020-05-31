@@ -1287,7 +1287,7 @@ farm-section-event {
 }
 
 
-/*Smartphopne View*/
+/*Ipad View*/
 @media screen and (min-width: 768px) and (max-width: 1025px) {
   .nav-links {
     width: 45%;
@@ -1434,10 +1434,12 @@ farm-section-event {
 
   #volunteerInfo .activities-list .activities-grid-container {
     padding-left: 30px;
+    padding-right: 30px;
   }
 
   #expertInfo .activities-list .activities-grid-container {
     padding-left: 30px;
+    padding-right: 30px;
   }
 }
 
