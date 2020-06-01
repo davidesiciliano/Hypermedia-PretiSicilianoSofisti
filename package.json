@@ -4,7 +4,7 @@
   "description": "This is a simple bookstore server with a book inventory, users and a shopping cart.",
   "main": "index.js",
   "scripts": {
-    "prestart": "npm install | npm install knex | npm install pg | npm install serve-static",
+    "prestart": "npm install | npm install knex | npm install pg | npm install serve-static | npm install express",
     "start": "node index.js",
     "test": "node index.js"
   },
@@ -15,6 +15,7 @@
   "private": true,
   "dependencies": {
     "connect": "^3.2.0",
+    "express": "^4.17.1",
     "js-yaml": "^3.3.0",
     "knex": "^0.21.1",
     "pg": "^8.2.1",

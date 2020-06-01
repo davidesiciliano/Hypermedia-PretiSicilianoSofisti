@@ -4,13 +4,15 @@ var fs = require('fs'),
   path = require('path'),
   http = require('http');
 
-var app = require('connect')();
+const express = require("express")
+var app = express();
 var swaggerTools = require('swagger-tools');
 var jsyaml = require('js-yaml');
 var serverPort = process.env.PORT || 5000;
 
 let serveStatic = require("serve-static");
 let {setupDataLayer} = require("./other/service/DataLayer");
+var docsRouter = require("./documentation/docs-router");
 
 // swaggerRouter configuration
 var options = {
@@ -39,6 +41,9 @@ swaggerTools.initializeMiddleware(swaggerDoc, function (middleware) {
   app.use(middleware.swaggerUi());
 
   app.use(serveStatic(__dirname + "/public")); //location where static files are located
+
+  // Documentation
+  app.use('/', docsRouter);
 
   // Start the server
   setupDataLayer().then(() => {
