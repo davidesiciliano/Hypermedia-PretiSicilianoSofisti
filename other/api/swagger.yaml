@@ -9,7 +9,7 @@ info:
   license:
     name: "Apache-2.0"
     url: "http://www.apache.org/licenses/LICENSE-2.0.html"
-host: "hyp-preti-siciliano-sofisti.herokuapp.com"
+host: "localhost:5000"
 basePath: "/v2"
 tags:
 - name: "activity"
@@ -27,13 +27,13 @@ tags:
 - name: "isInvolvedIn"
   description: "Relationship between person and activity"
 - name: "offers"
-  description: "Realtionship between farm and activity"
+  description: "Relationship between farm and activity"
 - name: "person"
   description: "Person of the volontariato"
 - name: "relatedTo"
-  description: "Realationship between event and activity"
+  description: "Relationship between event and activity"
 schemes:
-- "https"
+- "http"
 paths:
   /activities:
     get:
@@ -658,6 +658,7 @@ definitions:
       completeDescription: "complete description"
       eventImg: "Img0"
       personId: 1
+      farmId: 0
   FAQ:
     type: "object"
     properties:
@@ -691,7 +692,7 @@ definitions:
       coordinates:
         type: "array"
         items:
-          type: "integer"
+          type: "float"
       openingTimes:
         type: "string"
       gallery:
@@ -713,8 +714,8 @@ definitions:
       completeDescription: "A long description"
       address: "via fattoria, 10"
       coordinates:
-      - 1
-      - 3
+      - 45.91
+      - 9.98
       openingTimes: "7.00 - 14.00, 17.00 - 19.30"
       gallery:
       - "img1"
@@ -747,7 +748,6 @@ definitions:
     title: "HelpUsForm"
     description: "A form sent to the organizers"
     example:
-      id: "0"
       name: "Davide"
       surname: "Siciliano"
       birthDate: "28-7-96"
@@ -813,6 +813,7 @@ definitions:
       name: "Davide"
       surname: "Siciliano"
       role: "Founder"
+      description: "person description"
       personImg: "Img0"
       contactId: 0
   RelatedTo:
