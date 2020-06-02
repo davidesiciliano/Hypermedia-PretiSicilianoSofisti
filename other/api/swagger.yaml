@@ -9,7 +9,7 @@ info:
   license:
     name: "Apache-2.0"
     url: "http://www.apache.org/licenses/LICENSE-2.0.html"
-host: "localhost:5000"
+host: "hyp-preti-siciliano-sofisti.herokuapp.com"
 basePath: "/v2"
 tags:
 - name: "activity"
@@ -33,7 +33,7 @@ tags:
 - name: "relatedTo"
   description: "Relationship between event and activity"
 schemes:
-- "http"
+- "https"
 paths:
   /activities:
     get:
