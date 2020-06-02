@@ -17,6 +17,7 @@
 .wrap {
   overflow-x: hidden;
   position: relative
+  background-color: #888888;
 }
 
 h2 {
@@ -967,9 +968,8 @@ input {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 
-  margin: 20px 0px;
   grid-gap: 5px;
-  padding: 0px;
+  padding: 20px 0px 0px;
   background-color: white;
 }
 
