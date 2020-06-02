@@ -1104,6 +1104,10 @@ farm-section-event {
   padding: 0px;
 }
 
+.index .detailed-grid-container {
+  grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+}
+
 .detailed-card img {
   width: 100%;
   height: auto;
