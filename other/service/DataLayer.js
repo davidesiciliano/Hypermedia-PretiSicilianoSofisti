@@ -11,7 +11,7 @@ let {relatedToDbSetup} = require("./RelatedToService");
 
 const sqlDbFactory = require("knex");
 
-/*let sqlDb = sqlDbFactory({
+let sqlDb = sqlDbFactory({
   client: "pg",
   connection: {
     host: "ec2-176-34-97-213.eu-west-1.compute.amazonaws.com",
@@ -21,14 +21,14 @@ const sqlDbFactory = require("knex");
     ssl: { rejectUnauthorized: false }
   },
   debug: true,
-})*/
+})
 
-let sqlDb = sqlDbFactory({
+/*let sqlDb = sqlDbFactory({
   client: "pg",
   connection: process.env.DATABASE_URL,
   debug: true,
   ssl :true
-})
+})*/
 
 function setupDataLayer() {
   console.log("Setting up data layer");

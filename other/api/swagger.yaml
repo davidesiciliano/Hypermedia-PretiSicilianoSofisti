@@ -692,7 +692,7 @@ definitions:
       coordinates:
         type: "array"
         items:
-          type: "float"
+          type: "number"
       openingTimes:
         type: "string"
       gallery:

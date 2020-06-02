@@ -19,7 +19,7 @@ exports.farmDbSetup = function (connection) {
           tableBuilder.text(Farm.shortDescription);
           tableBuilder.text(Farm.completeDescription);
           tableBuilder.text(Farm.address);
-          tableBuilder.float(Farm.coordinates);
+          tableBuilder.integer(Farm.coordinates);
           tableBuilder.text(Farm.openingTimes);
           tableBuilder.text(Farm.gallery);
           tableBuilder.text(Farm.farmImg);
