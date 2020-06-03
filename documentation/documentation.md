@@ -130,7 +130,8 @@ Matteo and Giorgio worked mainly on the frontend, while Davide worked mainly on 
 
 During the weekly meeting we also reviewed together the already developed part, checking if it was coherent with the 
 design choices made before.
-In the last week we realized together all the documents to be delivered. 
+In the last week we realized together all the documents to be delivered.
+Thanks to this strategy the workload has been spread equally and each group member is aware of the work made by the other two.
 
 AAAAA
 Describe here how development tasks have been subdivided among members
