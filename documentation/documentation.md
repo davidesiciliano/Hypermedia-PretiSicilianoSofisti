@@ -130,7 +130,8 @@ Matteo and Giorgio worked mainly on the frontend, while Davide worked mainly on 
 
 During the weekly meeting we also reviewed together the already developed part, checking if it was coherent with the 
 design choices made before.
-In the last week we realized together all the documents to be delivered. 
+In the last week we realized together all the documents to be delivered.
+Thanks to this strategy the workload has been spread equally and each group member is aware of the work made by the other two.
 
 AAAAA
 Describe here how development tasks have been subdivided among members
@@ -159,9 +160,9 @@ Or
 Davide learned how to configure and interact with a relational database, and how to render dynamically the 
 HTML using the data retrieved from the database
 
-Matteo learned how to adapt a desktop website to a tablet and mobile view
+Matteo learned how to develop and adapt a desktop website to a tablet and mobile view
 
-Giorgio learned how to make a fully responsive website
+Giorgio learned how to make a fully responsive website dealing with different scrren sizes and resolution developing dynamic and reusable components
 
 AAAAA
 What was the most important thing all the members have learned while
