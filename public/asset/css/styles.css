@@ -222,7 +222,6 @@ nav {
 
 
 .contents {
-  max-width: 1800px;
   margin-left: auto;
   margin-right: auto;
   background-color: white;
@@ -971,6 +970,9 @@ input {
   grid-gap: 5px;
   padding: 20px 0px 0px;
   background-color: white;
+  max-width: 1800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .people .person-card img {
