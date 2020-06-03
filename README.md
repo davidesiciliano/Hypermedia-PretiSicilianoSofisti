@@ -1,6 +1,6 @@
 ## Hypermedia Project
 Project developed for Hypermedia application (web and multimedia) Polimi course 2020. 
-We decided to develop the website for Volontariato di Montagna non-profit voluntary association.
+We have decided to develop the website for Volontariato di Montagna non-profit voluntary association.
 
 
 # Pages
