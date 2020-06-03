@@ -254,6 +254,7 @@ nav {
 
 .upper-section {
   width: 100%;
+  background-color: #F1F1F1;
 }
 
 
@@ -1200,7 +1201,7 @@ h1 span {
 }
 
 .flex-parent {
-  padding-top: 20px;
+  padding-top: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1629,6 +1630,7 @@ h1 span {
 /*Smartphopne View*/
 @media screen and (max-width: 767px) {
   .flex-parent {
+    padding-top: 10px;
     justify-content: initial;
   }
 
