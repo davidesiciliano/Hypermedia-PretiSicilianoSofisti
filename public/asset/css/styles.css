@@ -281,7 +281,9 @@ nav {
   font-family: 'Poppins', sans-serif;
   font-size: 12px;
 }
-
+textarea{
+  font-family: 'Poppins', sans-serif;
+}
 .footer .footer-content {
   height: 369px;
   display: flex;
