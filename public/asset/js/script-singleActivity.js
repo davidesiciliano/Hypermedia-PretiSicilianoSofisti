@@ -77,13 +77,13 @@ function addActivityData(name, description, startDate, endDate, activityImg) {
         </div>
       </div>
     </div>
-    <div class="related-events">
+    <div class="related-events single-page-list">
       <h2>Related events</h2>
       <div class="events-list">
         <div class="detailed-grid-container" id="relatedEventsToActivity"></div>
       </div>
     </div>
-    <div class="farm-section">
+    <div class="farm-section single-page-list">
       <h2>Interested farms</h2>
       <div class="farms-list">
         <div class="detailed-grid-container" id="involvedFarmsToActivity"></div>

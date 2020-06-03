@@ -56,7 +56,7 @@ function addFarmDescription(farmName, ownerName, completeDescription, address, c
     <p>` + completeDescription + `</p>
   </div>
 
-  <div class="activities-list">
+  <div class="activities-list single-page-list">
     <h2>Activities</h2>
     <div class="activities-grid-container" id="activitiesGrid">
     </div>

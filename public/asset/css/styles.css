@@ -1096,14 +1096,6 @@ input {
   background-color: #F1F1F1;
 }
 
-.farm-section {
-  margin-bottom: 40px;
-}
-
-farm-section-event {
-  margin-bottom: 20px;
-}
-
 /* Detailed card */
 
 .detailed-grid-container {
@@ -1342,6 +1334,14 @@ h1 span {
 
 .description-flex-container p.active {
   display: block;
+}
+
+.main-list {
+  padding-bottom: 5px;
+}
+
+.single-page-list {
+  padding-bottom: 40px;
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
