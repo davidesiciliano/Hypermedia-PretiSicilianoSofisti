@@ -18,6 +18,20 @@ function loadPage() {
         eventDescription.innerHTML += addEventData(
           name, date, hours, location, completeDescription, eventImg,
           farmId, farmName, ownerName, address, shortDescription, farmImg, email, phoneNumber);
+        var relatedActivities = document.getElementById("relatedActivitiesGrid");
+        fetch("../v2/relatedTo/findRelatedActivities/" + eventId).then(function (response) {
+          return response.json();
+        }).then(function (relatedToJson) {
+          for (var i = 0; i < relatedToJson.length; i++) {
+            let {eventId, activityId} = relatedToJson[i];
+            fetch("../v2/activities/findById/" + activityId).then(function (response) {
+              return response.json();
+            }).then(function (activityJson) {
+              let {activityIdA, name, description, startDate, endDate, activityImg} = activityJson[0];
+              relatedActivities.innerHTML += addActivity(activityId, name, activityImg);
+            });
+          }
+        });
       });
     });
   });
@@ -62,6 +76,11 @@ function addEventData(name, date, hours, location, completeDescriptionEvent, eve
     </div>
   </div>
 
+  <div class="activities-list">
+    <h2>Activities</h2>
+    <div class="activities-grid-container" id="relatedActivitiesGrid"></div>
+  </div>
+
   <div class="bottomImage">
     <img src="../asset/img/Farms/` + farmImg + `" alt="text text" style="width:100%">
   </div>
@@ -69,6 +88,19 @@ function addEventData(name, date, hours, location, completeDescriptionEvent, eve
   <div class="farm-section-event">
     <h2><a href="./singleFarm_page.html?farmId=` + farmId + `">` + farmName + `</a></h2>
     <p>` + shortDescriptionFarm + `</p>
+  </div>
+  `;
+}
+
+function addActivity(id, name, activityImg) {
+  return `
+  <div class="activity-card">
+    <a href="./singleActivity_page.html?activityId=` + id + `">
+      <div class="rectangle-container">
+        <img src="../asset/img/Activities/` + activityImg + `" alt="">
+      </div>
+      <h2>` + name + `</h2>
+    </a>
   </div>
   `;
 }
