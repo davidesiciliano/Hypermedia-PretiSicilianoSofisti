@@ -159,9 +159,9 @@ Or
 Davide learned how to configure and interact with a relational database, and how to render dynamically the 
 HTML using the data retrieved from the database
 
-Matteo learned how to adapt a desktop website to a tablet and mobile view
+Matteo learned how to develop and adapt a desktop website to a tablet and mobile view
 
-Giorgio learned how to make a fully responsive website
+Giorgio learned how to make a fully responsive website dealing with different scrren sizes and resolution developing dynamic and reusable components
 
 AAAAA
 What was the most important thing all the members have learned while
