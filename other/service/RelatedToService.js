@@ -23,6 +23,18 @@ exports.relatedToDbSetup = function (connection) {
 };
 
 /**
+ * Find all activities related to a specific event
+ * Returns a list of activities
+ *
+ * eventId Long ID of the considered event
+ * returns RelatedTo
+ **/
+exports.getActivitiesByEventId = function(eventId) {
+  return sqlDb(RelatedTo.getTable)
+    .where(RelatedTo.eventId, eventId);
+}
+
+/**
  * Find all events related to a specific activity
  * Returns a list of events
  *

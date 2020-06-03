@@ -548,6 +548,32 @@ paths:
         "404":
           description: "Person not found"
       x-swagger-router-controller: "Person"
+  /relatedTo/findRelatedActivities/{eventId}:
+    get:
+      tags:
+      - "relatedTo"
+      summary: "Find all activities related to a specific event"
+      description: "Returns a list of activities"
+      operationId: "getActivitiesByEventId"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "eventId"
+        in: "path"
+        description: "ID of the considered event"
+        required: true
+        type: "integer"
+        format: "int64"
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/RelatedTo"
+        "400":
+          description: "Invalid ID supplied"
+        "404":
+          description: "Event not found"
+      x-swagger-router-controller: "RelatedTo"
   /relatedTo/findRelatedEvents/{activityId}:
     get:
       tags:
