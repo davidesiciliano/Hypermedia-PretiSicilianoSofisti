@@ -76,7 +76,7 @@ function addEventData(name, date, hours, location, completeDescriptionEvent, eve
     </div>
   </div>
 
-  <div class="activities-list">
+  <div class="activities-list single-page-list">
     <h2>Activities</h2>
     <div class="activities-grid-container" id="relatedActivitiesGrid"></div>
   </div>
