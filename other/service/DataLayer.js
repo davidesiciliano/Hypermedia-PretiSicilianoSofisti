@@ -14,10 +14,10 @@ const sqlDbFactory = require("knex");
 /*let sqlDb = sqlDbFactory({
   client: "pg",
   connection: {
-    host: "ec2-176-34-97-213.eu-west-1.compute.amazonaws.com",
-    user: "pkuvwhdfluphfy",
-    password: "6662683a4619db58d3a01906492e70bb6a7593d0a9d6ea37e8db93c72dbf1239",
-    database: "d1eh20mpmvnvc3",
+    host: "ec2-54-75-229-28.eu-west-1.compute.amazonaws.com",
+    user: "oadjrnyacucwph",
+    password: "752b6af6f00406587f8c938ebdb19fb4a4d3543dde57b03d73db254a1c5ef5e2",
+    database: "de7d4m7pa098l4",
     ssl: { rejectUnauthorized: false }
   },
   debug: true,
