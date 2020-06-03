@@ -25,7 +25,7 @@ give access to the instructors.
 ## Specification
 ### Web Architecture
 We've developed our web application creating a clear separation between the presentation layer, and the application layer:
-- The application layer is handled by the browser that requests page assets, send HTTP requests, and then finally renders the
+- The application layer is handled by the browser that requests page assets, sends HTTP requests, and then finally renders the
   results on the client-side
 - The application layer is composed by a frontend server and a backend server. The backend server is responsible of the communication
   with the data layer to perform SQL queries on the relational database requested through the exposed API. The frontend server 
@@ -54,8 +54,8 @@ We created a resource model for each entity of the website: these are Activity, 
 In these models all the properties are mandatory, and the primary key is always the ID that allows to retrieve the right 
 element when needed.
 
-We have also a resource model for the helpUsForm that a person can compile and send to the organization, the sending is done 
-by a POST to the database that creates a new tuple for each form.
+We have also a resource model for the helpUsForm that a person can compile and send to the organization. This is done 
+by performing a POST to the database that creates a new tuple for each form.
 
 AAAAA
 Describe here synthetically, which models you have introduced for
@@ -65,9 +65,9 @@ The ER diagram of the data model is available at [this address](https://app.diag
 
 The tables represented in the ER diagram are mapped into the resource models, with the addition of tables for the 
 relationship many-to-many, in particular we have added the tables:
--  IsInvolvedIn: define the relationship between person and activity
--  Offers: define the relationship between farm and activity
--  RelatedTo: define the relationship between event and activity
+-  IsInvolvedIn: define the relationship between person and activity.
+-  Offers: define the relationship between farm and activity.
+-  RelatedTo: define the relationship between event and activity.
 
 AAAAAA
 Describe with an ER diagram the model used in the data layer of your web
@@ -93,14 +93,14 @@ Describe here which tools, languages and frameworks did you use for the
 backend of the application.
 ### Discussion
 We used Swagger codegen tool to create controllers and services that use the node package swagger-middleware to point
-to the routes we defined in our OpenAPI specification and use our resource models
+to the routes we defined in our OpenAPI specification and use our resource models.
 
-Due to the separation between the backend and the frontend our application is well partitioned. The backend server 
-is the only one that interact with the database and that provides a RESTful API to operate on it, while the frontend application 
+Thanks to the separation between the backend and the frontend, our application is well partitioned. The backend server 
+is the only one that interacts with the database and that provides a RESTful API to operate on it, while the frontend application 
 acts as a server for the browser (so for the user) to show and render pages and as a client for the backend to request REST resources. 
 
 We used a relational database to manage the data model, we did not define any trigger mechanism because our data model is
-static and do not have any "runtime" modification
+static and does not have any "runtime" modification.
 
 AAAAAA
 
@@ -119,7 +119,7 @@ managing the data model?
 
 ## Other information
 ### Task assignment
-We decided to organize weekly meetings, in which we checked the progress of the previous week and organize for the 
+We decided to organize weekly meetings, in which we checked the progress of the previous week and organized for the 
 following week dividing equally the remaining work, in this way everybody could understand what was going on in every 
 part of the project. However, every time a member has a problem with his part, we organized an extra meeting to fully 
 understand the problem and resolve it together.
@@ -160,9 +160,9 @@ Or
 Davide learned how to configure and interact with a relational database, and how to render dynamically the 
 HTML using the data retrieved from the database
 
-Matteo learned how to develop and adapt a desktop website to a tablet and mobile view
+Matteo learned how to write reusable, clean and adaptive web code with dynamic effects
 
-Giorgio learned how to make a fully responsive website dealing with different scrren sizes and resolution developing dynamic and reusable components
+Giorgio learned how to make a fully responsive website dealing with different screen sizes and resolution developing dynamic and reusable components
 
 AAAAA
 What was the most important thing all the members have learned while
