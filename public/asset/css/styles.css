@@ -17,6 +17,7 @@
 .wrap {
   overflow-x: hidden;
   position: relative;
+  min-height: calc(100vh - 400px);
 }
 
 h2 {
