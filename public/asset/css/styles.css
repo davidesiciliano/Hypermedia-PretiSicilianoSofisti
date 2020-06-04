@@ -182,18 +182,19 @@ nav {
 }
 
 .contents .topImage {
+  width: 100%;
   position: relative;
   text-align: center;
   color: white;
   overflow: hidden;
+  max-height: 500px;
+  padding-bottom: 0px;
 }
 
-.single-farm .topImage img {
+.contents .topImage img {
   width: 100%;
-  /*height: auto;*/
   max-height: 500px;
   object-fit: cover;
-
 }
 
 .contents .topImage .title {
