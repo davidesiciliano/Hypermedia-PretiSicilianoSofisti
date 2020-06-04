@@ -61,7 +61,7 @@ function insertEvent(id, name, date, smallDescription, eventImg) {
   <div class="detailed-card">
     <a href="./singleEvent_page.html?eventId=` + id + `">
       <div class="rectangle-container">
-        <img src="../asset/img/Events/` + eventImg + `" alt="">
+        <img src="../asset/img/Events/` + eventImg + `" alt="` + name + ` event image">
       </div>
       <div class="card-content">
         <h2>` + name + `</h2>

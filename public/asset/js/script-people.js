@@ -37,7 +37,7 @@ function insertFounder(id, name, surname, personImg) {
     <div class="person-card">
       <a href="./singleFounder_page.html?personId=` + id + `">
         <div class="circle-container">
-          <img src="../asset/img/People/Founders/` + personImg + `" alt="">
+          <img src="../asset/img/People/Founders/` + personImg + `" alt="` + name + ` founder image">
           <h2>` + name + ` ` + surname + `</h2>
         </div>
       </a>
@@ -50,7 +50,7 @@ function insertExpert(id, name, surname, personImg) {
     <div class="person-card">
       <a href="./singleExpert_page.html?personId=` + id + `">
         <div class="circle-container">
-          <img src="../asset/img/People/Experts/` + personImg + `" alt="">
+          <img src="../asset/img/People/Experts/` + personImg + `" alt="` + name + ` expert image">
           <h2>` + name + ` ` + surname + `</h2>
         </div>
       </a>
@@ -63,7 +63,7 @@ function insertVolunteer(id, name, surname, personImg) {
     <div class="person-card">
       <a href="./singleVolunteer_page.html?personId=` + id + `">
         <div class="circle-container">
-          <img src="../asset/img/People/Volunteers/` + personImg + `" alt="">
+          <img src="../asset/img/People/Volunteers/` + personImg + `" alt="` + name + ` volunteer image">
           <h2>` + name + ` ` + surname + `</h2>
         </div>
       </a>

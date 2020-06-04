@@ -15,7 +15,7 @@ function addActivity(id, name, activityImg) {
   <div class="activity-card">
     <a href="./singleActivity_page.html?activityId=` + id + `">
       <div class="rectangle-container">
-        <img src="../asset/img/Activities/` + activityImg + `" alt="">
+        <img src="../asset/img/Activities/` + activityImg + `" alt="` + name + ` activity image">
       </div>
       <h2>` + name + `</h2>
     </a>

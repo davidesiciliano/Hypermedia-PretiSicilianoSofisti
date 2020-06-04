@@ -32,10 +32,10 @@ function addExpertData(name, surname, description, personImg, email, phoneNumber
       <div class="name"><a href="./people_page.html"><i class="fas fa-chevron-left"></i> ` + name + ` ` + surname + `</a></div>
       <div class="navInfo"><a href="./people_page.html">People</a></div>
     </div>
-    <img class="personImageResize" src="../asset/img/People/Experts/` + personImg + `" alt="">
+    <img class="personImageResize" src="../asset/img/People/Experts/` + personImg + `" alt="` + name + ` expert image">
     <div class="personDescription">
       <div class="column1">
-        <img src="../asset/img/People/Experts/` + personImg + `" alt="">
+        <img src="../asset/img/People/Experts/` + personImg + `" alt="` + name + ` expert image">
       </div>
       <div class="column2">
         <p>` + description + `</p>
@@ -62,7 +62,7 @@ function addRelatedEvent(eventId, name, eventImg) {
   <div class="activity-card">
     <a href="./singleEvent_page.html?eventId=` + eventId + `">
       <div class="rectangle-container">
-      <img src="../asset/img/Events/` + eventImg + `" alt="">
+      <img src="../asset/img/Events/` + eventImg + `" alt="` + name + ` related event image">
       </div>
       <h2>` + name + `</h2>
     </a>

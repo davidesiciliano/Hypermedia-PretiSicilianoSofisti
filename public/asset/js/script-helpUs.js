@@ -1,5 +1,4 @@
 function loadPage() {
-  //TODO aggiungere messaggio quando viene inviato correttamente
 
   var button = document.getElementById("sendForm");
   button.onclick = function () {
@@ -38,6 +37,7 @@ function loadPage() {
       .then(response => response.json())
       .then(data => {
         console.log('Success:', data);
+        alert("The form has been correctly sent");
       })
       .catch((error) => {
         console.error('Error:', error);

@@ -62,7 +62,10 @@ We used a relational database to manage the data model, we did not define any tr
 We decided to organize weekly meetings, in which we checked the progress of the previous week and organized for the following week dividing equally the remaining work, in this way everybody could understand what was going on in every part of the project. However, every time a member has a problem with his part, we organized an extra meeting to fully understand the problem and resolve it together.
 We started analysing the C-IDM, L-IDM, ER and Logic Design schemas realized together for the Design Document, from which we started to plan the work relying on the extrapolated main topics.
 
-Matteo and Giorgio worked mainly on the frontend, while Davide worked mainly on the backend.
+Matteo and Giorgio worked mainly on the frontend, while Davide worked mainly on the backend, in particular:
+- Davide worked on back end (80%) and front end (20% of the time)
+- Matteo worked on back end (20%) and front end (80% of the time)
+- Giorgio worked on back end (30%) and front end (70% of the time)
 
 During the weekly meeting we also reviewed together the already developed part, checking if it was coherent with the design choices made before.
 In the last week we realized together all the documents to be delivered. Thanks to this strategy the workload has been spread equally and each group member is aware of the work made by the other two.

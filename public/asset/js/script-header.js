@@ -5,7 +5,7 @@ function loadHeader() {
   header.innerHTML = `
     <div class="logo">
       <a href="../../index.html">
-        <img src="../../asset/img/Logo.png" alt="logo"/>
+        <img src="../../asset/img/Logo.png" alt="Volontariato di Montagna logo"/>
       </a>
       <h1><a href="../../index.html">Volontariato di Montagna</a></h1>
     </div>
@@ -27,7 +27,7 @@ function loadHeader() {
   `;
 
   if (currentPage !== "homepageH")
-  document.getElementById(currentPage).classList.add("selected");
+    document.getElementById(currentPage).classList.add("selected");
 }
 
 loadHeader();

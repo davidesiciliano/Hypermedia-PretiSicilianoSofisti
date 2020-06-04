@@ -46,11 +46,11 @@ function addEventData(name, date, hours, location, completeDescriptionEvent, eve
     <div class="navInfo"><a href="./events_page.html">Events</a></div>
   </div>
   <div class= "eventImageResizeContainer">
-    <img class="eventImageResize"  src="../asset/img/Events/` + eventImg + `"  alt="">
+    <img class="eventImageResize"  src="../asset/img/Events/` + eventImg + `"  alt="` + name + ` event image">
   </div>
   <div class="eventDescription">
     <div class="column1">
-      <img src="../asset/img/Events/` + eventImg + `" alt="">
+      <img src="../asset/img/Events/` + eventImg + `" alt="` + name + ` event image">
     </div>
     <div class="column2">
       <h4>` + parts[2] + `/` + parts[1] + `/` + parts[0] + `, ` + hours + `</h4>
@@ -82,7 +82,7 @@ function addEventData(name, date, hours, location, completeDescriptionEvent, eve
   </div>
 
   <div class="bottomImage">
-    <img src="../asset/img/Farms/` + farmImg + `" alt="text text" style="width:100%">
+    <img src="../asset/img/Farms/` + farmImg + `" alt="` + farmName + ` farm image">
   </div>
 
   <div class="farm-section-event">
@@ -97,7 +97,7 @@ function addActivity(id, name, activityImg) {
   <div class="activity-card">
     <a href="./singleActivity_page.html?activityId=` + id + `">
       <div class="rectangle-container">
-        <img src="../asset/img/Activities/` + activityImg + `" alt="">
+        <img src="../asset/img/Activities/` + activityImg + `" alt="` + name + ` activity image">
       </div>
       <h2>` + name + `</h2>
     </a>

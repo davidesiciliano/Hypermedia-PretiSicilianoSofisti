@@ -37,7 +37,7 @@ function addVolunteerData(name, surname, description, personImg, email, phoneNum
       <div class="name"><a href="./people_page.html"><i class="fas fa-chevron-left"></i> ` + name + ` ` + surname + `</a></div>
       <div class="navInfo"><a href="./people_page.html">People</a></div>
     </div>
-    <img class="personImageResize" src="../asset/img/People/Volunteers/` + personImg + `" alt="">
+    <img class="personImageResize" src="../asset/img/People/Volunteers/` + personImg + `" alt="` + name + ` volunteer image">
     <div class="personDescription">
       <div class="column1">
         <img src="../asset/img/People/Volunteers/` + personImg + `" alt="">
@@ -67,7 +67,7 @@ function addAssignedActivity(activityId, name, activityImg) {
   <div class="activity-card">
     <a href="./singleActivity_page.html?activityId=` + activityId + `">
       <div class="rectangle-container">
-      <img src="../asset/img/Activities/` + activityImg + `" alt="">
+      <img src="../asset/img/Activities/` + activityImg + `" alt="` + name + ` assigned activity image">
       </div>
       <h2>` + name + `</h2>
     </a>

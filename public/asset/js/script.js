@@ -1,7 +1,3 @@
-function popUp() {
-  alert("Due to the currrent COVID-19 situation all the association activities are suspended!");
-}
-
 const navSlide = () => {
   const burger = document.querySelector('.burger');
   const nav = document.querySelector('.nav-links');
