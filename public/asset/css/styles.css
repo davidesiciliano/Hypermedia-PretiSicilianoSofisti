@@ -2,6 +2,7 @@
   margin: 0; /* Remove default left margin */
   padding: 0px;
   box-sizing: border-box;
+
 }
 
 ::-webkit-scrollbar {
@@ -11,7 +12,6 @@
 .html .body {
   width: 100%;
   font-family: 'Poppins', sans-serif;
-
 }
 
 .wrap {
@@ -1638,6 +1638,9 @@ h1 span {
 
 /*Smartphopne View*/
 @media screen and (max-width: 767px) {
+  .footer .footer-bottom {
+    font-size: 9px;
+  }
   .flex-parent {
     padding-top: 10px;
     justify-content: initial;
