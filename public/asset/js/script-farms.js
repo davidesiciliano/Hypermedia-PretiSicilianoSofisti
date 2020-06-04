@@ -15,7 +15,7 @@ function insertFarm(id, farmName, shortDescription, address, farmImg) {
   <div class="detailed-card">
     <a href="./singleFarm_page.html?farmId=` + id + `">
       <div class="rectangle-container">
-        <img src="../asset/img/Farms/` + farmImg + `" alt="">
+        <img src="../asset/img/Farms/` + farmImg + `" alt="` + farmName + ` farm image">
       </div>
       <div class="card-content">
         <h2>` + farmName + `</h2>

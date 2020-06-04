@@ -60,11 +60,11 @@ function addActivityData(name, description, startDate, endDate, activityImg) {
       <div class="navInfo"><a href="../pages/activities_page.html">Activities</a></div>
     </div>
     <div class= "eventImageResizeContainer">
-      <img class="eventImageResize" src="../asset/img/Activities/` + activityImg + `" alt="">
+      <img class="eventImageResize" src="../asset/img/Activities/` + activityImg + `" alt="` + name + ` activity image">
     </div>
     <div class="eventDescription">
       <div class="column1">
-        <img src="../asset/img/Activities/` + activityImg + `" alt="">
+        <img src="../asset/img/Activities/` + activityImg + `" alt="` + name + ` activity image">
       </div>
       <div class="column2">
         <h4>`+ startDate +` - `+ endDate +`</h4>
@@ -103,7 +103,7 @@ function addRelatedEvent(id, name, smallDescription, eventImg) {
   <div class="detailed-card">
     <a href="./singleEvent_page.html?eventId=` + id + `">
       <div class="rectangle-container">
-        <img src="../asset/img/Events/` + eventImg + `" alt="">
+        <img src="../asset/img/Events/` + eventImg + `" alt="` + name + ` related event image">
       </div>
       <div class="card-content">
         <h2>` + name + `</h2>
@@ -119,7 +119,7 @@ function addInterestedFarm(id, farmName, shortDescription, address, farmImg) {
   <div class="detailed-card">
     <a href="./singleFarm_page.html?farmId=` + id + `">
       <div class="rectangle-container">
-        <img src="../asset/img/Farms/` + farmImg + `" alt="">
+        <img src="../asset/img/Farms/` + farmImg + `" alt="` + farmName + ` interested farm image">
       </div>
       <div class="card-content">
         <h2>` + farmName + `</h2>

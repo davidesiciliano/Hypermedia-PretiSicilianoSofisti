@@ -22,10 +22,10 @@ function addFounderData(name, surname, description, personImg, email, phoneNumbe
       <div class="name"><a href="./people_page.html"><i class="fas fa-chevron-left"></i> `+ name + ` ` + surname + `</a></div>
       <div class="navInfo"><a href="./people_page.html">People</a></div>
     </div>
-    <img class="personImageResize" src="../asset/img/People/Founders/` + personImg + `" alt="">
+    <img class="personImageResize" src="../asset/img/People/Founders/` + personImg + `" alt="` + name + ` founder image">
     <div class="personDescription">
       <div class="column1">
-        <img src="../asset/img/People/Founders/` + personImg + `" alt="">
+        <img src="../asset/img/People/Founders/` + personImg + `" alt="` + name + ` founder image">
       </div>
       <div class="column2">
         <p>` + description + `</p>

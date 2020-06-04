@@ -15,11 +15,12 @@ function loadPage() {
       farmDescription.innerHTML += addFarmDescription(farmName, ownerName, completeDescription, address, coordinates, openingTimes, farmImg, email, phoneNumber);
       myMap(coordinates[0], coordinates[1]);
 
+      var galleryColumn;
       for (var i = 0; i < gallery.length; i++) {
         if (i === 7)
-          var galleryColumn = document.getElementById("galleryColumn3");
+          galleryColumn = document.getElementById("galleryColumn3");
         else
-          var galleryColumn = document.getElementById("galleryColumn" + i%3);
+          galleryColumn = document.getElementById("galleryColumn" + i%3);
         galleryColumn.innerHTML += addGalleryImage(gallery[i]);
       }
 
@@ -46,7 +47,7 @@ loadPage();
 function addFarmDescription(farmName, ownerName, completeDescription, address, coordinates, openingTimes, farmImg, email, phoneNumber) {
   return `
   <div class="topImage">
-    <img src="../asset/img/Farms/` + farmImg + `" alt="text text">
+    <img src="../asset/img/Farms/` + farmImg + `" alt="` + farmName + ` farm image">
     <div class="name"><a href="../pages/farms_page.html"><i class="fas fa-chevron-left"></i> ` + farmName + `</a></div>
     <div class="navInfo"><a href="../pages/farms_page.html">Farms</a></div>
   </div>
@@ -107,7 +108,7 @@ function myMap(x, y) {
 
 function addGalleryImage(galleryImg) {
   return `
-    <img src="../asset/img/Farms/` + galleryImg + `" alt="">
+    <img src="../asset/img/Farms/` + galleryImg + `" alt="Farm's gallery image">
   `;
 }
 
@@ -116,7 +117,7 @@ function addActivity(id, name, activityImg) {
   <div class="activity-card">
     <a href="./singleActivity_page.html?activityId=` + id + `">
       <div class="rectangle-container">
-        <img src="../asset/img/Activities/` + activityImg + `" alt="">
+        <img src="../asset/img/Activities/` + activityImg + `" alt="` + name + ` activity image">
       </div>
       <h2>` + name + `</h2>
     </a>
