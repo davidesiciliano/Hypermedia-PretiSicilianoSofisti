@@ -182,18 +182,19 @@ nav {
 }
 
 .contents .topImage {
+  width: 100%;
   position: relative;
   text-align: center;
   color: white;
   overflow: hidden;
+  max-height: 500px;
+  padding-bottom: 0px;
 }
 
-.single-farm .topImage img {
+.contents .topImage img {
   width: 100%;
-  /*height: auto;*/
   max-height: 500px;
   object-fit: cover;
-
 }
 
 .contents .topImage .title {
@@ -663,9 +664,13 @@ h1 {
   -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
-  padding: 0 90px;
-  padding-top: 55px;
-  padding-bottom: 65px;
+  padding: 55px 90px 65px;
+}
+
+.shadow-inset {
+  -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 1px 20px 0px rgba(100, 100, 100, 0.1) inset, 0px -1px 20px 0px rgba(100, 100, 100, 0.1) inset;
 }
 
 /* Form grid */

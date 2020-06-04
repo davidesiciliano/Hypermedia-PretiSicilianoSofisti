@@ -57,7 +57,7 @@ function addFarmDescription(farmName, ownerName, completeDescription, address, c
     <p>` + completeDescription + `</p>
   </div>
 
-  <div class="activities-list single-page-list">
+  <div class="activities-list single-page-list shadow-inset">
     <h2>Activities</h2>
     <div class="activities-grid-container" id="activitiesGrid">
     </div>
@@ -73,7 +73,7 @@ function addFarmDescription(farmName, ownerName, completeDescription, address, c
     </div>
   </div>
 
-  <div class="bottom-section">
+  <div class="bottom-section shadow-inset">
     <div class="column">
       <h3>Location</h3>
       <div class="map" id="googleMap"></div>
