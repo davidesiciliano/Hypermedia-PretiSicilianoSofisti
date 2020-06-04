@@ -663,9 +663,13 @@ h1 {
   -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
-  padding: 0 90px;
-  padding-top: 55px;
-  padding-bottom: 65px;
+  padding: 55px 90px 65px;
+}
+
+.shadow-inset {
+  -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.10) inset, 0px -4px 20px 0px rgba(0, 0, 0, 0.10) inset;
 }
 
 /* Form grid */
