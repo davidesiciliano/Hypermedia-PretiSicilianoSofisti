@@ -29,7 +29,7 @@ let sqlDb = sqlDbFactory({
   debug: true,
   ssl :true
 })
- 
+
 function setupDataLayer() {
   console.log("Setting up data layer");
   return activityDbSetup(sqlDb)
